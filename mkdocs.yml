@@ -1,0 +1,49 @@
+site_name: AE2 Help
+site_url: https://ae2.nl
+site_description: Product documentation and support for AE2 devices and software
+
+repo_url: https://github.com/HanVertegaal/ae2.nl
+repo_name: HanVertegaal/ae2.nl
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: black
+    accent: blue
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+
+nav:
+  - Home: index.md
+  - Echo:
+      - Overview: echo/index.md
+      - Getting Started: echo/getting-started.md
+      - Display and Controls: echo/display-controls.md
+      - Signals: echo/signals.md
+      - Network: echo/network.md
+      - REST API: echo/api.md
+      - Troubleshooting: echo/troubleshooting.md
+  - Atlas:
+      - Overview: atlas/index.md
+      - Getting Started: atlas/getting-started.md
+      - Display and Controls: atlas/display-controls.md
+      - Signals: atlas/signals.md
+      - Network: atlas/network.md
+      - REST API: atlas/api.md
+      - Troubleshooting: atlas/troubleshooting.md
+  - Dirac:
+      - Overview: dirac/index.md
+      - Getting Started: dirac/getting-started.md
+      - Troubleshooting: dirac/troubleshooting.md
