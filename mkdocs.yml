@@ -1,9 +1,9 @@
 site_name: AE2 Help
 site_url: https://ae2.nl
-site_description: Product documentation and support for AE2 devices and software
+site_description: Product documentation and support for Acoustics Engineering devices and software
 
-repo_url: https://github.com/HanVertegaal/ae2.nl
-repo_name: HanVertegaal/ae2.nl
+extra_css:
+  - stylesheets/extra.css
 
 theme:
   name: material
@@ -29,12 +29,14 @@ nav:
   - Home: index.md
   - Echo:
       - Overview: echo/index.md
-      - Getting Started: echo/getting-started.md
-      - Display and Controls: echo/display-controls.md
-      - Signals: echo/signals.md
+      - Quick Start: echo/quick-start.md
+      - User Interface: echo/user-interface.md
+      - Signal Setup: echo/signal-setup.md
+      - System Menu: echo/system-menu.md
       - Network: echo/network.md
-      - REST API: echo/api.md
+      - Technical Specifications: echo/specifications.md
       - Troubleshooting: echo/troubleshooting.md
+      - REST API: echo/api.md
   - Atlas:
       - Overview: atlas/index.md
       - Getting Started: atlas/getting-started.md
