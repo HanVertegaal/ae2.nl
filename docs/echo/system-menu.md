@@ -13,7 +13,7 @@ Main menu sections:
 
 ---
 
-# Power
+## Power
 
 | Item | Description |
 |---|---|
@@ -26,7 +26,7 @@ Main menu sections:
 
 ---
 
-# Output
+## Output
 
 | Item | Description |
 |---|---|
@@ -36,7 +36,7 @@ Main menu sections:
 
 ---
 
-# Timer
+## Timer
 
 | Item | Description |
 |---|---|
@@ -47,7 +47,7 @@ Main menu sections:
 
 ---
 
-# Network
+## Network
 
 | Item | Description |
 |---|---|
@@ -62,7 +62,7 @@ Main menu sections:
 
 ---
 
-# Service
+## Service
 
 | Item | Description |
 |---|---|
