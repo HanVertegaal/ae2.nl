@@ -1,11 +1,33 @@
 # AE2 Help
 
-Product documentation and support for AE2 devices and software.
+Documentation and support for Acoustics Engineering products.
 
 ## Products
 
-- [Echo](echo/)
-- [Atlas](atlas/)
-- [Dirac](dirac/)
+### Echo
 
-Choose a product to view setup instructions, operating guidance, API documentation where applicable, and troubleshooting information.
+Portable acoustic signal source for electroacoustic and building acoustics measurements.
+
+- Signal playback
+- MLS and sweep generation
+- STIPA support
+- Wi‑Fi networking
+- REST API remote control
+
+[Open Echo documentation](echo/)
+
+---
+
+### Atlas
+
+Professional acoustic signal source platform.
+
+[Open Atlas documentation](atlas/)
+
+---
+
+### Dirac
+
+Software documentation and support.
+
+[Open Dirac documentation](dirac/)
