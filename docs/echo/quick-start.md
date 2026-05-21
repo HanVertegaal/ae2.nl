@@ -31,6 +31,5 @@ Most operation begins from the Home screen.
 - Esweep
 - STIPA
 - Speech
-- Sine
 - User
 - BNC input
