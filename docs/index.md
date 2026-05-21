@@ -1,26 +1,26 @@
-# AE2 Help
+# Acoustics Engineering Help
 
 Documentation and support for Acoustics Engineering products.
 
 ## Products
 
-### Echo
+### Echo 2
 
-Portable acoustic signal source for electroacoustic and building acoustics measurements.
+Portable acoustic signal source for speech intelligibility measurements.
 
 - Signal playback
 - MLS and sweep generation
 - STIPA support
 - Wi‑Fi networking
-- REST API remote control
+- Remote control
 
-[Open Echo documentation](echo/)
+[Open Echo 2 documentation](echo/)
 
 ---
 
 ### Atlas
 
-Professional acoustic signal source platform.
+Portable omni-directional source for room and building acoustics.
 
 [Open Atlas documentation](atlas/)
 
