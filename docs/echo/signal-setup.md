@@ -8,7 +8,6 @@
 | Esweep | Exponential sine sweep |
 | STIPA | Speech transmission index signal |
 | Speech | Speech playback |
-| Sine | Sine wave signal |
 | User | User-loaded signal |
 | BNC input | External signal input |
 

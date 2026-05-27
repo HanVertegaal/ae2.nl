@@ -70,7 +70,6 @@ Main menu sections:
 | Help | Display QR code linking to documentation |
 | Update | Update firmware |
 | Self-test | Perform self-test |
-| Memory | Display memory information |
 | Reset | Restart the device |
 | Back | Return to previous menu |
 | Exit | Return to Home screen |

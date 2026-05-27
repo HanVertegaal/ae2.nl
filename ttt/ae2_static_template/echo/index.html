@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo Documentation — Template</title>
+  <meta name="description" content="Echo2Atlas product documentation.">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../common/template.html" aria-label="Echo2Atlas documentation home">
+        <span class="brand-mark">AE</span>
+        <span>Echo2Atlas</span>
+        <span class="brand-subtitle">Documentation</span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="../common/template.html" >Common</a>
+        <a href="../echo/index.html" aria-current="page">Echo</a>
+        <a href="../atlas/index.html">Atlas</a>
+        <a href="https://www.acoustics-engineering.com/">Acoustics Engineering</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="kicker">User manual</div>
+      <h1>Echo documentation template</h1>
+      <p>Plain HTML and CSS template for Echo2Atlas documentation. No build step, no framework, no generated markup.</p>
+    </div>
+  </section>
+
+  <div class="page">
+    <aside class="sidebar" aria-label="Section navigation">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#quick-start">Quick start</a></li>
+        <li><a href="#status">Status indicators</a></li>
+        <li><a href="#api-example">API example</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../common/template.html">Documentation</a> › Echo › Getting started
+      </nav>
+
+      <h1 id="overview">Overview</h1>
+      <p class="lead">Use this file as a starting point for all pages. Copy it into the common, echo, or atlas folder and edit the content.</p>
+
+      <div class="notice">
+        <strong>Note:</strong> This template deliberately avoids JavaScript. Add small progressive enhancements later only where they are genuinely useful.
+      </div>
+
+      <h2 id="quick-start">Quick start</h2>
+      <div class="card-grid">
+        <section class="card">
+          <h3>1. Power on</h3>
+          <p>Connect USB-C power and switch on the device.</p>
+        </section>
+        <section class="card">
+          <h3>2. Connect</h3>
+          <p>Join the hotspot or connect through an existing WiFi network.</p>
+        </section>
+        <section class="card">
+          <h3>3. Open interface</h3>
+          <p>Open the device address in a browser and sign in.</p>
+        </section>
+      </div>
+
+      <h2 id="status">Status indicators</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Indicator</th><th>Meaning</th><th>Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Green</td><td>Device ready</td><td>No action required</td></tr>
+            <tr><td>Amber</td><td>Battery or charging state</td><td>Check battery page</td></tr>
+            <tr><td>Red</td><td>Error or overload</td><td>Reduce level or inspect output</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="api-example">API example</h2>
+      <p>Use code blocks for commands and JSON examples:</p>
+      <pre><code>curl -u echo:00000001 https://&lt;device-ip&gt;/api/battery</code></pre>
+
+      <div class="warning">
+        <strong>Warning:</strong> Keep safety-critical information visible in the page body, not hidden behind collapsible controls.
+      </div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright © 2026 Acoustics Engineering. Echo2Atlas documentation.
+  </footer>
+</body>
+</html>

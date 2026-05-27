@@ -1,4 +1,4 @@
-site_name: AE2 Help
+site_name: AE Help
 site_url: https://ae2.nl
 site_description: Product documentation and support for Acoustics Engineering devices and software
 
@@ -7,7 +7,7 @@ extra_css:
 
 theme:
   name: material
-  logo: assets/images/acoustics-engineering-logo.svg
+  logo: assets/common/acoustics-engineering-logo.svg
   palette:
     scheme: default
     primary: black
@@ -37,7 +37,7 @@ nav:
       - Network: echo/network.md
       - Technical Specifications: echo/specifications.md
       - Troubleshooting: echo/troubleshooting.md
-      - REST API: echo/api.md
+      - Remote Control: echo/api.md
   - Atlas:
       - Overview: atlas/index.md
       - Getting Started: atlas/getting-started.md

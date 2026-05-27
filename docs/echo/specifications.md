@@ -19,7 +19,6 @@
 | Exponential sweep | Yes |
 | STIPA | Yes |
 | Speech playback | Yes |
-| Sine playback | Yes |
 | User playback | Yes |
 | External BNC input | Yes |
 

@@ -6,22 +6,22 @@ Echo is operated using three buttons:
 
 | Button | Function |
 |---|---|
-| L | Signal setup |
-| M | Menu |
-| R | Start/stop playback |
+| **L**eft | Signal selection |
+| **M**iddle | Menu and settings |
+| **R**ight | Start/stop playback |
 
-Most operation begins from the Home screen.
+Turn on the Echo by pressing the **M**iddle button.<br>
+Turn the Echo off (from the home page) by pressing the **M**iddle button 3 times in succession. 
 
 ---
 
 ## Starting playback
 
 1. Press **L**
-2. Select a signal source
-3. Configure the signal
-4. Return to the Home screen
-5. Press **R** to start playback
-6. Press **R** again to stop playback
+2. Select a signal (source)
+3. Optionally select the signal mode, length and level
+4. Press **R** to start playback
+5. Press **R** again to stop playback
 
 ---
 
