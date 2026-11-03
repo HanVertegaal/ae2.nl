@@ -3,73 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quick Start - AE Help</title>
+  <title>Quick Start - Echo 2 manual</title>
   <meta name="description" content="Echo is operated using three buttons:">
   <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css">
+  <script src="../../assets/manual.js" defer></script>
 </head>
-<body>
+<body class="manual">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../../index.html" aria-label="Acoustics Engineering help home">
-        <span class="brand-mark">AE</span>
-        <span>AE Help</span>
-        <span class="brand-subtitle">Documentation</span>
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
       </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="../../index.html">Home</a>
-        <a href="../../echo/index.html" aria-current="page">Echo</a>
-        <a href="https://www.acoustics-engineering.com/">Acoustics Engineering</a>
-      </nav>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="kicker">User manual</div>
-      <h1>Quick Start</h1>
-      <p>Echo is operated using three buttons:</p>
-    </div>
-  </section>
-
-  <div class="page">
-    <aside class="sidebar" aria-label="Section navigation">
-      <h2>Documentation</h2>
-      <ul>
-<li><a href="../../index.html">Home</a></li>
-<li><a href="../../echo/index.html">Echo</a></li>
-<li><a href="../../echo/quick-start/index.html" aria-current="page">Quick Start</a></li>
-<li><a href="../../echo/user-interface/index.html">User Interface</a></li>
-<li><a href="../../echo/signal-setup/index.html">Signal Setup</a></li>
-<li><a href="../../echo/system-menu/index.html">System Menu</a></li>
-<li><a href="../../echo/network/index.html">Network</a></li>
-<li><a href="../../echo/specifications/index.html">Technical Specifications</a></li>
-<li><a href="../../echo/troubleshooting/index.html">Troubleshooting</a></li>
-<li><a href="../../echo/api/index.html">Remote Control</a></li>
-<li><a href="../../atlas/index.html">Atlas</a></li>
-<li><a href="../../dirac/index.html">Dirac</a></li>
-      </ul>
-      <h2>On this page</h2>
-      <ul>
-<li><a href="#quick-start">Quick Start</a></li>
-<li><a href="#basic-operation">Basic operation</a></li>
-<li><a href="#starting-playback">Starting playback</a></li>
-<li><a href="#available-signal-sources">Available signal sources</a></li>
-      </ul>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Echo 2 manual</summary>
+        <nav aria-label="Echo 2 chapters">
+          <ul>
+            <li><a href="../../echo/index.html">Overview</a></li>
+            <li><a href="../../echo/quick-start/index.html" aria-current="page">Quick Start</a></li>
+            <li><a href="../../echo/signal-setup/index.html">Signal Setup</a></li>
+            <li><a href="../../echo/system-menu/index.html">System Menu</a></li>
+            <li><a href="../../echo/network/index.html">Network &amp; Remote Control</a></li>
+            <li><a href="../../echo/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../../echo/troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../../echo/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
     </aside>
 
-    <main class="content">
+    <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs">
-        <a href="../../index.html">Documentation</a> &rsaquo; Quick Start
+        <a href="../../echo/index.html">Echo 2</a> <span aria-hidden="true">/</span> <span aria-current="page">Quick Start</span>
       </nav>
 <h1 id="quick-start">Quick Start</h1>
+
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+              <li><a href="#basic-operation">Basic operation</a></li>
+              <li><a href="#starting-playback">Starting playback</a></li>
+          </ul>
+        </nav>
+      </details>
 <h2 id="basic-operation">Basic operation</h2>
 <p>Echo is operated using three buttons:</p>
 <div class="table-wrap">
 <table>
 <thead>
 <tr>
-<th>Button</th>
-<th>Function</th>
+<th scope="col">Button</th>
+<th scope="col">Function</th>
 </tr>
 </thead>
 <tbody>
@@ -79,7 +71,7 @@
 </tr>
 <tr>
 <td><strong>M</strong>iddle</td>
-<td>Menu and settings</td>
+<td>Menu</td>
 </tr>
 <tr>
 <td><strong>R</strong>ight</td>
@@ -93,26 +85,34 @@
 <h2 id="starting-playback">Starting playback</h2>
 <ol>
 <li>Press <strong>L</strong></li>
-<li>Select a signal (source)</li>
-<li>Optionally select the signal mode, length and level</li>
-<li>Press <strong>R</strong> to start playback</li>
+<li>
+  Select a Signal Type. Press <strong>L</strong> (up arrow) or <strong>R</strong> (down arrow) to scroll through the list. The current choice appears in larger text. Press <strong>M</strong> to select it.
+  <p><img src="../../assets/echo/signal-type.svg" alt="Signal Type menu with ESweep selected, Pink MLS above it and STIPA below it. Up and down arrows appear at the bottom corners."></p>
+</li>
+<li>
+  If the selected signal offers a Signal Mode, use <strong>L</strong> and <strong>R</strong> to choose Continuous or Intermittent, then press <strong>M</strong> to confirm. Continuous repeats the signal; Intermittent alternates playback and silence.
+  <p><img src="../../assets/echo/signal-mode.svg" alt="Signal Mode menu with Continuous selected and Intermittent below it. A down arrow appears at the bottom right."></p>
+</li>
+<li>
+  If prompted for Signal Length, use <strong>L</strong> and <strong>R</strong> to choose a length, then press <strong>M</strong> to confirm. The available lengths depend on the signal and mode.
+  <p><img src="../../assets/echo/signal-length.svg" alt="Signal Length menu with 5.5 sec selected, 2.7 sec above it and 11 sec below it. Up and down arrows appear at the bottom corners."></p>
+</li>
+<li>
+  Select the Signal Level. Use <strong>L</strong> and <strong>R</strong> to choose an option, then press <strong>M</strong> to confirm. The options depend on the signal type. If you select <strong>User</strong>, adjust the level with <strong>L</strong> to decrease it or <strong>R</strong> to increase it, then press <strong>M</strong>.
+  <p><img src="../../assets/echo/signal-level.svg" alt="Signal Level menu with 70 dB selected, 60 dB above it and User below it. Up and down arrows appear at the bottom corners."></p>
+</li>
+<li>
+  Press <strong>R</strong> to start playback. The right-hand icon changes to show that pressing <strong>R</strong> again will stop playback.
+  <p><img src="../../assets/echo/home-playing.svg" alt="Home screen during ESweep playback, with a crossed speaker icon above the right button to stop playback."></p>
+</li>
 <li>Press <strong>R</strong> again to stop playback</li>
 </ol>
-<hr>
-<h2 id="available-signal-sources">Available signal sources</h2>
-<ul>
-<li>Pink MLS</li>
-<li>Esweep</li>
-<li>STIPA</li>
-<li>Speech</li>
-<li>User</li>
-<li>BNC input</li>
-</ul>
+<p>For signal descriptions, available modes, durations and levels, see <a href="../signal-setup/index.html">Signal Setup</a>.</p>
     </main>
   </div>
 
   <footer class="page-footer">
-    Copyright &copy; 2026 Acoustics Engineering. Product documentation and support.
+    Copyright &copy; 2026 Acoustics Engineering.
   </footer>
 </body>
 </html>

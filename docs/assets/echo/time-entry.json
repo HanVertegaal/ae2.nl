@@ -1,0 +1,35 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Time entry",
+  "description": "Time entry set to 01:00:00 with the last digit highlighted; down and up arrows appear at the lower corners.",
+  "elements": [
+    {
+      "type": "text",
+      "text": "01:00:0",
+      "font": 16,
+      "x": 27,
+      "y": 21
+    },
+    {
+      "type": "text",
+      "text": "0",
+      "font": 16,
+      "x": 89,
+      "y": 21,
+      "inverse": true
+    },
+    {
+      "type": "icon",
+      "name": "down_7x7",
+      "x": 0,
+      "y": 57
+    },
+    {
+      "type": "icon",
+      "name": "up_7x7",
+      "x": 121,
+      "y": 57
+    }
+  ]
+}

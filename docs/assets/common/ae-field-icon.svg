@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="276 103 452 452">
+  <g id="field-symbol" fill="none" stroke="#062d50" stroke-width="30">
+    <path d="M548 144.65 A190 190 0 0 1 686.35 283 M686.35 375 A190 190 0 0 1 548 513.35 M456 513.35 A190 190 0 0 1 317.65 375 M317.65 283 A190 190 0 0 1 456 144.65"/>
+    <g stroke-linecap="round" stroke-width="28">
+      <path d="M502 199 A130 130 0 0 1 632 329 M502 251 A78 78 0 0 1 580 329 M372 329 A130 130 0 0 0 502 459 M424 329 A78 78 0 0 0 502 407"/>
+    </g>
+    <g fill="#008e99" stroke="none">
+      <circle cx="502" cy="139" r="31"/>
+      <circle cx="692" cy="329" r="31"/>
+      <circle cx="502" cy="519" r="31"/>
+      <circle cx="312" cy="329" r="31"/>
+    </g>
+  </g>
+</svg>

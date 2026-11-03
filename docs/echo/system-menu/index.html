@@ -3,85 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>System Menu - AE Help</title>
+  <title>System Menu - Echo 2 manual</title>
   <meta name="description" content="Press M from the Home screen to open the system menu.">
   <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261031-1">
+  <script src="../../assets/manual.js" defer></script>
 </head>
-<body>
+<body class="manual system-menu">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../../index.html" aria-label="Acoustics Engineering help home">
-        <span class="brand-mark">AE</span>
-        <span>AE Help</span>
-        <span class="brand-subtitle">Documentation</span>
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
       </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="../../index.html">Home</a>
-        <a href="../../echo/index.html" aria-current="page">Echo</a>
-        <a href="https://www.acoustics-engineering.com/">Acoustics Engineering</a>
-      </nav>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="kicker">User manual</div>
-      <h1>System Menu</h1>
-      <p>Press M from the Home screen to open the system menu.</p>
-    </div>
-  </section>
-
-  <div class="page">
-    <aside class="sidebar" aria-label="Section navigation">
-      <h2>Documentation</h2>
-      <ul>
-<li><a href="../../index.html">Home</a></li>
-<li><a href="../../echo/index.html">Echo</a></li>
-<li><a href="../../echo/quick-start/index.html">Quick Start</a></li>
-<li><a href="../../echo/user-interface/index.html">User Interface</a></li>
-<li><a href="../../echo/signal-setup/index.html">Signal Setup</a></li>
-<li><a href="../../echo/system-menu/index.html" aria-current="page">System Menu</a></li>
-<li><a href="../../echo/network/index.html">Network</a></li>
-<li><a href="../../echo/specifications/index.html">Technical Specifications</a></li>
-<li><a href="../../echo/troubleshooting/index.html">Troubleshooting</a></li>
-<li><a href="../../echo/api/index.html">Remote Control</a></li>
-<li><a href="../../atlas/index.html">Atlas</a></li>
-<li><a href="../../dirac/index.html">Dirac</a></li>
-      </ul>
-      <h2>On this page</h2>
-      <ul>
-<li><a href="#system-menu">System Menu</a></li>
-<li><a href="#power">Power</a></li>
-<li><a href="#output">Output</a></li>
-<li><a href="#timer">Timer</a></li>
-<li><a href="#network">Network</a></li>
-<li><a href="#service">Service</a></li>
-      </ul>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Echo 2 manual</summary>
+        <nav aria-label="Echo 2 chapters">
+          <ul>
+            <li><a href="../../echo/index.html">Overview</a></li>
+            <li><a href="../../echo/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../echo/signal-setup/index.html">Signal Setup</a></li>
+            <li><a href="../../echo/system-menu/index.html" aria-current="page">System Menu</a></li>
+            <li><a href="../../echo/network/index.html">Network &amp; Remote Control</a></li>
+            <li><a href="../../echo/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../../echo/troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../../echo/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
     </aside>
 
-    <main class="content">
+    <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs">
-        <a href="../../index.html">Documentation</a> &rsaquo; System Menu
+        <a href="../../echo/index.html">Echo 2</a> <span aria-hidden="true">/</span> <span aria-current="page">System Menu</span>
       </nav>
 <h1 id="system-menu">System Menu</h1>
-<p>Press <strong>M</strong> from the Home screen to open the system menu.</p>
-<p>Main menu sections:</p>
-<ul>
-<li>Power</li>
-<li>Output</li>
-<li>Timer</li>
-<li>Network</li>
-<li>Service</li>
-<li>Exit</li>
-</ul>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+              <li><a href="#navigation">Navigation</a></li>
+              <li><a href="#entering-time">Entering a time</a></li>
+              <li><a href="#entering-text">Entering text</a></li>
+              <li><a href="#power">Power</a></li>
+              <li><a href="#output">Output</a></li>
+              <li><a href="#timer">Timer</a></li>
+              <li><a href="#network">Network</a></li>
+              <li><a href="#service">Service</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="navigation">Navigation</h2>
+<p>Press <strong>M</strong> on the Home screen to open the system menu. Use the <strong>L</strong> and <strong>R</strong> buttons, indicated by the arrows on the display, to move through the options. Press <strong>M</strong> to select an item.</p>
+<p>In a submenu, select <strong>Back</strong> to return to the main menu. Select <strong>Exit</strong> to return to the Home screen, or press and hold <strong>M</strong> from anywhere in the menu.</p>
+<h2 id="entering-time">Entering a time</h2>
+<p>Time is entered as hours, minutes and seconds (<strong>hh:mm:ss</strong>). Use the down and up arrows to change the highlighted digit, then press <strong>M</strong> to accept it and move to the next digit. When you accept the final digit, the time is stored and Echo returns to the menu.</p>
+<p><img src="../../assets/echo/time-entry.svg" alt="Time entry screen showing 01:00:00 with the final digit highlighted and down and up arrows below."></p>
+<h2 id="entering-text">Entering text</h2>
+<p>When entering a device or network password, use the arrow buttons to select a character and press <strong>M</strong> to accept it. When the text is complete, select the checkmark and press <strong>M</strong> to store it and return to the menu or connect to the network. To abort text entry, press and hold <strong>M</strong>.</p>
+<p><img src="../../assets/echo/password-entry.svg" alt="Password entry screen with the checkmark selected to accept the entered text."></p>
+<p>The main menu contains Power, Output, Timer, Network, Service and Exit.</p>
 <hr>
 <h2 id="power">Power</h2>
 <div class="table-wrap">
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Description</th>
+<th scope="col">Item</th>
+<th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -118,8 +113,8 @@
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Description</th>
+<th scope="col">Item</th>
+<th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -144,8 +139,8 @@
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Description</th>
+<th scope="col">Item</th>
+<th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -174,8 +169,8 @@
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Description</th>
+<th scope="col">Item</th>
+<th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -192,12 +187,8 @@
 <td>Remove stored access point</td>
 </tr>
 <tr>
-<td>Hotspot pwd</td>
-<td>Configure hotspot password</td>
-</tr>
-<tr>
-<td>Remote pwd</td>
-<td>Configure REST API password</td>
+<td>Device pwd</td>
+<td>Configure the device password</td>
 </tr>
 <tr>
 <td>Info</td>
@@ -220,8 +211,8 @@
 <table>
 <thead>
 <tr>
-<th>Item</th>
-<th>Description</th>
+<th scope="col">Item</th>
+<th scope="col">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -260,7 +251,7 @@
   </div>
 
   <footer class="page-footer">
-    Copyright &copy; 2026 Acoustics Engineering. Product documentation and support.
+    Copyright &copy; 2026 Acoustics Engineering.
   </footer>
 </body>
 </html>

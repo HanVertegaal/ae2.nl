@@ -1,0 +1,15 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Echo 2 Signal Length menu",
+  "description": "Signal Length menu with 5.5 sec selected, 2.7 sec above and 11 sec below, and navigation arrows.",
+  "elements": [
+    {
+      "type": "menu",
+      "title": "Signal Length",
+      "previous": "2.7 sec",
+      "selected": "5.5 sec",
+      "next": "11 sec"
+    }
+  ]
+}

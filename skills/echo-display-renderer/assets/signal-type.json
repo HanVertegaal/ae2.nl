@@ -1,0 +1,9 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Echo 2 signal type menu",
+  "description": "Signal Type heading, Pink MLS above selected ESweep, STIPA below, and navigation arrows.",
+  "elements": [
+    {"type": "menu", "title": "Signal Type", "previous": "Pink MLS", "selected": "ESweep", "next": "STIPA"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Echo 2 Signal Mode menu",
+  "description": "Signal Mode menu with Continuous selected and Intermittent below it; a down arrow appears at the bottom right.",
+  "elements": [
+    {
+      "type": "menu",
+      "title": "Signal Mode",
+      "selected": "Continuous",
+      "next": "Intermittent"
+    }
+  ]
+}

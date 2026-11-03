@@ -1,0 +1,4 @@
+interface:
+  display_name: "Echo Display Renderer"
+  short_description: "Recreate OLED photos with exact firmware pixels"
+  default_prompt: "Use $echo-display-renderer to recreate this device display photograph in the manual illustration style."

@@ -1,0 +1,228 @@
+/* Homepage styles are scoped to keep the product manuals independent. */
+.home .header-inner,
+.home .page-footer,
+.home-main
+{
+  max-width: 1040px;
+}
+
+.home .header-inner
+{
+  min-height: 88px;
+}
+
+.home-header-label
+{
+  color: #4f5d68;
+  font-size: 0.95rem;
+}
+
+.home-main
+{
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 2.5rem;
+}
+
+.home-intro
+{
+  margin-bottom: 2rem;
+}
+
+.home-intro h1
+{
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.home-intro p
+{
+  color: #4f5d68;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.home-intro .field-icon
+{
+  display: block;
+  flex: 0 0 clamp(3rem, 9vw, 4.5rem);
+  width: clamp(3rem, 9vw, 4.5rem);
+  height: auto;
+}
+
+.product-grid
+{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-grid li
+{
+  display: flex;
+  min-width: 0;
+}
+
+.product-card
+{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.6rem 1.75rem;
+  border: 1px solid var(--ae-line);
+  border-top: 3px solid var(--ae-blue);
+  border-radius: 0.5rem;
+  background: #fff;
+  color: var(--ae-ink);
+}
+
+.product-card:hover
+{
+  border-color: var(--ae-blue);
+  background: #f8fbff;
+  color: var(--ae-ink);
+  text-decoration: none;
+}
+
+.product-type
+{
+  color: #4f5d68;
+  font-size: 0.85rem;
+}
+
+.product-card h2
+{
+  margin: 0.4rem 0 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.65rem;
+}
+
+.product-card p
+{
+  color: #4f5d68;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.product-link
+{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  color: var(--ae-blue);
+  font-weight: 700;
+}
+
+.product-card:hover .product-link
+{
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.future-guide
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ae-line);
+}
+
+.future-guide h2
+{
+  font-size: 1.15rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.future-guide p
+{
+  color: #4f5d68;
+  margin: 0.4rem 0 0;
+}
+
+.coming-later
+{
+  flex-shrink: 0;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #cad6e5;
+  border-radius: 1rem;
+  color: #40516b;
+  font-size: 0.85rem;
+}
+
+.home a:focus-visible
+{
+  outline: 3px solid var(--ae-blue);
+  outline-offset: 4px;
+}
+
+.skip-link
+{
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  z-index: 1;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus
+{
+  transform: translateY(0);
+}
+
+@media (max-width: 600px)
+{
+  .home .header-inner
+  {
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .home-main
+  {
+    padding-top: 2rem;
+  }
+
+  .product-grid
+  {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .product-card
+  {
+    padding: 1.25rem;
+  }
+
+  .future-guide
+  {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media print
+{
+  .home-main
+  {
+    max-width: none;
+    padding: 0;
+  }
+
+  .product-card
+  {
+    break-inside: avoid;
+  }
+}

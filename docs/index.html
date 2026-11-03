@@ -3,89 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Acoustics Engineering Help - AE Help</title>
-  <meta name="description" content="Documentation and support for Acoustics Engineering products.">
+  <title>AE Field product documentation - Acoustics Engineering</title>
+  <meta name="description" content="User guides for the AE Field product collection: Aether, Atlas, Echo 2 and Dirac Mobile.">
   <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/home.css?v=20261031-2">
 </head>
-<body>
+<body class="home">
+  <a class="skip-link" href="#main">Skip to documentation</a>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
         <img class="brand-logo" src="./assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
-      </a>      
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="./index.html" aria-current="page">Home</a>
-        <a href="./echo/index.html">Echo</a>
-        <a href="./aether/index.html">Aether</a>
-        <a href="./diracmobile/index.html">Dirac Mobile</a>
-      </nav>
+      </a>
+      <span class="home-header-label">Help &amp; documentation</span>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="kicker">User manual</div>
-      <h1>Acoustics Engineering Help</h1>
-      <p>Documentation and support for Acoustics Engineering products.</p>
+  <main id="main" class="home-main" tabindex="-1">
+    <div class="home-intro">
+      <h1><img class="field-icon" src="./assets/common/ae-field-icon.svg" alt=""> <span>AE Field product documentation</span></h1>
+      <p>Choose your product to get started.</p>
     </div>
-  </section>
 
-  <div class="page">
-    <aside class="sidebar" aria-label="Section navigation">
-      <h2>Documentation</h2>
-      <ul>
-<li><a href="index.html" aria-current="page">Home</a></li>
-<li><a href="aether/index.html">Aether</a></li>
-<li><a href="atlas/index.html">Atlas</a></li>
-<li><a href="dirac/index.html">Dirac</a></li>
-<li><a href="diracmobile/index.html">Dirac Mobile</a></li>
-<li><a href="echo/index.html">Echo</a></li>
+    <nav aria-label="Product documentation">
+      <ul class="product-grid">
+        <li>
+          <a class="product-card" href="./aether/index.html" aria-labelledby="aether aether-guide">
+            <span class="product-type">Measurement platform</span>
+            <h2 id="aether">Aether</h2>
+            <p>Portable acoustic measurement and analysis for field and lab use.</p>
+            <span class="product-link" id="aether-guide">Read documentation <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="product-card" href="./atlas/index.html" aria-labelledby="atlas atlas-guide">
+            <span class="product-type">Omnidirectional source</span>
+            <h2 id="atlas">Atlas</h2>
+            <p>Portable sound source for room and building acoustics.</p>
+            <span class="product-link" id="atlas-guide">Read documentation <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="product-card" href="./echo/index.html" aria-labelledby="echo-2 echo-guide">
+            <span class="product-type">Speech source</span>
+            <h2 id="echo-2">Echo 2</h2>
+            <p>Acoustic signals for speech intelligibility measurements.</p>
+            <span class="product-link" id="echo-guide">Read documentation <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="product-card" href="./diracmobile/index.html" aria-labelledby="dirac-mobile diracmobile-guide">
+            <span class="product-type">Mobile software</span>
+            <h2 id="dirac-mobile">Dirac Mobile</h2>
+            <p>Device control, acoustic measurements and analysis</p>
+            <span class="product-link" id="diracmobile-guide">Read documentation <span aria-hidden="true">&rarr;</span></span>
+          </a>
+        </li>
       </ul>
-      <h2>On this page</h2>
-      <ul>
-<li><a href="#acoustics-engineering-help">Acoustics Engineering Help</a></li>
-<li><a href="#products">Products</a></li>
-      </ul>
+    </nav>
+
+    <aside class="future-guide" aria-labelledby="dirac">
+      <div>
+        <h2 id="dirac">Dirac</h2>
+        <p>Documentation for the desktop software will be added here.</p>
+      </div>
+      <span class="coming-later">Coming later</span>
     </aside>
-
-    <main class="content">
-      <nav class="breadcrumbs" aria-label="Breadcrumbs">
-        Documentation
-      </nav>
-<h1 id="acoustics-engineering-help">Acoustics Engineering Help</h1>
-<p>Documentation and support for Acoustics Engineering products.</p>
-<h2 id="products">Products</h2>
-<h3 id="aether">Aether</h3>
-<p>Portable acoustic measurement and analysis platform for field and lab use.</p>
-<p><a href="aether/index.html">Open Aether documentation</a></p>
-<hr>
-<h3 id="atlas">Atlas</h3>
-<p>Portable omni-directional source for room and building acoustics.</p>
-<p><a href="atlas/index.html">Open Atlas documentation</a></p>
-<hr>
-<h3 id="dirac">Dirac</h3>
-<p>Software documentation and support.</p>
-<p><a href="dirac/index.html">Open Dirac documentation</a></p>
-<hr>
-<h3 id="dirac-mobile">Dirac Mobile</h3>
-<p>Measurement software for mobile acoustic analysis and reporting.</p>
-<p><a href="diracmobile/index.html">Open Dirac Mobile documentation</a></p>
-<hr>
-<h3 id="echo-2">Echo 2</h3>
-<p>Portable acoustic signal source for speech intelligibility measurements.</p>
-<ul>
-<li>Signal playback</li>
-<li>MLS and sweep generation</li>
-<li>STIPA support</li>
-<li>Wi‑Fi networking</li>
-<li>Remote control</li>
-</ul>
-<p><a href="echo/index.html">Open Echo 2 documentation</a></p>
-    </main>
-  </div>
+  </main>
 
   <footer class="page-footer">
-    Copyright &copy; 2026 Acoustics Engineering. Product documentation and support.
+    Copyright &copy; 2026 Acoustics Engineering.
   </footer>
 </body>
 </html>

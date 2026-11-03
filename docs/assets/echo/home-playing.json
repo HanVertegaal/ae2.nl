@@ -1,0 +1,50 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Echo 2 home screen during playback",
+  "description": "ESweep playing continuously at 70 dB with a 5.5 second signal length. The right button shows a speaker with a cross for stopping playback.",
+  "elements": [
+    {
+      "type": "icon",
+      "name": "bat50_16x9",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "type": "icon",
+      "name": "wifi_12x9",
+      "x": 116,
+      "y": 0
+    },
+    {
+      "type": "text",
+      "text": "ESweep",
+      "font": 16,
+      "y": 12
+    },
+    {
+      "type": "text",
+      "text": "C 5.5s 70dB",
+      "font": 8,
+      "y": 35
+    },
+    {
+      "type": "icon",
+      "name": "signal_11x10",
+      "x": 0,
+      "y": 54
+    },
+    {
+      "type": "icon",
+      "name": "menu_10x10",
+      "x": 59,
+      "y": 54
+    },
+    {
+      "type": "icon",
+      "name": "off_spk_12x10",
+      "x": 116,
+      "y": 54
+    }
+  ]
+}
