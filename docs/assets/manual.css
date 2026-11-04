@@ -1,4 +1,4 @@
-/* Echo 2 manuals share the homepage's restrained colours and card treatment. */
+/* Echo manuals share the homepage's restrained colours and card treatment. */
 .manual .header-inner,
 .manual .page-footer,
 .manual-layout
@@ -208,8 +208,8 @@
   background: #eef3f9;
 }
 
-/* Keep signal and mode names intact while descriptions wrap to the available width. */
-.manual :is(.signal-sources, .playback-modes, .signal-levels) :is(th, td):first-child
+/* Keep signal, mode and button names intact while descriptions wrap to the available width. */
+.manual :is(.signal-sources, .playback-modes, .signal-levels, .button-functions) :is(th, td):first-child
 {
   white-space: nowrap;
   overflow-wrap: normal;

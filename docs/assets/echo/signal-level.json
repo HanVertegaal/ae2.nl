@@ -1,7 +1,7 @@
 {
   "width": 128,
   "height": 64,
-  "title": "Echo 2 Signal Level menu",
+  "title": "Echo Signal Level menu",
   "description": "Signal Level menu with 70 dB selected, 60 dB above and User below, and navigation arrows.",
   "elements": [
     {

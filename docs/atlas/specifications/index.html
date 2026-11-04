@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Specifications - Atlas manual</title>
+  <meta name="description" content="Product documentation and support for Acoustics Engineering devices and software">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Atlas manual</summary>
+        <nav aria-label="Atlas chapters">
+          <ul>
+            <li><a href="../../atlas/index.html">Overview</a></li>
+            <li><a href="../../atlas/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../atlas/signal-setup/index.html">Signal Setup</a></li>
+            <li><a href="../../atlas/system-menu/index.html">System Menu</a></li>
+            <li><a href="../../atlas/network/index.html">Network &amp; Remote Control</a></li>
+            <li><a href="../../atlas/specifications/index.html" aria-current="page">Technical Specifications</a></li>
+            <li><a href="../../atlas/troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../../atlas/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <p class="notice"><strong>Draft:</strong> This Atlas guide is adapted from the Echo manual. Descriptions, specifications and illustrations still need to be checked for Atlas.</p>
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../../atlas/index.html">Atlas</a> <span aria-hidden="true">/</span> <span aria-current="page">Technical Specifications</span>
+      </nav>
+<h1 id="technical-specifications">Technical Specifications</h1>
+<details class="page-outline">
+  <summary>On this page</summary>
+  <nav aria-label="On this page"><ul>
+    <li><a href="#stimuli">Stimuli</a></li>
+    <li><a href="#stimulus-level">Stimulus level</a></li>
+    <li><a href="#input-output">Input and output</a></li>
+    <li><a href="#power">Power</a></li>
+    <li><a href="#physical">Physical specifications</a></li>
+    <li><a href="#interface">Interface and control</a></li>
+  </ul></nav>
+</details>
+<h2 id="stimuli">Stimuli</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead>
+<tbody>
+<tr><td>Signal types</td><td>MLS-BA, MLS-RA, PMLS-BA, PMLS-RA, ESWP-BA, ESWP-RA, LSWP-BA, EqMLS-BA, User and BNC input</td></tr>
+<tr><td>Frequency range</td><td>125 Hz to 8 kHz octave bands.</td></tr>
+<tr><td>Maximum acoustic third-octave spectral error</td><td>±1 dB, 100 Hz to 10 kHz bands.</td></tr>
+<tr><td>Playback modes and sequence periods</td><td>Depend on signal type; see <a href="../signal-setup/index.html#sequence-duration">Signal Setup</a>.</td></tr>
+</tbody></table></div>
+<h2 id="stimulus-level">Stimulus level</h2>
+<p>Atlas uses gain settings from −60 to 0 dB for its built-in signals, User and BNC input. See <a href="../signal-setup/index.html#signal-level">Signal Setup</a>.</p>
+<h2 id="input-output">Input and output</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead>
+<tbody>
+<tr><td>Connectors</td><td>BNC line input and output; USB-C power input.</td></tr>
+<tr><td>Output modes</td><td>Speaker, BNC or Speaker+BNC.</td></tr>
+<tr><td>Input voltage</td><td>15 mV RMS nominal, pink noise at 60 dBA.</td></tr>
+<tr><td>Input impedance at 1 kHz</td><td>10 kΩ.</td></tr>
+<tr><td>Output voltage</td><td>120 mV RMS nominal noise signal; 1.5 V peak.</td></tr>
+<tr><td>Output impedance at 1 kHz</td><td>200 Ω.</td></tr>
+</tbody></table></div>
+<h2 id="power">Power</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead>
+<tbody>
+<tr><td>Power source</td><td>Battery or USB-C power.</td></tr>
+<tr><td>Battery type and capacity</td><td>Internal (18650) Li-ion battery, 4000 mAh.</td></tr>
+<tr><td>Battery operating time</td><td>24 h at reference level or 8 h at raised level, continuous playback.</td></tr>
+<tr><td>Power functions</td><td>Auto-off timer and standby.</td></tr>
+</tbody></table></div>
+<h2 id="physical">Physical specifications</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead>
+<tbody>
+<tr><td>Weight</td><td>1.0 kg.</td></tr>
+<tr><td>Dimensions (W × H × D)</td><td>100 × 105 × 170 mm.</td></tr>
+</tbody></table></div>
+<h2 id="interface">Interface and control</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead>
+<tbody>
+<tr><td>Display and controls</td><td>128 × 64 pixel OLED display; three buttons.</td></tr>
+<tr><td>Networking</td><td>Wi-Fi: Station and Hotspot modes.</td></tr>
+<tr><td>Remote control</td><td>DiracMobile for Android and iOS; see <a href="../network/index.html#remote-control">Network &amp; Remote Control</a>.</td></tr>
+</tbody></table></div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Acoustics Engineering.
+  </footer>
+</body>
+</html>

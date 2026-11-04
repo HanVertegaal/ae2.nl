@@ -3,59 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Atlas - AE Help</title>
-  <meta name="description" content="Portable omni-directional source for room and building acoustics.">
+  <title>Atlas - Acoustics Engineering</title>
+  <meta name="description" content="Atlas user manual: operation, signal setup, networking and technical specifications.">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/manual.css">
+  <script src="../assets/manual.js" defer></script>
 </head>
-<body>
+<body class="manual">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../index.html" aria-label="Acoustics Engineering help home">
-        <span class="brand-mark">AE</span>
-        <span>Echo2Atlas</span>
-        <span class="brand-subtitle">Documentation</span>
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
       </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../echo/index.html">Echo</a>
-        <a href="https://www.acoustics-engineering.com/">Acoustics Engineering</a>
-      </nav>
+      <a class="all-products" href="../index.html"><span aria-hidden="true">&larr;</span> All products</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="kicker">User manual</div>
-      <h1>Atlas</h1>
-      <p>Portable omni-directional source for room and building acoustics.</p>
-    </div>
-  </section>
-
-  <div class="page">
-    <aside class="sidebar" aria-label="Section navigation">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../echo/index.html">Echo</a></li>
-        <li><a href="../atlas/index.html" aria-current="page">Atlas</a></li>
-        <li><a href="../dirac/index.html">Dirac</a></li>
-      </ul>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Atlas manual</summary>
+        <nav aria-label="Atlas chapters">
+          <ul>
+            <li><a href="../atlas/index.html" aria-current="page">Overview</a></li>
+            <li><a href="../atlas/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../atlas/signal-setup/index.html">Signal Setup</a></li>
+            <li><a href="../atlas/system-menu/index.html">System Menu</a></li>
+            <li><a href="../atlas/network/index.html">Network &amp; Remote Control</a></li>
+            <li><a href="../atlas/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../atlas/troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../atlas/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
     </aside>
 
-    <main class="content">
+    <main id="main" class="content" tabindex="-1">
+      <p class="notice"><strong>Draft:</strong> This Atlas guide is adapted from the Echo manual. Descriptions, specifications and illustrations still need to be checked for Atlas.</p>
       <nav class="breadcrumbs" aria-label="Breadcrumbs">
-        <a href="../index.html">Documentation</a> &rsaquo; Atlas
+        <span aria-current="page">Atlas</span>
       </nav>
-      <h1 id="atlas">Atlas</h1>
-      <p class="lead">Portable omni-directional source for room and building acoustics.</p>
-      <div class="notice">
-        <strong>Note:</strong> Markdown source for this section is not present in this repository yet.
+<h1 id="atlas">Atlas</h1>
+      <p>Atlas is a portable omnidirectional source for room and building acoustics.</p>
+      <p>The Atlas is designed to be used with the DiracMobile or Dirac acoustics measurement software.</p>
+
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+
+              <li><a href="#main-functions">Main functions</a></li>
+              <li><a href="#control-panel">Control panel</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="main-functions">Main functions</h2>
+      <ul>
+        <li>Built-in signals for room and building acoustics</li>
+        <li>User signal playback</li>
+        <li>BNC line input and output support</li>
+        <li>Wi‑Fi based remote control using DiracMobile</li>
+      </ul>
+      <h2 id="control-panel">Control panel</h2>
+      <p><img src="../assets/echo/front_annotated.svg" alt="Annotated front view"></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th scope="col">Number</th><th scope="col">Function</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>OLED Display</td></tr>
+            <tr><td>2</td><td><strong>L</strong>eft button - Signal setup on the home page; decrease gain during playback</td></tr>
+            <tr><td>3</td><td><strong>M</strong>iddle button - Menu on the home page; stop playback and return home during playback</td></tr>
+            <tr><td>4</td><td><strong>R</strong>ight button - Start playback on the home page; increase gain during playback</td></tr>
+            <tr><td>5</td><td>BNC line level input</td></tr>
+            <tr><td>6</td><td>BNC line level output</td></tr>
+            <tr><td>7</td><td>USB-C power input</td></tr>
+          </tbody>
+        </table>
       </div>
+      <h3 id="display">Display</h3>
+      <p><img src="../assets/atlas/home.svg" alt="Atlas home screen showing PMLS-RA, C 5.5s -30dB, battery, charging, plus and Wi-Fi indicators, and three button icons"></p>
+      <p>The home page shows the battery state (upper left), Wifi state (upper right), selected signal (center), and icons for the three buttons.<br/>
+         In this example, the battery is partially charged with a charger attached. The + sign indicates the charger can deliver at least 45 Watts of power.<br/>
+         Also in this example, the selected signal is a continuous (C) PMLS-RA signal with a length of 5.5 seconds at a gain of -30 dB. </p>
     </main>
   </div>
 
   <footer class="page-footer">
-    Copyright &copy; 2026 Acoustics Engineering. Product documentation and support.
+    Copyright &copy; 2026 Acoustics Engineering.
   </footer>
 </body>
 </html>

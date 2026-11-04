@@ -1,0 +1,30 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Atlas PMLS-RA gain adjustment",
+  "description": "PMLS-RA gain adjustment showing -30 dB, with a down arrow at the bottom left and an up arrow at the bottom right.",
+  "elements": [
+    {
+      "type": "title",
+      "text": "PMLS-RA gain"
+    },
+    {
+      "type": "text",
+      "text": "-30 dB",
+      "font": 16,
+      "y": 32
+    },
+    {
+      "type": "icon",
+      "name": "down_7x7",
+      "x": 0,
+      "y": 57
+    },
+    {
+      "type": "icon",
+      "name": "up_7x7",
+      "x": 121,
+      "y": 57
+    }
+  ]
+}

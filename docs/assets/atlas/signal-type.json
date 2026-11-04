@@ -1,0 +1,15 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Atlas Signal Type menu",
+  "description": "Signal Type menu with PMLS-RA selected, PMLS-BA above it and ESWP-BA below it. Up and down arrows appear at the bottom corners.",
+  "elements": [
+    {
+      "type": "menu",
+      "title": "Signal Type",
+      "previous": "PMLS-BA",
+      "selected": "PMLS-RA",
+      "next": "ESWP-BA"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Atlas home screen",
+  "description": "PMLS-RA selected, continuous 5.5 second signal at -30 dB gain, three battery bars, charging, high-power plus and Wi-Fi indicators, and signal, menu and speaker controls.",
+  "elements": [
+    {
+      "type": "icon",
+      "name": "bat75_16x9",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "type": "icon",
+      "name": "plug_12x9",
+      "x": 16,
+      "y": 0
+    },
+    {
+      "type": "icon",
+      "name": "plus_9x9",
+      "x": 30,
+      "y": 0
+    },
+    {
+      "type": "icon",
+      "name": "wifi_12x9",
+      "x": 116,
+      "y": 0
+    },
+    {
+      "type": "text",
+      "text": "PMLS-RA",
+      "font": 16,
+      "y": 12
+    },
+    {
+      "type": "text",
+      "text": "C 5.5s -30dB",
+      "font": 8,
+      "y": 35
+    },
+    {
+      "type": "icon",
+      "name": "signal_11x10",
+      "x": 0,
+      "y": 54
+    },
+    {
+      "type": "icon",
+      "name": "menu_10x10",
+      "x": 59,
+      "y": 54
+    },
+    {
+      "type": "icon",
+      "name": "on_spk_12x10",
+      "x": 116,
+      "y": 54
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Atlas Signal Length menu",
+  "description": "Signal Length menu with 5.5 sec selected and 11 sec below it. A down arrow appears at the bottom right.",
+  "elements": [
+    {
+      "type": "menu",
+      "title": "Signal Length",
+      "selected": "5.5 sec",
+      "next": "11 sec"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1216" height="704" viewBox="0 0 152 88" role="img" aria-labelledby="title desc">
-<title id="title">Echo 2 home screen during playback</title>
+<title id="title">Echo home screen during playback</title>
 <desc id="desc">ESweep playing continuously at 70 dB with a 5.5 second signal length. The right button shows a speaker with a cross for stopping playback.</desc>
 <rect width="152" height="88" fill="white"/>
 <rect x="6" y="6" width="140" height="76" rx="8" fill="#03060b"/>

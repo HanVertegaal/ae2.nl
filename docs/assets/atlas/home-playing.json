@@ -1,0 +1,50 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Atlas home screen during playback",
+  "description": "PMLS-RA playing continuously with a 5.5 second signal length at -29 dB gain, full battery and Wi-Fi indicators, gain adjustment arrows at the bottom corners, and a crossed speaker above the middle button to stop playback and return home.",
+  "elements": [
+    {
+      "type": "icon",
+      "name": "bat100_16x9",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "type": "icon",
+      "name": "wifi_12x9",
+      "x": 116,
+      "y": 0
+    },
+    {
+      "type": "text",
+      "text": "PMLS-RA",
+      "font": 16,
+      "y": 12
+    },
+    {
+      "type": "text",
+      "text": "C 5.5s -29dB",
+      "font": 8,
+      "y": 35
+    },
+    {
+      "type": "icon",
+      "name": "down_7x7",
+      "x": 0,
+      "y": 57
+    },
+    {
+      "type": "icon",
+      "name": "off_12x10",
+      "x": 58,
+      "y": 54
+    },
+    {
+      "type": "icon",
+      "name": "up_7x7",
+      "x": 121,
+      "y": 57
+    }
+  ]
+}

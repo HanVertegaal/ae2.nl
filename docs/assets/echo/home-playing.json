@@ -1,7 +1,7 @@
 {
   "width": 128,
   "height": 64,
-  "title": "Echo 2 home screen during playback",
+  "title": "Echo home screen during playback",
   "description": "ESweep playing continuously at 70 dB with a 5.5 second signal length. The right button shows a speaker with a cross for stopping playback.",
   "elements": [
     {
