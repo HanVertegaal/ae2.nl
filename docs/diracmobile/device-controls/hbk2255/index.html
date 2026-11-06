@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using HBK 2255 - DIRAC Field manual</title>
+  <meta name="description" content="Record and retrieve HBK 2255 data in DIRAC Field and understand source-measurement eligibility.">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../../index.html">Overview</a></li>
+            <li><a href="../../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2255/index.html" aria-current="page">HBK 2255</a></li>
+            <li><a href="../../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../../index.html">DIRAC Field</a><span aria-hidden="true">/</span><a href="../../device-controls/index.html">Device Controls</a><span aria-hidden="true">/</span><span aria-current="page">Using HBK 2255</span></nav>
+      <h1 id="hbk2255">Using HBK 2255</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#page">Read the control page</a></li>
+            <li><a href="#recording">Make a recording</a></li>
+            <li><a href="#prerequisites">Source-triggered measurements and BZ-7351</a></li>
+            <li><a href="#source-runs">Use HBK 2255 with a source</a></li>
+            <li><a href="#settings">HBK 2255 settings</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>DIRAC Field uses HBK 2255 as a recording receiver. The control page shows input-level information and recording controls. It does not provide Aether's selectable SLM workflow; the HBK's functions operated locally are outside this app guide.</p>
+<h2 id="page">Read the control page</h2>
+<!-- Illustration DF-26 -->
+<p>Check the selected device name, connection and battery state. The main area contains an input-level readout, the <strong>Save to</strong> destination, <strong>Measurement duration</strong> and the recording action. Use the level indication to check signal presence before acquisition.</p>
+<p>Use the HBK equipment's own microphone setup and calibration procedures. DIRAC Field's <strong>Calibrate Aether</strong> dialog is not an HBK 2255 calibration control.</p>
+<h2 id="recording">Make a recording</h2>
+<ol><li>Open the HBK 2255 card on Devices, complete authentication if required, and wait for the recording control page to be ready.</li><li>Check microphone preparation and the input-level indication.</li><li>Check <strong>Save to</strong>, choose <strong>Measurement duration</strong>, and tap Record.</li><li>Wait for preparation, capture and retrieval. If you interrupt the run, check its final status and the retrieved duration.</li><li>Open the destination group and inspect the saved receiver data.</li></ol>
+<p>The duration labels are rounded for display. Use the saved data to check the exact duration when timing matters. A recording-only run can acquire from other available recorders too; inspect the receiver identity associated with each result.</p>
+<p>Retrieval is part of completing the app measurement. A recording that exists on the HBK but was not successfully retrieved is not yet a usable local result in DIRAC Field. Keep the instrument and its original recording available while investigating a retrieval failure.</p>
+<h2 id="prerequisites">Source-triggered measurements and BZ-7351</h2>
+<!-- Illustration DF-27 -->
+<p>For a complete source-triggered measurement, DIRAC Field requires the HBK 2255's <strong>BZ-7351</strong> status to be verified as active. The Devices list can show <strong>BZ-7351 missing or inactive</strong> or <strong>BZ-7351 status not verified</strong>. An unverified state is not a confirmed active licence.</p>
+<p>This gate applies to participation in the source-triggered measurement workflow. It does not disable ordinary recording-only captures from the HBK 2255 control page. Resolve the licence/status issue if the instrument is to participate in a run started from Echo, Atlas or HBK 2755.</p>
+<h2 id="source-runs">Use HBK 2255 with a source</h2>
+<p>Connect and authenticate the receiver, verify its eligibility, then open the desired source's control page. Configure the source, check the destination and use its measurement action. For a multi-receiver run, check that each expected receiver supplied usable data.</p>
+<p>Using a source does not make every capture an impulse response. The selected stimulus and the processing supported for it determine the result. See <a href="../../measurement-workflow/index.html#signals">Match signal and analysis</a>.</p>
+<h2 id="settings">HBK 2255 settings</h2>
+<p>From its control page, open <strong>menu → Settings</strong> to inspect identity, network address and reported power information. In <strong>Measurement</strong>, set and Save the default source–receiver distance in metres for new captures. Correct individual existing measurements through their metadata editor.</p>
+<p>Power actions are offered where supported. The app's AE Network configuration editor, unified device password, Aether LEDs and Aether recovery/reset workflow are not HBK 2255 settings. Use the HBK's own controls and documentation for configuration that DIRAC Field does not expose.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remote Control - Aether manual</title>
+  <meta name="description" content="Aether Wi-Fi connection modes, passwords, saved networks and recovery networking.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261105-aether">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual aether-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Aether manual</summary>
+        <nav aria-label="Aether chapters">
+          <ul>
+            <li><a href="../../aether/index.html">Overview</a></li>
+            <li><a href="../../aether/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../aether/microphone-calibration/index.html">Microphone and Calibration</a></li>
+            <li><a href="../../aether/power-status/index.html">Power and Status Indicators</a></li>
+            <li><a href="../../aether/network/index.html" aria-current="page">Remote Control</a></li>
+            <li><a href="../../aether/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../../aether/troubleshooting/index.html">Troubleshooting and Recovery</a></li>
+            <li><a href="../../aether/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../index.html">Aether</a> <span aria-hidden="true">/</span> <span aria-current="page">Remote Control</span>
+      </nav>
+      <h1 id="network">Remote Control</h1>
+      <p class="notice"><strong>Draft for review:</strong> This Aether guide is being prepared. Product details and procedures are subject to review.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#network-modes">Network modes</a></li>
+            <li><a href="#hotspot">Direct hotspot connection</a></li>
+            <li><a href="#saved-networks">Existing Wi-Fi networks</a></li>
+            <li><a href="#passwords">Device password</a></li>
+            <li><a href="#connection-checks">Connection checks</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>Aether is normally used wirelessly with DIRAC Field. Connect it to the same local network as the device running DIRAC Field, or connect that device directly to Aether's hotspot. The same Wi-Fi connection options apply when using Aether for recording with DIRAC on a desktop computer; the desktop application does not support Aether's SLM function.</p>
+<h2 id="network-modes">Network modes</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Mode</th><th scope="col">Use</th></tr></thead><tbody>
+<tr><td>Station</td><td>Aether joins an existing Wi-Fi network. The controlling device must be able to reach it on that network.</td></tr>
+<tr><td>Hotspot</td><td>Aether creates a protected Wi-Fi network for direct local control.</td></tr>
+</tbody></table></div>
+<h2 id="hotspot">Direct hotspot connection</h2>
+<p>When Aether is in Hotspot mode, join its Wi-Fi network using the device password, then select Aether in DIRAC Field. A direct device hotspot does not itself provide internet access. Your phone, tablet or computer may report that the network has no internet connection.</p>
+<p>The normal hotspot uses the same device password as authenticated remote access. It is separate from the temporary recovery hotspot described under <a href="../troubleshooting/index.html#recovery-network">Troubleshooting and Recovery</a>.</p>
+<h2 id="saved-networks">Existing Wi-Fi networks</h2>
+<p>Use DIRAC Field to select an access point, enter its network password and choose whether Aether should connect automatically. The access-point password belongs to that network and can differ from the Aether device password.</p>
+<p>Saved networks can be retained even when out of range. Automatic connection applies to networks for which it is enabled. If a connection cannot be completed, Aether can try another saved automatic network and provide a fallback hotspot.</p>
+<p>Changing network mode or joining another network can interrupt the control connection. Reconnect the controlling device to the appropriate network and select Aether again. For application steps, see the <a href="../../diracmobile/index.html">DIRAC Field guide</a>.</p>
+<h2 id="passwords">Device password</h2>
+<p>The device password protects normal remote control and the normal Aether hotspot. Keep the factory password supplied with the device available for recovery. Changing the device password may require reconnecting both Wi-Fi and the app.</p>
+<p>If the current password is lost, the factory password can be restored without deleting measurements. See <a href="../troubleshooting/index.html#password-recovery">Password recovery</a>.</p>
+<h2 id="connection-checks">Connection checks</h2>
+<ul>
+  <li>Check that Aether is powered and that the controlling device is on the intended network.</li>
+  <li>Use a local network that permits communication between connected devices. Guest-network or client-isolation settings can prevent discovery and control.</li>
+  <li>Move closer to the access point or Aether when the signal is weak.</li>
+  <li>If Aether is visible but authentication fails, check the device password rather than changing the access-point password.</li>
+</ul>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Acoustics Engineering.
+  </footer>
+</body>
+</html>

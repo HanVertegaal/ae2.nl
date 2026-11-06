@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using HBK 2755 - DIRAC Field manual</title>
+  <meta name="description" content="DIRAC Field HBK 2755 signal buttons, gain, user-signal management and receiver capture.">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../../index.html">Overview</a></li>
+            <li><a href="../../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2755/index.html" aria-current="page">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../../index.html">DIRAC Field</a><span aria-hidden="true">/</span><a href="../../device-controls/index.html">Device Controls</a><span aria-hidden="true">/</span><span aria-current="page">Using HBK 2755</span></nav>
+      <h1 id="hbk2755">Using HBK 2755</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#signals">Select and play a signal</a></li>
+            <li><a href="#gain">Adjust gain</a></li>
+            <li><a href="#user-signals">Choose or upload User audio</a></li>
+            <li><a href="#measurement">Acquire with receivers</a></li>
+            <li><a href="#settings">Settings</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>HBK 2755 is a playback source in DIRAC Field. Its control page uses <strong>White</strong>, <strong>Pink</strong> and <strong>User</strong> buttons instead of the Echo/Atlas signal configuration form. It does not provide a microphone recording or SLM mode.</p>
+<h2 id="signals">Select and play a signal</h2>
+<!-- Illustration DF-24 -->
+<ol><li>Open the HBK 2755 card on Devices and wait until the source is connected and authenticated.</li><li>Tap <strong>White</strong>, <strong>Pink</strong> or <strong>User</strong> to play that signal. User uses the file currently assigned to the source's User selection.</li><li>Check the highlighted signal and output state. Tap the active signal button again to stop it; selecting another signal changes the requested playback selection.</li></ol>
+<p>The controls follow the device's returned state. If a command fails or the connection is lost, confirm the actual source state before assuming that sound has stopped.</p>
+<h2 id="gain">Adjust gain</h2>
+<p>The large gain readout and knob set output gain in dB. Drag the knob to the required setting and release it to finish the adjustment. The step size follows the source configuration. Allow the returned state to confirm the value.</p>
+<p>Gain is an output adjustment, not a calibrated sound level at a receiver. Check the sound level and operating limits for the actual source and measurement arrangement. Leave gain fixed while a measurement is being acquired; the control is unavailable during an app-managed capture.</p>
+<h2 id="user-signals">Choose or upload User audio</h2>
+<!-- Illustration DF-25 -->
+<ol><li>Press and hold <strong>User</strong> to open <strong>User Signals</strong>. A short tap instead operates playback.</li><li>Select a stored file and tap <strong>Set as User</strong> to assign it to the User button.</li><li>To add audio, tap <strong>Upload</strong>, choose the supported source file and wait for transfer to complete. Then select and assign the intended uploaded file.</li><li>Return to the control page and use a short User tap to play the assigned signal.</li></ol>
+<p>Use <strong>Delete</strong> to remove a selected user file from the source after confirmation. Retain an original copy if it will be needed again. Source file selection and project measurement selection are separate operations.</p>
+<h2 id="measurement">Acquire with receivers</h2>
+<p>When suitable receivers are available, the control page provides the <strong>Save to</strong> field and measurement action. Check the project/group, choose the signal and gain, then use the measurement action to run source playback and receiver acquisition together.</p>
+<p>Allow signal buildup, capture and retrieval to finish. Check each receiver result in the destination group. Verify playback afterward and stop the source explicitly when finished. HBK 2755 noise or user playback must not be assumed to produce the processed impulse response offered for supported Echo/Atlas sequences.</p>
+<p>If no suitable receiver is available, ordinary source playback remains a different task from measurement capture. See <a href="../../measurement-workflow/index.html">Acoustic Measurement Workflow</a> and the <a href="../../device-controls/hbk2255/index.html#prerequisites">HBK 2255 prerequisite</a>.</p>
+<h2 id="settings">Settings</h2>
+<p><strong>menu → Settings</strong> opens the HBK 2755 device settings. Read its identity, reported software and battery information, and use the supported Network controls. Supported software-update actions are described in the common Device settings chapter. The unified AE device-password arrangement and Aether's LED and recovery procedures do not apply to HBK 2755.</p>
+<p>For physical connections, source power and the HBK's own operating controls, use the documentation supplied with the equipment.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

@@ -186,6 +186,98 @@
   margin: 0;
 }
 
+/* Keep the Field device guides visible within the shared chapter navigation. */
+.dirac-field-manual .chapter-child a
+{
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.dirac-field-manual :is(th, td):first-child
+{
+  width: 30%;
+  overflow-wrap: normal;
+}
+
+.dirac-field-manual .manual-chapter-index li
+{
+  margin-bottom: 0.75rem;
+}
+
+/* Give Aether reference labels room and wrap them at word boundaries. */
+.aether-manual :is(th, td):first-child
+{
+  width: 35%;
+  overflow-wrap: normal;
+}
+
+/* Identify the Aether's physical parts with editable callouts and a text key. */
+.aether-parts
+{
+  margin: 1.5rem 0;
+}
+
+.aether-parts-layout
+{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.aether-parts-diagram
+{
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.aether-parts-leaders
+{
+  stroke: var(--ae-blue);
+}
+
+.aether-parts-points,
+.aether-parts-markers
+{
+  fill: var(--ae-blue);
+}
+
+.aether-parts-key
+{
+  margin: 0;
+  padding-left: 1.5rem;
+  overflow-wrap: normal;
+}
+
+.aether-parts-key li::marker
+{
+  color: var(--ae-blue);
+  font-weight: 700;
+}
+
+.aether-parts-key p
+{
+  margin: 0 0 1rem;
+}
+
+.aether-parts figcaption
+{
+  margin-top: 1rem;
+  color: #4f5d68;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1000px)
+{
+  .aether-parts-layout
+  {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* Keep menu item columns aligned while the tables resize with the page. */
 .system-menu .content table
 {

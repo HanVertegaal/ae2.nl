@@ -3,70 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dirac Mobile - AE Help</title>
-  <meta name="description" content="Measurement software for mobile acoustic analysis and reporting.">
+  <title>DIRAC Field - Acoustics Engineering</title>
+  <meta name="description" content="DIRAC Field user manual: device control, acoustic measurement, projects, analysis and export.">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/manual.css?v=20261106-dirac-field">
+  <script src="../assets/manual.js" defer></script>
 </head>
-<body>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../index.html" aria-label="Acoustics Engineering help home">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
         <img class="brand-logo" src="../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
       </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../echo/index.html">Echo</a>
-        <a href="../aether/index.html">Aether</a>
-        <a href="../atlas/index.html">Atlas</a>
-        <a href="../dirac/index.html">Dirac</a>
-        <a href="../diracmobile/index.html" aria-current="page">Dirac Mobile</a>
-      </nav>
+      <a class="all-products" href="../index.html"><span aria-hidden="true">&larr;</span> All products</a>
     </div>
   </header>
-
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="kicker">User manual</div>
-      <h1>Dirac Mobile</h1>
-      <p>Measurement software for mobile acoustic analysis and reporting.</p>
-    </div>
-  </section>
-
-  <div class="page">
-    <aside class="sidebar" aria-label="Section navigation">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../echo/index.html">Echo</a></li>
-        <li><a href="../aether/index.html">Aether</a></li>
-        <li><a href="../atlas/index.html">Atlas</a></li>
-        <li><a href="../dirac/index.html">Dirac</a></li>
-        <li><a href="../diracmobile/index.html" aria-current="page">Dirac Mobile</a></li>
-      </ul>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="index.html" aria-current="page">Overview</a></li>
+            <li><a href="quick-start/index.html">Quick Start</a></li>
+            <li><a href="connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="application-settings/index.html">Application Settings</a></li>
+            <li><a href="troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
     </aside>
-
-    <main class="content">
-      <nav class="breadcrumbs" aria-label="Breadcrumbs">
-        <a href="../index.html">Documentation</a> &rsaquo; Dirac Mobile
-      </nav>
-      <h1 id="dirac-mobile">Dirac Mobile</h1>
-      <p class="lead">Measurement software for mobile acoustic analysis and reporting.</p>
-      <div class="notice">
-        <strong>Note:</strong> This section is intentionally scaffolded as a static HTML page and ready for product-specific content.
-      </div>
-      <h2>Overview</h2>
-      <p>Dirac Mobile brings acoustic measurement and analysis workflows to mobile devices, making it easier to capture and review data in the field.</p>
-      <ul>
-        <li>Portable measurement workflows</li>
-        <li>On-device analysis and summaries</li>
-        <li>Reporting and data review</li>
-        <li>Support for AE measurement hardware</li>
-      </ul>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><span aria-current="page">DIRAC Field</span></nav>
+      <h1 id="dirac-mobile">DIRAC Field</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#overview">What each device does</a></li>
+            <li><a href="#navigation">Finding your way around the app</a></li>
+            <li><a href="#chapters">Chapters</a></li>
+            <li><a href="#task-guide">Find a particular task</a></li>
+            <li><a href="#hardware-guides">App instructions and hardware instructions</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>DIRAC Field controls supported acoustic measurement equipment over a local network, organises recordings into projects and groups, and provides signal inspection, acoustic analysis and export to desktop DIRAC.</p>
+<h2 id="overview">What each device does</h2>
+<p>The table describes the functions available <em>through DIRAC Field</em>. A device's own local functions may differ.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Device and guide</th><th scope="col">Role in DIRAC Field</th></tr></thead><tbody>
+<tr><td><a href="device-controls/aether/index.html">Aether</a></td><td>Live sound level measurement (SLM), microphone calibration and recording.</td></tr>
+<tr><td><a href="device-controls/echo-atlas/index.html#echo">Echo</a></td><td>Signal playback; source control for measurements with receivers.</td></tr>
+<tr><td><a href="device-controls/echo-atlas/index.html#atlas">Atlas</a></td><td>Signal playback with adjustable gain; source control for measurements with receivers.</td></tr>
+<tr><td><a href="device-controls/hbk2755/index.html">HBK 2755</a></td><td>White noise, pink noise and user-signal playback; source control for measurements with receivers.</td></tr>
+<tr><td><a href="device-controls/hbk2255/index.html">HBK 2255</a></td><td>Recording and input-level indication. The app does not provide Aether's selectable SLM mode for this device.</td></tr>
+</tbody></table></div>
+<p>Aether is the only device with the SLM workflow described in this manual. An Echo, Atlas or HBK 2755 produces sound; an Aether or HBK 2255 captures it. Opening a source's control page does not turn that source into a recorder.</p>
+<h2 id="navigation">Finding your way around the app</h2>
+<!-- Illustration DF-01 -->
+<p>After startup, the <strong>Devices</strong> page lists discovered equipment. Tap a device card to open its control page. The menu in the top app bar provides <strong>Devices</strong>, <strong>Projects</strong>, <strong>Settings</strong>, <strong>Help</strong> and <strong>About</strong>.</p>
+<p><strong>Settings</strong> and <strong>Help</strong> follow the current context. On a device control page they refer to that device. From a general page, such as Devices, they open application settings and general help. Use the back arrow to return from a subordinate page.</p>
+<h2 id="chapters">Chapters</h2>
+<ol class="manual-chapter-index">
+<li id="quick-start"><a href="quick-start/index.html">Quick Start</a> — make a first recording and inspect it.</li>
+<li id="connecting-devices"><a href="connecting-devices/index.html">Connecting Devices</a> — networks, discovery, passwords and reconnection.</li>
+<li id="projects-and-groups"><a href="projects-and-groups/index.html">Projects and Measurement Groups</a> — destinations, metadata and organisation.</li>
+<li id="acoustic-measurement-workflow"><a href="measurement-workflow/index.html">Acoustic Measurement Workflow</a> — combine a source and receivers.</li>
+<li><a href="device-controls/index.html">Device Controls</a> — choose the guide for Aether, Echo/Atlas, HBK 2755 or HBK 2255.</li>
+<li id="results-and-analysis"><a href="results-and-analysis/index.html">Results and Analysis</a> — signals, graphs, acoustic parameters and display options.</li>
+<li id="export-and-desktop-dirac"><a href="export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a> — DIRAC packages, WAV, CSV and TXT.</li>
+<li id="device-settings-and-maintenance"><a href="device-settings/index.html">Device Settings and Maintenance</a> — common settings and device differences.</li>
+<li id="application-settings"><a href="application-settings/index.html">Application Settings</a> — naming, stored passwords and forgotten devices.</li>
+<li id="troubleshooting"><a href="troubleshooting/index.html">Troubleshooting</a> — connection, capture, analysis and export problems.</li>
+<li id="release-notes"><a href="release-notes/index.html">Version and Release Information</a> — identify the installed software and its compatibility.</li>
+</ol>
+<h2 id="task-guide">Find a particular task</h2>
+<ul>
+<li id="sound-level-measurements"><a href="device-controls/aether/index.html#slm">Measure a sound level with Aether.</a></li>
+<li id="microphone-calibration"><a href="device-controls/aether/index.html#calibration">Calibrate the Aether microphone from the app.</a></li>
+<li id="signal-playback"><a href="device-controls/echo-atlas/index.html#configure">Configure Echo or Atlas playback</a>, or <a href="device-controls/hbk2755/index.html#signals">use HBK 2755 signal controls</a>.</li>
+<li id="recording"><a href="device-controls/aether/index.html#recording">Record with Aether</a>, or <a href="device-controls/hbk2255/index.html#recording">record with HBK 2255</a>.</li>
+</ul>
+<h2 id="hardware-guides">App instructions and hardware instructions</h2>
+<p>This manual explains the pages and actions in DIRAC Field. Physical connections, local buttons, indicators, power limits and physical recovery sequences belong in the <a href="../aether/index.html">Aether</a>, <a href="../echo/index.html">Echo</a> and <a href="../atlas/index.html">Atlas</a> hardware guides, or the manufacturer's HBK documentation. Links in the device chapters take you to the relevant hardware information.</p>
+<p>The <a href="../dirac/index.html">desktop DIRAC guide</a> covers the desktop application. Aether can also be used by desktop DIRAC for recording, but its SLM workflow described here is a DIRAC Field function.</p>
     </main>
   </div>
-
-  <footer class="page-footer">
-    Copyright &copy; 2026 Acoustics Engineering. Product documentation and support.
-  </footer>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
 </body>
 </html>

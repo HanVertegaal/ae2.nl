@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects and Measurement Groups - DIRAC Field manual</title>
+  <meta name="description" content="Create projects and groups, choose a capture destination, edit metadata and organise measurements.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../index.html">Overview</a></li>
+            <li><a href="../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../projects-and-groups/index.html" aria-current="page">Projects and Measurement Groups</a></li>
+            <li><a href="../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Projects and Measurement Groups</span></nav>
+      <h1 id="projects-and-groups">Projects and Measurement Groups</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#hierarchy">Projects, groups and measurements</a></li>
+            <li><a href="#projects">Create or edit a project</a></li>
+            <li><a href="#groups">Create and activate a group</a></li>
+            <li><a href="#save-to">Change the destination from a control page</a></li>
+            <li><a href="#measurements">Inspect, move and delete measurements</a></li>
+            <li><a href="#metadata">Edit measurement metadata</a></li>
+            <li><a href="#names">Measurement filenames</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="hierarchy">Projects, groups and measurements</h2>
+<p>A <strong>project</strong> holds related work, such as a building or survey. A <strong>group</strong> collects measurements within that project, for example a room or receiver position. A <strong>measurement</strong> represents one acquisition and can include separate data from several receivers.</p>
+<p>Keep the distinction between measurements stored in the app and recordings still held by the equipment. Exporting an app measurement, deleting it, or changing its group is not the same operation as managing files on the recorder.</p>
+<h2 id="projects">Create or edit a project</h2>
+<!-- Illustrations DF-06, DF-07 -->
+<ol><li>Choose <strong>Projects</strong> from the app menu.</li><li>Tap <strong>+ New project</strong>, enter its name, and enter the default temperature, air pressure and relative humidity for new measurements.</li><li>Tap <strong>Save</strong>, then open the project.</li><li>Use the project's edit action or <strong>Edit project defaults</strong> to change these defaults later.</li></ol>
+<p>Environmental defaults are copied into new measurements. Existing measurements retain their own environmental values. Enter the conditions for the measurement location, rather than assuming that the initial defaults describe the site.</p>
+<h2 id="groups">Create and activate a group</h2>
+<!-- Illustration DF-08 -->
+<ol><li>Open a project and tap <strong>+ New group</strong>.</li><li>Give the group a meaningful name, such as a room, source position or receiver position.</li><li>Use the group's <strong>Use</strong> action, or open it and choose <strong>Use for new measurements</strong>.</li><li>Check the active-destination indication and the <strong>Save to</strong> field when returning to the control page.</li></ol>
+<p>The active group is the destination for subsequent acquisitions. Opening another group to inspect old data does not by itself mean that the next acquisition will be saved there. Use the explicit destination action.</p>
+<h2 id="save-to">Change the destination from a control page</h2>
+<p>The <strong>Save to</strong> field shows the active project and group. Its change action opens <strong>Save the next measurement to</strong>, where you can choose an existing destination or create a new group or project. Recheck the displayed destination before acquiring a new series.</p>
+<h2 id="measurements">Inspect, move and delete measurements</h2>
+<!-- Illustration DF-09 -->
+<p>Open a group to see its measurements and capture summaries. Tap a successful entry to inspect its data. The list includes identifying metadata and acquisition information; an entry with no successful receiver data cannot be opened as a valid recording.</p>
+<p>Use the measurement edit action to open <strong>Edit Measurement Metadata</strong>. Use <strong>Select</strong> for a batch operation, mark the required measurements, and choose <strong>Move</strong>, <strong>Export</strong> or <strong>Delete</strong>. <strong>Done</strong> leaves selection mode. The move chooser offers other groups in the same project and can create a new group there.</p>
+<p>Read the confirmation before deleting a measurement, group or project. Export data that you need to retain before deleting its app copy. Deleting a parent group or project also affects its contained measurements.</p>
+<h2 id="metadata">Edit measurement metadata</h2>
+<!-- Illustration DF-10 -->
+<p>The metadata editor includes the measurement name, <strong>Measurement Type</strong>, source–receiver distance for successful receiver recordings, and speech/noise level information. Save changes explicitly; Cancel leaves the editor without applying them.</p>
+<p>Set the type to <strong>Signal</strong> for a recording of sound, and to <strong>Impulse response</strong> only when the stored data actually represent an impulse response. Changing the label does not deconvolve or repair the waveform. The type determines which analysis parameters are offered.</p>
+<p>Source–receiver distance is entered in metres. Check the actual distance for each receiver. The default distance can be set in that receiver's <a href="../device-settings/index.html#measurement">Measurement settings</a>; editing an existing measurement is a separate action.</p>
+<h2 id="names">Measurement filenames</h2>
+<p>New names use the app's configured naming format, including a project/group/fixed prefix and optional source and receiver labels. Configure this under <a href="../application-settings/index.html#filenames">Application Settings</a>. Naming preferences apply to new captures; they do not rename earlier measurements automatically.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

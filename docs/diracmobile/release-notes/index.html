@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Version and Release Information - DIRAC Field manual</title>
+  <meta name="description" content="Identify the DIRAC Field application and instrument versions and understand the scope of this draft manual.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../index.html">Overview</a></li>
+            <li><a href="../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../release-notes/index.html" aria-current="page">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Version and Release Information</span></nav>
+      <h1 id="release-notes">Version and Release Information</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#versions">Identify the installed versions</a></li>
+            <li><a href="#coverage">Functionality covered by this guide</a></li>
+            <li><a href="#limitations">Compatibility and current boundaries</a></li>
+            <li><a href="#history">Release history</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="versions">Identify the installed versions</h2>
+<p>Open <strong>menu → About</strong> for the installed DIRAC Field application version. Open a connected device's <strong>Settings → ID</strong> for its Software version and serial number. App and device versions are separate and can change independently.</p>
+<p>The controls and signal choices described here reflect the app functionality used to prepare this draft. Device-reported capabilities, installed device software and connection readiness can affect the controls offered on a particular installation.</p>
+<h2 id="coverage">Functionality covered by this guide</h2>
+<ul><li>Discovery, manual address entry, device authentication and context-sensitive navigation.</li><li>Aether SLM and recording, Echo/Atlas and HBK 2755 source control, and HBK 2255 recording.</li><li>Projects, groups, capture destinations, measurement metadata and multi-receiver capture.</li><li>Signal views, supported acoustic parameters, graph/table display options and stored-audio auditioning.</li><li>DIRAC packages and WAV/CSV/TXT data export.</li><li>App settings, supported device settings, updates and Aether recovery actions.</li></ul>
+<h2 id="limitations">Compatibility and current boundaries</h2>
+<p>Aether's SLM mode is not offered for the other devices. HBK 2255's BZ-7351 prerequisite applies to complete source-triggered measurements, while recording-only capture remains a separate workflow.</p>
+<p>The measurement detail page currently opens the first successful receiver recording and has no receiver selector. Export a multi-receiver measurement to examine its other receiver recordings in a suitable application.</p>
+<p>Not every played signal is a supported impulse-response measurement stimulus. Use the configured signal, stored measurement type and offered analysis parameters together when choosing how to inspect a result.</p>
+<h2 id="history">Release history</h2>
+<p>A version-by-version published change history has not yet been added to this draft. No release date or compatibility guarantee should be inferred from the manual's copyright year. When seeking support, report the versions actually shown by the installed application and equipment.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

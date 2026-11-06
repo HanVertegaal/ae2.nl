@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acoustic Measurement Workflow - DIRAC Field manual</title>
+  <meta name="description" content="Combine source playback and receiver capture, verify the result and choose the correct analysis.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../index.html">Overview</a></li>
+            <li><a href="../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../measurement-workflow/index.html" aria-current="page">Acoustic Measurement Workflow</a></li>
+            <li><a href="../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Acoustic Measurement Workflow</span></nav>
+      <h1 id="measurement-workflow">Acoustic Measurement Workflow</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#choose-workflow">Choose the right workflow</a></li>
+            <li><a href="#prepare">Prepare the measurement</a></li>
+            <li><a href="#signals">Match signal and analysis</a></li>
+            <li><a href="#run">Run the acquisition</a></li>
+            <li><a href="#verify">Verify every receiver result</a></li>
+            <li><a href="#finish">Finish and preserve the data</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="choose-workflow">Choose the right workflow</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">Task</th><th scope="col">Start here</th></tr></thead><tbody>
+<tr><td>Read or integrate a sound level</td><td><a href="../device-controls/aether/index.html#slm">Aether → SLM</a>.</td></tr>
+<tr><td>Record an existing sound</td><td><a href="../device-controls/aether/index.html#recording">Aether → Recording</a> or <a href="../device-controls/hbk2255/index.html#recording">HBK 2255</a>.</td></tr>
+<tr><td>Play a source without capturing data</td><td>Echo/Atlas Play, or HBK 2755 White/Pink/User.</td></tr>
+<tr><td>Acquire with a controlled source</td><td>The measurement/Record action on the source control page, with suitable receivers available.</td></tr>
+</tbody></table></div>
+<p>The source's Play action and its measurement action are different. Play controls the sound source alone. A source-triggered measurement also prepares receivers, acquires their data and retrieves the results.</p>
+<h2 id="prepare">Prepare the measurement</h2>
+<ol><li>Choose an Echo, Atlas or HBK 2755 as the source, and Aether and/or HBK 2255 as receivers.</li><li>Prepare the hardware, positions and microphone calibration. Use the equipment guides for physical connections and operating limits.</li><li>Make the intended equipment reachable from DIRAC Field and authenticate it. Confirm the device identities before acquisition.</li><li>Choose the project and group, check receiver-distance defaults, and note the site conditions.</li><li>Configure an appropriate source signal. For a source-triggered run, stop ordinary playback first if the measurement action requires the source to be idle.</li></ol>
+<p>Several receivers can contribute to one run. The app discovers the available recorder set; the source control page is not a receiver-selection checklist. Check which recorders are present and inspect the result for each intended receiver.</p>
+<h2 id="signals">Match signal and analysis</h2>
+<p>Use a supported measurement sequence when you require a processed impulse response. The app can process supported Echo/Atlas measurement sequences as part of capture. Ordinary noise playback, arbitrary user audio and an external input should not be assumed to produce an impulse response.</p>
+<p>A dedicated STIPA acquisition is a signal-based speech-intelligibility workflow. Use the appropriate STIPA source configuration and review the corresponding STIPA result. A waveform's presence alone does not establish that its recording is suitable for that analysis.</p>
+<p>The signal and its supported timing determine the source-driven run. Recording duration selected on a receiver's recording-only page is a separate setting. Review the actual saved duration instead of assuming it equals the rounded sequence-length label.</p>
+<h2 id="run">Run the acquisition</h2>
+<!-- Illustration DF-11 -->
+<ol><li>Open the source control page and verify the signal and level or gain. Check the <strong>Save to</strong> destination.</li><li>Use the source's measurement/Record control. It becomes available when the app has suitable receivers and, for Echo/Atlas, a supported measurement signal.</li><li>Allow preparation, any signal buildup, capture, retrieval and processing to complete. Keep the app connected and the equipment stationary.</li><li>If you stop or cancel, read the resulting state. Stop acquisition and Cancel are distinct actions where both are shown; an abandoned run must not be treated as complete.</li></ol>
+<p>HBK 2255 participates in a complete source-triggered run only after its BZ-7351 status has been verified as active. This prerequisite does not prevent ordinary recording-only captures from its own control page. See <a href="../device-controls/hbk2255/index.html#prerequisites">HBK 2255 prerequisites</a>.</p>
+<h2 id="verify">Verify every receiver result</h2>
+<p>Open the destination group. A completed multi-receiver measurement should have usable data for every intended receiver. A partially completed run means some receiver data succeeded and some did not; preserve the successful data and repeat the missing measurements where necessary. The current detail page opens the first successful receiver recording; export the complete measurement to inspect the other receivers.</p>
+<p>Check waveform duration, clipping, background disturbance and the appropriate measurement type. Examine an impulse response and its decay before relying on reverberation or speech results. A missing result or band is not a zero value.</p>
+<h2 id="finish">Finish and preserve the data</h2>
+<p>Stop source playback explicitly and check the device state, especially after a canceled run or lost connection. Review the <a href="../results-and-analysis/index.html">results</a>, add useful metadata, then <a href="../export-and-desktop-dirac/index.html">export</a> the required data. Confirm the exported file was saved before removing equipment or deleting local copies.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

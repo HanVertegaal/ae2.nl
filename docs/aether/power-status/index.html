@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Power and Status Indicators - Aether manual</title>
+  <meta name="description" content="Aether power sources, charging, automatic power-off and LED status indications.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261105-aether">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual aether-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Aether manual</summary>
+        <nav aria-label="Aether chapters">
+          <ul>
+            <li><a href="../../aether/index.html">Overview</a></li>
+            <li><a href="../../aether/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../aether/microphone-calibration/index.html">Microphone and Calibration</a></li>
+            <li><a href="../../aether/power-status/index.html" aria-current="page">Power and Status Indicators</a></li>
+            <li><a href="../../aether/network/index.html">Remote Control</a></li>
+            <li><a href="../../aether/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../../aether/troubleshooting/index.html">Troubleshooting and Recovery</a></li>
+            <li><a href="../../aether/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../index.html">Aether</a> <span aria-hidden="true">/</span> <span aria-current="page">Power and Status Indicators</span>
+      </nav>
+      <h1 id="power-status">Power and Status Indicators</h1>
+      <p class="notice"><strong>Draft for review:</strong> This Aether guide is being prepared. Product details and procedures are subject to review.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#power-sources">Power sources and wake-up</a></li>
+            <li><a href="#power-off">Power-off and standby</a></li>
+            <li><a href="#charging">Charging and low battery</a></li>
+            <li><a href="#status-indicators">Status indicators</a></li>
+            <li><a href="#attention-and-identify">Attention and Identify</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="power-sources">Power sources and wake-up</h2>
+<p>Aether is normally used wirelessly on its internal battery, without a power adapter. External power is available only through the USB-C connector, which can power Aether and charge its battery. Use a suitable USB-C supply and cable when charging or external power is needed.</p>
+<p>Aether can wake when its orientation-sensitive switch activates or USB-C power is connected. If it does not start, connect USB-C power and check the LED indication.</p>
+<h2 id="power-off">Power-off and standby</h2>
+<p>Stop recording, calibration and live measurements before switching off. Automatic power-off limits battery use when Aether is inactive; the timeout is configured through DIRAC Field.</p>
+<p>On battery power, power-off shuts the device down. With USB-C power connected, the device can enter standby while charging remains controlled. Disconnect USB-C power before requesting a complete battery-powered shutdown from the app.</p>
+<h2 id="charging">Charging and low battery</h2>
+<p>Check the battery state in DIRAC Field before starting a long recording. In charging standby, the LEDs breathe white while charging is enabled. To protect the battery during prolonged connection, standby charging stops at about 80% and resumes below about 75%.</p>
+<p>At very low battery voltage, Aether switches off. Finish measurements and retrieve the required files before the battery becomes empty. Do not rely on an interrupted recording as a completed result.</p>
+<h2 id="status-indicators">Status indicators</h2>
+<p>A breathing indication gradually brightens and dims. A flashing indication switches on and off.</p>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Indication</th><th scope="col">Meaning</th></tr></thead><tbody>
+<tr><td>Flashing yellow</td><td>Starting up.</td></tr>
+<tr><td>Flashing cyan</td><td>Connecting to a Wi-Fi network.</td></tr>
+<tr><td>Breathing green</td><td>Hotspot mode, including idle operation while the normal hotspot is active.</td></tr>
+<tr><td>Breathing blue</td><td>Idle outside hotspot mode. Check the app for connection and measurement status.</td></tr>
+<tr><td>Rotating purple</td><td>Searching for or measuring the acoustic calibration tone.</td></tr>
+<tr><td>Flashing red</td><td>Pre-recording attention period.</td></tr>
+<tr><td>Breathing red</td><td>Recording.</td></tr>
+<tr><td>Flashing orange</td><td>Firmware update in progress.</td></tr>
+<tr><td>Breathing white</td><td>Charging enabled during standby.</td></tr>
+<tr><td>Brief multicolour pattern</td><td>Identify, requested from the controlling application.</td></tr>
+<tr><td>Alternating red and white</td><td>Service required. See <a href="../troubleshooting/index.html#service-required">Troubleshooting and Recovery</a>.</td></tr>
+</tbody></table></div>
+<p>The app's LED brightness setting controls ordinary status indications. The pre-recording attention indication uses full brightness even when ordinary status brightness is set to zero. LEDs can also be off during standby when charging is paused, so darkness alone does not establish that the battery is empty.</p>
+<h2 id="attention-and-identify">Attention and Identify</h2>
+<p>The attention time is a configurable delay before recording, accompanied by flashing red LEDs. It allows people near the microphone to settle before acquisition starts. Setting the attention time to zero removes this delay.</p>
+<p>Once the app is connected to Aether, Identify briefly shows a multicolour pattern to help locate the selected device among several Aethers. Identify requires an active connection. It finishes automatically and is separate from the measurement state.</p>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Acoustics Engineering.
+  </footer>
+</body>
+</html>

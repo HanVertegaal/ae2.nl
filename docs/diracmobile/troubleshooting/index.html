@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Troubleshooting - DIRAC Field manual</title>
+  <meta name="description" content="Resolve DIRAC Field discovery, authentication, capture, analysis and export problems.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../index.html">Overview</a></li>
+            <li><a href="../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../troubleshooting/index.html" aria-current="page">Troubleshooting</a></li>
+            <li><a href="../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Troubleshooting</span></nav>
+      <h1 id="troubleshooting">Troubleshooting</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#discovery">A device does not appear</a></li>
+            <li><a href="#authentication">A password is rejected</a></li>
+            <li><a href="#controls">A control is absent or disabled</a></li>
+            <li><a href="#slm">Aether's level is missing, stale or unexpected</a></li>
+            <li><a href="#capture">Recording or retrieval fails</a></li>
+            <li><a href="#results">A measurement or parameter cannot be opened</a></li>
+            <li><a href="#export">Export or desktop import fails</a></li>
+            <li><a href="#support">Information for support</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="discovery">A device does not appear</h2>
+<ol><li>Check that the equipment is powered and ready, and that the phone/tablet is on the intended network.</li><li>Check operating-system local-network permissions. A hotspot without internet can still be the correct measurement network.</li><li>Pull down on Devices to refresh. If its current IP address is known, try manual Add Device.</li><li>Check <strong>App settings → Forgotten Devices</strong> and Unblock the device if necessary.</li><li>Check for access-point client isolation or a guest network that prevents devices communicating.</li></ol>
+<p>Use a device's physical recovery procedure only when ordinary access cannot be restored. Aether recovery-mode cards open different actions from normal device cards.</p>
+<h2 id="authentication">A password is rejected</h2>
+<p>Check whether the prompt requests the device password or an access-point password. For AE normal hotspots, use the active device password; the password of a separate site Wi-Fi network is unrelated.</p>
+<p>If an old credential is stored, clear it for that device in App settings and enter the current password when reconnecting. This does not reset the device password. Aether factory-password restoration is available through its recovery workflow and preserves data; factory reset is a separate destructive action.</p>
+<h2 id="controls">A control is absent or disabled</h2>
+<p>First check the device type. SLM belongs to Aether; source playback belongs to Echo, Atlas and HBK 2755; HBK 2255 is a receiver. A source's measurement action also needs eligible receivers. A network, update or calibration editor may be unavailable for a particular device.</p>
+<p>Wait for connection or initialization to finish. Stop the current operation before changing mode or parameter, and stop ordinary Echo/Atlas playback before starting a source-triggered measurement. Check the BZ-7351 status when HBK 2255 is missing from source-measurement eligibility.</p>
+<h2 id="slm">Aether's level is missing, stale or unexpected</h2>
+<p>Check the microphone attachment, calibration and selected parameter. A cumulative Lmin/Lmax measurement needs Start, and a timed Leq needs a valid interval. A final retained value is different from a still-running live value. An interrupted or stale indication should not be copied as a fresh completed measurement.</p>
+<p>Repeat calibration when appropriate. Do not compensate for a damaged or overloaded waveform by merely changing a display scale or source gain after acquisition.</p>
+<h2 id="capture">Recording or retrieval fails</h2>
+<p>Keep the receiver powered and connected during retrieval as well as recording. Check available storage, battery state, receiver readiness and the destination. Read the operation's error rather than assuming that returning to the control page means success.</p>
+<p>A run can be partially completed when some receivers succeed and others fail. Preserve the successful data, keep any instrument recording available during investigation, and repeat the missing acquisition as needed. Do not erase equipment storage or factory-reset the receiver as the first response to a failed transfer.</p>
+<p>During a source-triggered run, confirm that the selected stimulus is supported. Ordinary user audio, noise or external input is not automatically a processed impulse response. Stop the source explicitly after an interrupted workflow and check its actual state.</p>
+<h2 id="results">A measurement or parameter cannot be opened</h2>
+<p>Confirm that the measurement has a successful local recording. The detail page opens the first successful receiver recording; use a full export to examine other receivers. If an expected parameter is absent, check Signal versus Impulse response classification and whether that analysis is supported for the data.</p>
+<p>Missing bands can reflect insufficient usable data, decay or signal-to-noise conditions. Check the waveform and acquisition conditions; a blank result is not zero. Correcting metadata does not repair clipped or missing samples.</p>
+<h2 id="export">Export or desktop import fails</h2>
+<p>Retain the app data, check local storage space and file-save permissions, and repeat the export for the intended scope. Complete the system save dialog and wait for Export complete. Verify that a transferred file has finished copying or synchronising.</p>
+<p>Use <strong>Export for Dirac (.dmpx)</strong> for the desktop package workflow. For a data ZIP, extract its contents before opening individual files. Check desktop DIRAC package compatibility if the file is not recognised.</p>
+<h2 id="support">Information for support</h2>
+<p>Note the app version from About, device type/name/serial, device Software version, network arrangement, selected signal or SLM parameter, operation stage and exact error text. For a data problem, retain the original measurement and an export. A screenshot of the relevant app state is useful; keep actual passwords concealed.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

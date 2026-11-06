@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Specifications - Aether manual</title>
+  <meta name="description" content="Aether microphone interface, acquisition and recording format, power and control specifications.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261105-aether">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual aether-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Aether manual</summary>
+        <nav aria-label="Aether chapters">
+          <ul>
+            <li><a href="../../aether/index.html">Overview</a></li>
+            <li><a href="../../aether/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../aether/microphone-calibration/index.html">Microphone and Calibration</a></li>
+            <li><a href="../../aether/power-status/index.html">Power and Status Indicators</a></li>
+            <li><a href="../../aether/network/index.html">Remote Control</a></li>
+            <li><a href="../../aether/specifications/index.html" aria-current="page">Technical Specifications</a></li>
+            <li><a href="../../aether/troubleshooting/index.html">Troubleshooting and Recovery</a></li>
+            <li><a href="../../aether/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../index.html">Aether</a> <span aria-hidden="true">/</span> <span aria-current="page">Technical Specifications</span>
+      </nav>
+      <h1 id="specifications">Technical Specifications</h1>
+      <p class="notice"><strong>Draft for review:</strong> This Aether guide is being prepared. Product details and procedures are subject to review.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#microphone-interface">Microphone interface</a></li>
+            <li><a href="#acquisition">Acquisition and storage</a></li>
+            <li><a href="#power-and-control">Power and control</a></li>
+            <li><a href="#physical">Physical specifications</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>This draft lists the characteristics established for the current Aether design. Values marked <em>To be confirmed</em> require the final product specification.</p>
+<h2 id="microphone-interface">Microphone interface</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead><tbody>
+<tr><td>Microphone type and connection</td><td>1/2-inch IEPE measurement microphone, normally supplied with Aether, connected directly to its BNC input without a microphone cable.</td></tr>
+<tr><td>Microphone power warm-up</td><td>At least 5 s after IEPE power is enabled.</td></tr>
+<tr><td>IEPE supply voltage and current</td><td>To be confirmed.</td></tr>
+<tr><td>Input voltage limits and acoustic measurement range</td><td>To be confirmed for the supplied microphone.</td></tr>
+<tr><td>Frequency response and noise performance</td><td>To be confirmed.</td></tr>
+</tbody></table></div>
+<h2 id="acquisition">Acquisition and storage</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead><tbody>
+<tr><td>Sampling rate</td><td>48 kHz.</td></tr>
+<tr><td>Recorded channels</td><td>One microphone channel.</td></tr>
+<tr><td>Recording format</td><td>WAV, 32-bit IEEE floating-point samples representing sound pressure in pascals, using the Aether calibration scale.</td></tr>
+<tr><td>Storage</td><td>Internal SD card. Supplied capacity to be confirmed.</td></tr>
+<tr><td>Acoustic calibration</td><td>Stable 1 kHz tone with a user-specified calibrator level.</td></tr>
+</tbody></table></div>
+<h2 id="power-and-control">Power and control</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead><tbody>
+<tr><td>Power sources</td><td>Internal battery for normal wireless use. External power and charging through USB-C only.</td></tr>
+<tr><td>Battery capacity and operating time</td><td>To be confirmed.</td></tr>
+<tr><td>Control connection</td><td>Wi-Fi, with Station and Hotspot modes.</td></tr>
+<tr><td>Local indications</td><td>RGB LED ring; see <a href="../power-status/index.html#status-indicators">status indicators</a>.</td></tr>
+<tr><td>Operation</td><td>DIRAC Field: SLM and recording. DIRAC desktop: recording only, without SLM. Orientation-sensitive wake-up and recovery confirmation.</td></tr>
+</tbody></table></div>
+<h2 id="physical">Physical specifications</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Parameter</th><th scope="col">Specification</th></tr></thead><tbody>
+<tr><td>Dimensions and weight</td><td>To be confirmed.</td></tr>
+<tr><td>Operating temperature and environmental protection</td><td>To be confirmed.</td></tr>
+<tr><td>Supplied microphone and accessories</td><td>A 1/2-inch measurement microphone is normally supplied with Aether. Exact model and other accessories to be confirmed.</td></tr>
+</tbody></table></div>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Acoustics Engineering.
+  </footer>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Signal Setup - Atlas manual</title>
-  <meta name="description" content="Atlas offers signals for room and building acoustics.">
+  <meta name="description" content="Atlas signal sources, playback modes, sequence duration, gain settings, power limits and overload warnings.">
   <link rel="stylesheet" href="../../assets/style.css">
   <link rel="stylesheet" href="../../assets/manual.css?v=20261029-4">
   <script src="../../assets/manual.js" defer></script>
@@ -30,7 +30,7 @@
             <li><a href="../../atlas/quick-start/index.html">Quick Start</a></li>
             <li><a href="../../atlas/signal-setup/index.html" aria-current="page">Signal Setup</a></li>
             <li><a href="../../atlas/system-menu/index.html">System Menu</a></li>
-            <li><a href="../../atlas/network/index.html">Network &amp; Remote Control</a></li>
+            <li><a href="../../atlas/network/index.html">Remote Control</a></li>
             <li><a href="../../atlas/specifications/index.html">Technical Specifications</a></li>
             <li><a href="../../atlas/troubleshooting/index.html">Troubleshooting</a></li>
             <li><a href="../../atlas/release-notes/index.html">Release Notes</a></li>
@@ -54,6 +54,7 @@
               <li><a href="#playback-modes">Playback modes</a></li>
               <li><a href="#sequence-duration">Sequence duration</a></li>
               <li><a href="#signal-level">Signal level</a></li>
+              <li><a href="#power-limits">Power limits and warnings</a></li>
           </ul>
         </nav>
       </details>
@@ -88,8 +89,38 @@
 <p>User and BNC input do not use the sequence-length setting.</p>
 <h2 id="signal-level">Signal level</h2>
 <p>Atlas uses a gain setting from −60 to 0 dB for all signal sources, rather than a calibrated sound pressure level. The resulting acoustic level depends on the signal and measurement conditions.</p>
-<p>If the chosen signal gain requires more power than is available, Atlas displays a warning showing the available (<strong>Avl</strong>) and required (<strong>Req</strong>) values. In the battery warning below, the values are shown in watt-hours (Wh).</p>
-<p><img src="../../assets/atlas/battery-low.svg" alt="Battery low warning showing Avl:18.6 Req:36.4 Wh: 18.6 Wh available and 36.4 Wh required."></p>
+<hr>
+<h2 id="power-limits">Power limits and warnings</h2>
+<p>The usable signal gain depends on the signal peaks, the remaining battery energy and the power available from the USB supply. Lowering the gain reduces the load, but input clipping must be corrected at the external source.</p>
+<p>For stored signals, Atlas checks the expected power demand before starting playback and when changing the gain. If the requested gain exceeds the available power, a warning is displayed and playback may be prevented. The level of an external BNC signal is not known in advance, so its source level must also be controlled.</p>
+<p>Atlas enables high-power mode when the connected USB-PD supply provides at least 45 W. The <strong>+</strong> indicator shows that this mode is available. During playback, press <strong>L</strong> to decrease the gain or <strong>R</strong> to increase it. The up arrow disappears when the gain cannot be increased further. Press <strong>M</strong> to stop playback and return home.</p>
+<p>In a full-screen power warning, <strong>Avl</strong> identifies the available amount and <strong>Req</strong> the required amount. Press any button to return to the home screen, correct the cause and try again.</p>
+<p>The following illustrations reproduce the display layout with example readings; the numbers are not fixed limits.</p>
+
+<h3 id="adc-overload">ADC overload (ADCO)</h3>
+<p>The external BNC input reaches the analogue-to-digital converter's full-scale limit and clips. The input clip indicator appears near the lower left of the home screen. Reduce the level of the external source; lowering Atlas's output gain does not remove distortion that has already occurred at the input.</p>
+<p><img src="../../assets/atlas/warning-input-clip.svg" alt="Atlas BNC input playback with the input clip indicator near the lower left, gain adjustment arrows and a middle stop control."></p>
+
+<h3 id="dac-overload">DAC overload (DACO)</h3>
+<p>The signal peaks exceed the output stage's limit. The clipping threshold depends on the power mode: in high-power mode it is at digital full scale; in the lower-power mode the output can overload before digital full scale is reached. The output clip indicator appears near the lower right of the home screen. Reduce the signal gain; for an external signal, reducing its source level also helps.</p>
+<p><img src="../../assets/atlas/warning-output-clip.svg" alt="Atlas BNC input playback at 0 dB gain with the output clip indicator near the lower right, a down arrow and a middle stop control. The up arrow is absent at maximum gain."></p>
+
+<h3 id="battery-energy-overload">Battery remaining energy overload (BREO)</h3>
+<p>With no USB supply attached, the remaining battery energy is insufficient to run the chosen signal for the minimum operating time. Atlas displays <strong>Battery low</strong>. Lower the gain, recharge the battery or connect a suitable USB supply.</p>
+<p><img src="../../assets/atlas/battery-low.svg" alt="Battery low warning with example readings Avl:18.6 Req:36.4 Wh."></p>
+
+<h3 id="battery-current-overload">Battery peak current overload (BPCO)</h3>
+<p>With no USB supply attached, the signal peaks would draw more current than the battery protection allows. Atlas displays <strong>Battery ovl</strong>. This can occur even when the battery has plenty of charge. Reduce the gain or use a suitable USB supply.</p>
+<p><img src="../../assets/atlas/warning-battery-overload.svg" alt="Battery ovl warning with example available and required readings, labelled A as on the device display."></p>
+
+<h3 id="usb-average-overload">USB average power overload (UAPO)</h3>
+<p>The average power required by Atlas and the selected signal exceeds the power available from the connected USB supply. Atlas displays <strong>USB pwr ovl</strong>. Reduce the gain or use a USB supply and cable capable of delivering more power. The available power depends on the connection negotiated with the supply.</p>
+
+<h3 id="usb-peak-overload">USB peak current overload (UPCO)</h3>
+<p>The signal peaks demand more current than the USB supply can sustain, even if its average power rating appears sufficient. The height and duration of the peaks matter. User signals with a high crest factor (large peaks relative to their average level) are particularly demanding. Reduce the gain or use a signal with smaller peaks.</p>
+<p>Both USB overload conditions use the <strong>USB pwr ovl</strong> message:</p>
+<p><img src="../../assets/atlas/warning-usb-power.svg" alt="USB pwr ovl warning with example readings Avl:7.5 Req:9.0 W, used for USB average power and peak current overload."></p>
+<p>If the USB supply disconnects during playback, Atlas stops the output. Reconnect a suitable supply and check the gain before restarting playback.</p>
     </main>
   </div>
 

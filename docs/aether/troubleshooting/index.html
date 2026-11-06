@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Troubleshooting and Recovery - Aether manual</title>
+  <meta name="description" content="Resolve Aether connection, microphone, calibration and storage problems, and recover access safely.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261105-aether">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual aether-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Aether manual</summary>
+        <nav aria-label="Aether chapters">
+          <ul>
+            <li><a href="../../aether/index.html">Overview</a></li>
+            <li><a href="../../aether/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../aether/microphone-calibration/index.html">Microphone and Calibration</a></li>
+            <li><a href="../../aether/power-status/index.html">Power and Status Indicators</a></li>
+            <li><a href="../../aether/network/index.html">Remote Control</a></li>
+            <li><a href="../../aether/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../../aether/troubleshooting/index.html" aria-current="page">Troubleshooting and Recovery</a></li>
+            <li><a href="../../aether/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../index.html">Aether</a> <span aria-hidden="true">/</span> <span aria-current="page">Troubleshooting and Recovery</span>
+      </nav>
+      <h1 id="troubleshooting">Troubleshooting and Recovery</h1>
+      <p class="notice"><strong>Draft for review:</strong> This Aether guide is being prepared. Product details and procedures are subject to review.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#cannot-connect">Cannot connect</a></li>
+            <li><a href="#no-microphone-signal">No microphone signal or unexpected levels</a></li>
+            <li><a href="#calibration-fails">Calibration fails</a></li>
+            <li><a href="#recording-fails">Recording fails or stops unexpectedly</a></li>
+            <li><a href="#software-updates">Software updates and rollback</a></li>
+            <li><a href="#recovery-network">Temporary recovery network</a></li>
+            <li><a href="#password-recovery">Password recovery</a></li>
+            <li><a href="#factory-reset">Factory reset</a></li>
+            <li><a href="#service-required">Service required</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="cannot-connect">Cannot connect</h2>
+<p>Check power, Wi-Fi mode, network selection and the device password. A protected Aether hotspot requires the Aether password; joining an existing access point requires that access point's password. See <a href="../network/index.html">Remote Control</a>.</p>
+<p>If the device is not discovered, check for guest-network or client-isolation settings, and try a direct hotspot connection. A network change can temporarily interrupt the app connection.</p>
+<h2 id="no-microphone-signal">No microphone signal or unexpected levels</h2>
+<ul>
+  <li>Check that the microphone is securely connected directly to Aether's BNC input and confirm IEPE compatibility if using a replacement microphone.</li>
+  <li>Start a live microphone operation and allow for the five-second power warm-up.</li>
+  <li>Check the microphone calibration.</li>
+  <li>If peaks clip, reduce the acoustic level at the microphone; applying a lower level afterwards cannot repair clipped samples.</li>
+</ul>
+<h2 id="calibration-fails">Calibration fails</h2>
+<p>Check that the calibrator is on, produces a 1 kHz tone and is fitted correctly. Enter its actual selected level, keep it steady and reduce background disturbance. Stop other microphone operations before retrying. See <a href="../microphone-calibration/index.html#calibration">Acoustic calibration</a>.</p>
+<h2 id="recording-fails">Recording fails or stops unexpectedly</h2>
+<p>Check battery charge, available storage and the operation status shown by DIRAC Field. Retrieve important recordings before deleting files to make space. Do not disconnect power or initiate a restart, update or reset during a recording.</p>
+<p>After an interrupted operation, confirm that the required result exists and can be opened. Repeat the measurement when completion is uncertain.</p>
+<h2 id="software-updates">Software updates and rollback</h2>
+<p>Check the installed Aether software version in DIRAC Field. Stop measurements and recordings, use stable power and allow the update to finish. The LEDs flash orange during an update.</p>
+<p>Rollback can return to a retained previous software image when Aether offers one. It does not restore earlier recordings or undo changes to settings. Use the <a href="../../diracmobile/index.html">DIRAC Field guide</a> for the update and rollback controls.</p>
+<h2 id="recovery-network">Temporary recovery network</h2>
+<p>When ordinary access is unavailable, Aether can open a temporary recovery hotspot. It permits recovery operations rather than normal measurement or access to recordings.</p>
+<ol>
+  <li>Let Aether finish starting and stop any active measurement or recording. Disconnect the app's active device connection.</li>
+  <li>Hold Aether upright for at least 1.5 s.</li>
+  <li>Turn it upside down and hold for at least 1.5 s, then return it upright and hold again. Repeat this complete movement three times, finishing upright. Complete the sequence within about 20 s.</li>
+  <li>Join the open Wi-Fi network named <strong>Aether-Recovery-</strong> followed by the device identifier, then select the recovery device in DIRAC Field.</li>
+</ol>
+<p>The recovery hotspot is available for about two minutes unless a recovery operation extends the process. Its activation alone does not erase recordings or settings. If it expires, repeat the movement sequence and reconnect.</p>
+<h2 id="password-recovery">Password recovery</h2>
+<p>Use <strong>Restore factory password</strong> from the recovery workflow and enter the factory password supplied with the device or obtained from Acoustics Engineering. A successful restoration makes it the active password for both remote access and the normal hotspot.</p>
+<p>Password restoration preserves recordings, calibration and other settings. Reconnect normal Wi-Fi and update the app's saved device password afterwards.</p>
+<h2 id="factory-reset">Factory reset</h2>
+<p class="warning"><strong>Data loss:</strong> Factory reset permanently deletes recordings, saved networks, calibration data and user settings, and restores the factory device password. Retrieve anything you need before proceeding.</p>
+<p>Initiate a factory-reset session from the app's Service settings or the recovery workflow. Follow the app's physical confirmation instructions: establish the upright position, then complete two upside-down-and-upright movements, holding each position steady. Starting the session and completing the movement pattern do not themselves erase data; the final <strong>Erase and reset</strong> action is still required.</p>
+<p>After the reset completes, reconnect using the factory password, configure networking again and recalibrate the microphone before calibrated measurements.</p>
+<h2 id="service-required">Service required</h2>
+<p>An alternating red-and-white indication identifies a condition requiring service. Note the serial number, software version and what happened before the indication appeared, and contact Acoustics Engineering. Repeated reset attempts are not a substitute for checking a storage or recovery fault.</p>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Acoustics Engineering.
+  </footer>
+</body>
+</html>

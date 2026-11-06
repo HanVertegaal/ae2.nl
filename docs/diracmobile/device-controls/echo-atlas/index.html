@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using Echo and Atlas - DIRAC Field manual</title>
+  <meta name="description" content="Configure and control Echo and Atlas signals in DIRAC Field, including their different level and gain controls.">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../../index.html">Overview</a></li>
+            <li><a href="../../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../../device-controls/echo-atlas/index.html" aria-current="page">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../../index.html">DIRAC Field</a><span aria-hidden="true">/</span><a href="../../device-controls/index.html">Device Controls</a><span aria-hidden="true">/</span><span aria-current="page">Using Echo and Atlas</span></nav>
+      <h1 id="echo-atlas">Using Echo and Atlas</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#page">Read the control page</a></li>
+            <li><a href="#configure">Configure a signal</a></li>
+            <li><a href="#echo">Echo signals and levels</a></li>
+            <li><a href="#atlas">Atlas signals and gain</a></li>
+            <li><a href="#user-signals">Stored user signals</a></li>
+            <li><a href="#measurement">Measure with receivers</a></li>
+            <li><a href="#settings">Settings and hardware operation</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>Echo and Atlas share the signal-selection and playback workflow in DIRAC Field. Their signal catalogues and output controls differ. Always check the device name and selected signal before starting playback.</p>
+<h2 id="page">Read the control page</h2>
+<!-- Illustrations DF-19, DF-20 -->
+<p>The control page shows the device identity, battery/connection indications, selected signal and transport controls. Tap the signal display to open <strong>Signal Type</strong> configuration. Atlas also provides a gain readout and knob on the control page.</p>
+<p><strong>Play</strong> starts source playback and <strong>Stop</strong> stops it. The separate measurement/Record action acquires with available receivers and shows the <strong>Save to</strong> destination. It requires a suitable measurement signal and eligible receivers; playback on its own does not save a microphone recording.</p>
+<h2 id="configure">Configure a signal</h2>
+<!-- Illustrations DF-21, DF-22 -->
+<ol><li>Stop playback or acquisition before setting up a new measurement.</li><li>Tap the signal display and select <strong>Signal Type</strong>.</li><li>Choose the offered <strong>Mode</strong> and <strong>Length</strong> where they apply. A signal with only one mode does not offer an alternative.</li><li>Set the signal's level or gain. Sine also provides a frequency setting; User provides a stored-signal selector.</li><li>Tap <strong>Apply</strong>. Wait for acceptance and verify the signal description on the control page. Use Cancel to discard the proposed configuration.</li></ol>
+<p>Only controls relevant to the selected device and signal are shown. The offered list also depends on the device's reported capabilities. Changing the type can change the available modes, lengths and level choices; check all three before applying.</p>
+<p><strong>Continuous</strong> and <strong>Intermittent</strong> describe the source sequence, not whether DIRAC Field will save a recording. Their timing and available lengths are explained in the source hardware guide. An external USB or analogue input also requires a physical signal connection.</p>
+<h2 id="echo">Echo signals and levels</h2>
+<p>Echo provides Pink MLS, e-Sweep, STIPA, Speech, Sine, User, USB and BNC selections where supported. Use <a href="../../../echo/signal-setup/index.html">Echo: Signal Setup</a> for the signal meanings, available timing and hardware power limits.</p>
+<p>Built-in calibrated signals present an acoustic <strong>Level</strong>; other sources present an electrical <strong>Gain</strong>. The displayed units and offered choices identify which applies. STIPA offers its supported preset levels. Do not interpret an external-input gain value as a calibrated sound level at the microphone.</p>
+<p>For a tone, set the Sine frequency as well as gain. For User, select the required stored file. For USB or BNC, check the upstream source and its level before starting the output.</p>
+<h2 id="atlas">Atlas signals and gain</h2>
+<p>Atlas provides the MLS-BA/RA, PMLS-BA/RA, ESWP-BA/RA, LSWP-BA and EqMLS-BA measurement sequences, together with User, USB and AUX where supported. Building-acoustics and room-acoustics variants can have different mode and length choices. See <a href="../../../atlas/signal-setup/index.html">Atlas: Signal Setup</a>.</p>
+<p>Atlas uses custom gain, from −60 to 0 dB, rather than Echo's calibrated acoustic-level presets. Use the gain control on the source page for adjustments. Drag the knob to the desired value and release it; wait for the device state to confirm the requested value before relying on it.</p>
+<p>A gain adjustment changes the source output, not the receiver calibration. Once a measurement has started, leave the measurement conditions stable. If a power or clipping warning is reported, check the source and level before repeating the measurement.</p>
+<h2 id="user-signals">Stored user signals</h2>
+<!-- Illustration DF-23 -->
+<p>Select <strong>User</strong> on the signal configuration page. Choose a stored signal, or use <strong>Upload</strong> to select a supported audio file through the system file picker. Wait for upload progress to finish, select the intended file, then Apply the configuration.</p>
+<p><strong>Delete</strong> removes the selected stored user signal from the source after confirmation. It does not delete a project measurement in DIRAC Field. Check that you have retained the original audio file before deleting the device copy. The source validates uploaded data; a rejected file must be corrected rather than merely renamed.</p>
+<h2 id="measurement">Measure with receivers</h2>
+<ol><li>Connect the intended Aether/HBK 2255 receivers and verify any HBK source-measurement prerequisite.</li><li>Apply a supported measurement signal and check the destination. Ordinary playback must be stopped before the Echo/Atlas measurement action becomes available.</li><li>Tap the measurement/Record control. Allow preparation, capture, retrieval and any sequence processing to finish.</li><li>Check the destination group for every expected receiver result. Use <a href="../../results-and-analysis/index.html">Results and Analysis</a> to inspect it.</li></ol>
+<p>The app records the stimulus information with a source-triggered run and processes supported sequences as appropriate. Merely recording arbitrary user audio or an external input does not guarantee an impulse response. A partial result requires inspection of each receiver entry.</p>
+<h2 id="settings">Settings and hardware operation</h2>
+<p>Use <strong>menu → Settings</strong> from the source page for <a href="../../device-settings/index.html">Device settings</a>. These include the supported network, password, power and software controls. Hardware screen icons, local buttons, connectors and protection warnings are documented in the <a href="../../../echo/index.html">Echo</a> and <a href="../../../atlas/index.html">Atlas</a> guides.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

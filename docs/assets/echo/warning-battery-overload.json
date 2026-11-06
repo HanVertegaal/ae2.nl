@@ -1,0 +1,35 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Echo Battery ovl warning",
+  "description": "Battery ovl warning with example readings Avl:37.0 Req:40.0 A. The unit label matches the firmware display.",
+  "elements": [
+    {
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 128,
+      "height": 64
+    },
+    {
+      "type": "rect",
+      "x": 2,
+      "y": 2,
+      "width": 124,
+      "height": 60,
+      "lit": false
+    },
+    {
+      "type": "text",
+      "text": "Battery ovl",
+      "font": 16,
+      "y": 20
+    },
+    {
+      "type": "text",
+      "text": "Avl:37.0 Req:40.0 A",
+      "font": 8,
+      "y": 45
+    }
+  ]
+}

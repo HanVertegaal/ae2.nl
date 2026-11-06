@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using Aether - DIRAC Field manual</title>
+  <meta name="description" content="DIRAC Field Aether control page, SLM, recording, microphone calibration, settings and recovery.">
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <link rel="stylesheet" href="../../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../../index.html">Overview</a></li>
+            <li><a href="../../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../../device-controls/aether/index.html" aria-current="page">Aether</a></li>
+            <li class="chapter-child"><a href="../../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../../device-settings/index.html">Device Settings and Maintenance</a></li>
+            <li><a href="../../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../../index.html">DIRAC Field</a><span aria-hidden="true">/</span><a href="../../device-controls/index.html">Device Controls</a><span aria-hidden="true">/</span><span aria-current="page">Using Aether</span></nav>
+      <h1 id="aether">Using Aether</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#page">Read the control page</a></li>
+            <li><a href="#slm">Measure a sound level</a></li>
+            <li><a href="#recording">Record a signal</a></li>
+            <li><a href="#calibration">Calibrate the microphone</a></li>
+            <li><a href="#settings">Aether settings</a></li>
+            <li><a href="#recovery">Recovery actions in the app</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>Aether provides both sound level measurement and recording in DIRAC Field. Its <strong>Mode</strong> selector chooses which controls the page displays. Stop the current operation before changing mode or the SLM parameter.</p>
+<h2 id="page">Read the control page</h2>
+<!-- Illustrations DF-12, DF-13 -->
+<div class="table-wrap"><table><thead><tr><th scope="col">Control or indication</th><th scope="col">Purpose</th></tr></thead><tbody>
+<tr><td>Device name and connection state</td><td>Confirm the selected Aether and wait for connection to finish.</td></tr>
+<tr><td>Battery indication</td><td>Check the reported charge/charging state before a long session.</td></tr>
+<tr><td>Identify</td><td>Briefly illuminate the connected Aether's identification pattern.</td></tr>
+<tr><td>Mode</td><td>Select SLM or Recording.</td></tr>
+<tr><td>Level display</td><td>Read the selected SLM parameter. In SLM mode, tap it to configure the next measurement while stopped.</td></tr>
+<tr><td>Measurement time</td><td>Integration time in seconds for Leq; shown only when applicable.</td></tr>
+<tr><td>Save to / Measurement duration</td><td>Destination and recording length in Recording mode.</td></tr>
+<tr><td>Transport control</td><td>Start/Stop for SLM; Record for signal capture.</td></tr>
+</tbody></table></div>
+<p><strong>Identify</strong> requires a working connection. It is a useful final identity check after connecting, not a way to establish the connection.</p>
+<h2 id="slm">Measure a sound level</h2>
+<!-- Illustration DF-14 -->
+<ol><li>Select <strong>SLM</strong> in Mode.</li><li>While stopped, tap the level display to open the SLM configuration page.</li><li>Choose <strong>Measurement type</strong>, <strong>Frequency weighting</strong> and, when applicable, <strong>Time weighting</strong>. Tap <strong>Apply</strong> to return to the control page. Cancel leaves the selection unchanged.</li><li>For Leq, enter <strong>Measurement time (seconds)</strong> on the control page.</li><li>Tap Start. Follow the measurement state as well as the numerical level.</li><li>Use Stop for an ongoing measurement. A timed Leq ends at its configured interval; its final value remains displayed.</li></ol>
+<p>Applying a parameter prepares the next acquisition; it does not start it. Mode and parameter controls are unavailable while an operation is running.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Measurement type</th><th scope="col">Meaning and choices</th></tr></thead><tbody>
+<tr><td>L</td><td>Live sound pressure level. Select A, B, C or Z frequency weighting and Fast (F), Slow (S), Impulse (I) or Peak detection. Runs until stopped.</td></tr>
+<tr><td>Leq</td><td>Energy-average level over the specified measurement interval. Frequency weighting applies; a separate Fast/Slow detector does not.</td></tr>
+<tr><td>Lmin</td><td>Lowest time-weighted level since Start. Select F or S. Continues until stopped.</td></tr>
+<tr><td>Lmax</td><td>Highest time-weighted level since Start. Select F or S. Continues until stopped.</td></tr>
+</tbody></table></div>
+<p>Use the full parameter symbol when recording a reading; for example, LAeq and LAFmax describe different measurements. A final timed result is different from a live value that is still updating. If the connection is lost or the app reports an interruption, do not treat the last displayed number as a newly completed measurement.</p>
+<p>The SLM controls display sound level results. They do not make a project waveform recording. To retain a waveform for later analysis and export, select <strong>Recording</strong>.</p>
+<h2 id="recording">Record a signal</h2>
+<ol><li>Select <strong>Recording</strong>. Check the input indication and microphone calibration.</li><li>Check <strong>Save to</strong> and choose <strong>Measurement duration</strong>.</li><li>Tap Record and allow preparation to finish. Microphone warm-up and an attention delay may precede actual capture.</li><li>Wait through acquisition and retrieval. Use the offered Stop or Cancel action only when you intend to interrupt the run, and check its resulting status.</li><li>Open the destination group and inspect the successful receiver recording or recordings.</li></ol>
+<p>Recording-only capture can involve other available receivers as well as the Aether whose page is open. A source-triggered run starts instead from the source's page; see <a href="../../measurement-workflow/index.html">Acoustic Measurement Workflow</a>.</p>
+<h2 id="calibration">Calibrate the microphone</h2>
+<!-- Illustrations DF-15, DF-16 -->
+<ol><li>Stop SLM and recording. Fit and operate the acoustic calibrator according to the microphone and calibrator instructions.</li><li>On the Aether control page, choose <strong>menu → Settings → Measurement → Calibrate</strong>.</li><li>In <strong>Calibrate Aether</strong>, enter the actual calibrator level in dB and tap <strong>Start</strong>.</li><li>Keep the assembly steady while the app reports warm-up, tone search and measurement. Use Cancel if you need to abandon the attempt.</li><li>Wait for a successful result. On failure, check the connection, tone and entered level before retrying.</li><li>Remove the calibrator before measuring and check the resulting sound level indication.</li></ol>
+<p>The app initiates calibration and reports its progress; the Aether retains the resulting calibration. Physical microphone compatibility, direct mounting and calibrator preparation are covered in <a href="../../../aether/microphone-calibration/index.html">Aether: Microphone and Calibration</a>. Recheck calibration after replacing the microphone.</p>
+<h2 id="settings">Aether settings</h2>
+<p>The common <a href="../../device-settings/index.html">Device settings</a> sections cover identity, network, password, power and software. Aether additionally provides:</p>
+<ul><li><strong>Measurement:</strong> the default source–receiver distance and the calibration action.</li><li><strong>LEDs:</strong> ordinary status brightness and pre-recording attention time. Save changes explicitly.</li><li><strong>Service:</strong> factory reset with a physical confirmation sequence and final erase action.</li></ul>
+<p>Attention time is a delay before recording; it is not part of the waveform duration. Setting ordinary LED brightness to zero does not suppress the full-brightness attention indication. See <a href="../../../aether/power-status/index.html">Aether: Power and Status Indicators</a>.</p>
+<h2 id="recovery">Recovery actions in the app</h2>
+<!-- Illustrations DF-17, DF-18 -->
+<p>If normal access is unavailable, follow the physical procedure in <a href="../../../aether/troubleshooting/index.html#recovery-network">Aether: Temporary recovery network</a>. Join that network in the operating system, return to Devices, and tap the recovery-mode Aether card.</p>
+<p><strong>Restore factory password</strong> asks for the original factory password supplied with the equipment. On success it becomes the active password for remote access and the normal hotspot. This restoration preserves recordings and settings.</p>
+<p><strong>Factory reset</strong> is a different operation: it deletes recordings, saved networks, calibration and user settings and restores the factory password. Follow the app's physical confirmation instructions and read the final <strong>Erase and reset</strong> confirmation. Export required data before starting. Afterward, reconnect and recalibrate.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

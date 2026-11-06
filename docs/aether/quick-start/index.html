@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Start - Aether manual</title>
+  <meta name="description" content="Prepare Aether, connect through DIRAC Field, calibrate and make a first measurement.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261105-aether">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual aether-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Aether manual</summary>
+        <nav aria-label="Aether chapters">
+          <ul>
+            <li><a href="../../aether/index.html">Overview</a></li>
+            <li><a href="../../aether/quick-start/index.html" aria-current="page">Quick Start</a></li>
+            <li><a href="../../aether/microphone-calibration/index.html">Microphone and Calibration</a></li>
+            <li><a href="../../aether/power-status/index.html">Power and Status Indicators</a></li>
+            <li><a href="../../aether/network/index.html">Remote Control</a></li>
+            <li><a href="../../aether/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../../aether/troubleshooting/index.html">Troubleshooting and Recovery</a></li>
+            <li><a href="../../aether/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../index.html">Aether</a> <span aria-hidden="true">/</span> <span aria-current="page">Quick Start</span>
+      </nav>
+      <h1 id="quick-start">Quick Start</h1>
+      <p class="notice"><strong>Draft for review:</strong> This Aether guide is being prepared. Product details and procedures are subject to review.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#before-you-start">Before you start</a></li>
+            <li><a href="#prepare-aether">Prepare Aether</a></li>
+            <li><a href="#check-and-calibrate">Check and calibrate</a></li>
+            <li><a href="#first-measurement">Make a first measurement</a></li>
+            <li><a href="#finish">Finish</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>This page takes you from an unconnected Aether to a first measurement. Detailed application controls belong in the <a href="../../diracmobile/index.html">DIRAC Field guide</a>.</p>
+<h2 id="before-you-start">Before you start</h2>
+<ul>
+  <li>Aether and its 1/2-inch IEPE measurement microphone, normally supplied together.</li>
+  <li>A charged Aether battery. USB-C power is optional during use.</li>
+  <li>A phone or tablet running DIRAC Field, and the Aether device password.</li>
+  <li>A suitable acoustic calibrator when calibrated sound levels are required.</li>
+</ul>
+<h2 id="prepare-aether">Prepare Aether</h2>
+<ol>
+  <li>Connect the microphone directly to Aether's BNC input and place the assembly so it will remain undisturbed. No microphone cable is needed.</li>
+  <li>Wake Aether using its orientation-sensitive switch and wait for the startup indication to finish. Normal use is on battery power; connect a suitable USB-C supply if charging or external power is needed.</li>
+  <li>Connect the controlling device to the same network as Aether, or to Aether's hotspot. See <a href="../network/index.html">Remote Control</a>.</li>
+  <li>Select Aether in DIRAC Field and authenticate with its device password.</li>
+</ol>
+<p>After the connection is established, you can use Identify to confirm which physical Aether you have selected. Identify requires an active connection.</p>
+<h2 id="check-and-calibrate">Check and calibrate</h2>
+<p>Check that the live microphone level responds to sound. Allow the microphone power to settle; Aether applies a five-second IEPE warm-up when the supply has just been enabled.</p>
+<p>For calibrated measurements, fit the acoustic calibrator, check its selected level and run calibration. See <a href="../microphone-calibration/index.html#calibration">Microphone and Calibration</a>. Remove the calibrator before measuring.</p>
+<h2 id="first-measurement">Make a first measurement</h2>
+<p>In DIRAC Field, select either <strong>SLM</strong> for sound level measurement or <strong>Recording</strong> for a signal recording. Choose the required parameter or recording duration and start the operation.</p>
+<p>A recording may be preceded by microphone warm-up and a flashing red attention indication. The red breathing indication identifies recording. Wait for completion and check the result in the app before moving the equipment or switching off.</p>
+<p>Use DIRAC Field to retrieve and manage recordings. Before leaving the site, check that the required measurements have been saved.</p>
+<p>Aether can also record with the desktop version of DIRAC. The desktop application supports recording only, without Aether's SLM function. See the <a href="../../dirac/index.html">DIRAC guide</a> for desktop recording workflows.</p>
+<h2 id="finish">Finish</h2>
+<p>Stop the active measurement or recording before disconnecting equipment. For battery operation, use the app's power-off action when finished. Aether can also power down automatically after inactivity. See <a href="../power-status/index.html">Power and Status Indicators</a>.</p>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Acoustics Engineering.
+  </footer>
+</body>
+</html>

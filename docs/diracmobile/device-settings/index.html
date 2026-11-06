@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Device Settings and Maintenance - DIRAC Field manual</title>
+  <meta name="description" content="DIRAC Field device settings: identity, networks, passwords, power, receiver defaults and supported software updates.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual dirac-field-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>DIRAC Field manual</summary>
+        <nav aria-label="DIRAC Field chapters">
+          <ul>
+            <li><a href="../index.html">Overview</a></li>
+            <li><a href="../quick-start/index.html">Quick Start</a></li>
+            <li><a href="../connecting-devices/index.html">Connecting Devices</a></li>
+            <li><a href="../projects-and-groups/index.html">Projects and Measurement Groups</a></li>
+            <li><a href="../measurement-workflow/index.html">Acoustic Measurement Workflow</a></li>
+            <li><a href="../device-controls/index.html">Device Controls</a></li>
+            <li class="chapter-child"><a href="../device-controls/aether/index.html">Aether</a></li>
+            <li class="chapter-child"><a href="../device-controls/echo-atlas/index.html">Echo and Atlas</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2755/index.html">HBK 2755</a></li>
+            <li class="chapter-child"><a href="../device-controls/hbk2255/index.html">HBK 2255</a></li>
+            <li><a href="../results-and-analysis/index.html">Results and Analysis</a></li>
+            <li><a href="../export-and-desktop-dirac/index.html">Export and Desktop DIRAC</a></li>
+            <li><a href="../device-settings/index.html" aria-current="page">Device Settings and Maintenance</a></li>
+            <li><a href="../application-settings/index.html">Application Settings</a></li>
+            <li><a href="../troubleshooting/index.html">Troubleshooting</a></li>
+            <li><a href="../release-notes/index.html">Version and Release Information</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Device Settings and Maintenance</span></nav>
+      <h1 id="device-settings">Device Settings and Maintenance</h1>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#open">Open the correct settings</a></li>
+            <li><a href="#identity">ID and software identity</a></li>
+            <li><a href="#network">Network</a></li>
+            <li><a href="#password">Device password</a></li>
+            <li><a href="#power">Power &amp; Battery</a></li>
+            <li><a href="#measurement">Measurement and LEDs</a></li>
+            <li><a href="#updates">Check and install device software</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="open">Open the correct settings</h2>
+<!-- Illustration DF-37 -->
+<p>From a connected device's control page, choose <strong>menu → Settings</strong>. The header identifies the selected equipment. Tap a section heading to expand it; the page presents only the relevant editors and actions for that device.</p>
+<p>From Devices or another general page, the same menu entry opens <a href="../application-settings/index.html">App settings</a>. Device settings change equipment or receiver defaults; App settings change DIRAC Field's own preferences.</p>
+<h2 id="identity">ID and software identity</h2>
+<p><strong>ID</strong> shows Name, Serial number and Software version as reported by the device. Use these values to confirm which unit you are configuring and to provide useful information when seeking support. These identity rows are readouts, not a name-edit form.</p>
+<h2 id="network">Network</h2>
+<!-- Illustrations DF-38, DF-39 -->
+<p>Expand <strong>Network</strong> to see IP and MAC information and, on supported devices, scan for Wi-Fi networks. Aether, Echo, Atlas and HBK 2755 provide network configuration in the app; HBK 2255's address information does not imply that this editor is available.</p>
+<ol><li>Under <strong>Connect device to Wi-Fi</strong>, select the network.</li><li>Enter its access-point password if needed. If the editor asks to <strong>Authenticate with device</strong>, first supply the device credential; this is not the access-point password.</li><li>On AE equipment, choose the saved network's <strong>Auto-reconnect</strong> policy as required.</li><li>Use <strong>Connect</strong> and follow the reported progress. Reconnect the phone/tablet to the resulting network if necessary.</li></ol>
+<p>For AE saved networks, <strong>Save auto-reconnect setting</strong> changes the selected saved network's automatic-connection policy. It does not ask the device to replace that network's password or immediately change networks. <strong>Forget</strong> removes the selected network's saved information from the equipment; it is different from forgetting a device in the Devices list.</p>
+<p>Under <strong>Device access point</strong>, use the offered settings and <strong>Set access point and switch mode</strong> to open a direct device network. This disconnects the existing session. Join the device network using the operating system's Wi-Fi settings and return to the app.</p>
+<p>Aether supports Station and Hotspot operation. Aether, Echo and Atlas use their active device password for the normal hotspot. HBK 2755 can expose separate hotspot credentials; follow the fields shown for that device.</p>
+<h2 id="password">Device password</h2>
+<!-- Illustration DF-40 -->
+<p>Aether, Echo and Atlas provide the unified <strong>Device password</strong> editor. Enter and confirm the new password, or use <strong>Generate</strong> and retain a copy using the offered Copy action. Use <strong>Change device password</strong> to apply it.</p>
+<p>The accepted password length is 8–63 characters. Changing it affects remote authentication and the normal device hotspot. Retain the new password and expect other controllers or operating-system Wi-Fi profiles to need it. App-stored passwords and network credentials on the equipment are distinct.</p>
+<h2 id="power">Power &amp; Battery</h2>
+<p>This section shows reported Voltage, Current, Charge and Charging state. Missing information is not proof of an empty battery. Power actions are available for Aether, Echo, Atlas and HBK 2255 where supported; stop acquisition and playback before using them.</p>
+<p><strong>Off</strong> requests device power-off; it is not a Wi-Fi mode. <strong>Reset</strong> restarts the device; it is not Aether's factory reset. Aether must be disconnected from USB-C power for a complete battery-powered shutdown; with USB-C connected its standby/charging behaviour applies.</p>
+<p>On Aether, Echo and Atlas, the <strong>Auto powerdown timeout</strong> editor uses minutes; zero disables automatic powerdown. Save the setting explicitly. Consult the hardware guide for the conditions in which the timeout applies.</p>
+<h2 id="measurement">Measurement and LEDs</h2>
+<!-- Illustration DF-41 -->
+<p>Aether and HBK 2255 provide <strong>Default source-receiver distance</strong> in metres. Set and Save it for subsequent captures. Existing measurements keep their stored distances and can be corrected through their metadata editor.</p>
+<p>Aether also provides the <strong>Calibrate</strong> action in Measurement, an <strong>LEDs</strong> section for brightness and attention time, and a <strong>Service</strong> section for factory reset. See <a href="../device-controls/aether/index.html#calibration">Using Aether</a> for the app procedure and the Aether guide for physical preparation.</p>
+<h2 id="updates">Check and install device software</h2>
+<!-- Illustration DF-42 -->
+<ol><li>Stop playback, measurement and calibration, and provide stable device power and connectivity.</li><li>In <strong>ID</strong>, choose <strong>Check for updates</strong> on supported equipment. A check requires access to the update service; a local-only hotspot may not provide that access.</li><li>If an update is offered, review its information and choose <strong>Install software update</strong>.</li><li>Allow download, installation and restart to finish. Reconnect afterward and confirm the reported Software version.</li></ol>
+<p>The app has update support for Aether, Echo, Atlas and HBK 2755; HBK 2255 updates are not managed here. Availability still depends on the device and update service.</p>
+<p><strong>Rollback</strong> is offered only when the app has a verified retained target for supported equipment. Review the proposed version and confirmation before proceeding. It restores the retained device software image, not deleted measurements or an earlier copy of all settings. Update DIRAC Field itself through its normal app installation/distribution route, not this device-software control.</p>
+    </main>
+  </div>
+  <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>
+</body>
+</html>

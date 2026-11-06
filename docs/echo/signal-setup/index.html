@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Signal Setup - Echo manual</title>
-  <meta name="description" content="Pink MLS, ESweep and STIPA support two playback modes.">
+  <meta name="description" content="Echo signal sources, playback modes, sequence duration, signal levels, power limits and overload warnings.">
   <link rel="stylesheet" href="../../assets/style.css">
   <link rel="stylesheet" href="../../assets/manual.css?v=20261029-4">
   <script src="../../assets/manual.js" defer></script>
@@ -30,7 +30,7 @@
             <li><a href="../../echo/quick-start/index.html">Quick Start</a></li>
             <li><a href="../../echo/signal-setup/index.html" aria-current="page">Signal Setup</a></li>
             <li><a href="../../echo/system-menu/index.html">System Menu</a></li>
-            <li><a href="../../echo/network/index.html">Network &amp; Remote Control</a></li>
+            <li><a href="../../echo/network/index.html">Remote Control</a></li>
             <li><a href="../../echo/specifications/index.html">Technical Specifications</a></li>
             <li><a href="../../echo/troubleshooting/index.html">Troubleshooting</a></li>
             <li><a href="../../echo/release-notes/index.html">Release Notes</a></li>
@@ -54,6 +54,7 @@
               <li><a href="#playback-modes">Playback modes</a></li>
               <li><a href="#sequence-duration">Sequence duration</a></li>
               <li><a href="#signal-level">Signal level</a></li>
+              <li><a href="#power-limits">Power limits and warnings</a></li>
           </ul>
         </nav>
       </details>
@@ -170,6 +171,36 @@
 </table>
 </div>
 <p>A gain setting does not specify an absolute sound level. The resulting output level depends on the level of the source signal.</p>
+<hr>
+<h2 id="power-limits">Power limits and warnings</h2>
+<p>The usable signal level depends on the signal peaks, the remaining battery energy and the power available from the USB supply. Lowering the signal level reduces the load, but input clipping must be corrected at the external source.</p>
+<p>For stored signals, Echo checks the expected power demand before starting playback and when changing the signal level. If the requested level exceeds the available power, a warning is displayed and playback may be prevented. The level of an external BNC signal is not known in advance, so its source level must also be controlled.</p>
+<p>In a full-screen power warning, <strong>Avl</strong> identifies the available amount and <strong>Req</strong> the required amount. Press any button to return to the home screen, correct the cause and try again.</p>
+<p>The following illustrations reproduce the display layout with example readings; the numbers are not fixed limits.</p>
+
+<h3 id="adc-overload">ADC overload (ADCO)</h3>
+<p>The external BNC input reaches the analogue-to-digital converter's full-scale limit and clips. The input clip indicator appears near the lower left of the home screen. Reduce the level of the external source; lowering Echo's output gain does not remove distortion that has already occurred at the input.</p>
+<p><img src="../../assets/echo/warning-input-clip.svg" alt="Echo BNC input playback with the input clip indicator near the lower left, beside the signal selection icon."></p>
+
+<h3 id="dac-overload">DAC overload (DACO)</h3>
+<p>The signal peaks exceed the output stage's limit. In Echo, this can occur before the digital signal reaches full scale. The output clip indicator appears near the lower right of the home screen. Reduce the selected signal level or gain; for an external signal, reducing its source level also helps.</p>
+<p><img src="../../assets/echo/warning-output-clip.svg" alt="Echo BNC input playback with the output clip indicator near the lower right, beside the speaker control."></p>
+
+<h3 id="battery-energy-overload">Battery remaining energy overload (BREO)</h3>
+<p>With no USB supply attached, the remaining battery energy is insufficient to run the chosen signal for the minimum operating time. Echo displays <strong>Battery low</strong>. Lower the signal level, recharge the battery or connect a suitable USB supply.</p>
+<p><img src="../../assets/echo/warning-battery-low.svg" alt="Battery low warning with example readings Avl:18.6 Req:36.4 Wh."></p>
+
+<h3 id="battery-current-overload">Battery peak current overload (BPCO)</h3>
+<p>With no USB supply attached, the signal peaks would draw more current than the battery protection allows. Echo displays <strong>Battery ovl</strong>. This can occur even when the battery has plenty of charge. Reduce the signal level or use a suitable USB supply.</p>
+<p><img src="../../assets/echo/warning-battery-overload.svg" alt="Battery ovl warning with example available and required readings, labelled A as on the device display."></p>
+
+<h3 id="usb-average-overload">USB average power overload (UAPO)</h3>
+<p>The average power required by Echo and the selected signal exceeds the power available from the connected USB supply. Echo displays <strong>USB pwr ovl</strong>. Reduce the signal level or use a USB supply and cable capable of delivering more power. The available power depends on the connection negotiated with the supply.</p>
+
+<h3 id="usb-peak-overload">USB peak current overload (UPCO)</h3>
+<p>The signal peaks demand more current than the USB supply can sustain, even if its average power rating appears sufficient. The height and duration of the peaks matter. User signals with a high crest factor (large peaks relative to their average level) are particularly demanding. Reduce the gain or use a signal with smaller peaks.</p>
+<p>Both USB overload conditions use the <strong>USB pwr ovl</strong> message:</p>
+<p><img src="../../assets/echo/warning-usb-power.svg" alt="USB pwr ovl warning with example readings Avl:7.5 Req:9.0 W, used for USB average power and peak current overload."></p>
     </main>
   </div>
 

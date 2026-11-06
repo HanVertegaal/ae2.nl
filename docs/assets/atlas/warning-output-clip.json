@@ -1,0 +1,50 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Atlas output clipping indicator",
+  "description": "BNC input playback at the maximum 0 dB gain, with the output clip indicator near the lower right, a down arrow and the middle stop control.",
+  "elements": [
+    {
+      "type": "icon",
+      "name": "bat100_16x9",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "type": "icon",
+      "name": "wifi_12x9",
+      "x": 116,
+      "y": 0
+    },
+    {
+      "type": "text",
+      "text": "BNC input",
+      "font": 16,
+      "y": 12
+    },
+    {
+      "type": "text",
+      "text": "0dB",
+      "font": 8,
+      "y": 35
+    },
+    {
+      "type": "icon",
+      "name": "down_7x7",
+      "x": 0,
+      "y": 57
+    },
+    {
+      "type": "icon",
+      "name": "off_12x10",
+      "x": 58,
+      "y": 54
+    },
+    {
+      "type": "icon",
+      "name": "clip_10x10",
+      "x": 104,
+      "y": 54
+    }
+  ]
+}

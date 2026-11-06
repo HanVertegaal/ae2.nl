@@ -3,70 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aether - AE Help</title>
-  <meta name="description" content="Portable acoustic measurement and analysis platform for field and lab use.">
+  <title>Aether - Acoustics Engineering</title>
+  <meta name="description" content="Aether microphone interface, main functions and guide overview.">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/manual.css?v=20261106-aether-parts">
+  <script src="../assets/manual.js" defer></script>
 </head>
-<body>
+<body class="manual aether-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="../index.html" aria-label="Acoustics Engineering help home">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
         <img class="brand-logo" src="../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
       </a>
-      <nav class="top-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="../echo/index.html">Echo</a>
-        <a href="../aether/index.html" aria-current="page">Aether</a>
-        <a href="../atlas/index.html">Atlas</a>
-        <a href="../dirac/index.html">Dirac</a>
-        <a href="../diracmobile/index.html">Dirac Mobile</a>
-      </nav>
+      <a class="all-products" href="../index.html"><span aria-hidden="true">&larr;</span> All products</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="kicker">User manual</div>
-      <h1>Aether</h1>
-      <p>Portable acoustic measurement and analysis platform for field and lab use.</p>
-    </div>
-  </section>
-
-  <div class="page">
-    <aside class="sidebar" aria-label="Section navigation">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../echo/index.html">Echo</a></li>
-        <li><a href="../aether/index.html" aria-current="page">Aether</a></li>
-        <li><a href="../atlas/index.html">Atlas</a></li>
-        <li><a href="../dirac/index.html">Dirac</a></li>
-        <li><a href="../diracmobile/index.html">Dirac Mobile</a></li>
-      </ul>
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Aether manual</summary>
+        <nav aria-label="Aether chapters">
+          <ul>
+            <li><a href="../aether/index.html" aria-current="page">Overview</a></li>
+            <li><a href="../aether/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../aether/microphone-calibration/index.html">Microphone and Calibration</a></li>
+            <li><a href="../aether/power-status/index.html">Power and Status Indicators</a></li>
+            <li><a href="../aether/network/index.html">Remote Control</a></li>
+            <li><a href="../aether/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../aether/troubleshooting/index.html">Troubleshooting and Recovery</a></li>
+            <li><a href="../aether/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
     </aside>
 
-    <main class="content">
+    <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs">
-        <a href="../index.html">Documentation</a> &rsaquo; Aether
+        <span aria-current="page">Aether</span>
       </nav>
       <h1 id="aether">Aether</h1>
-      <p class="lead">Portable acoustic measurement and analysis platform for field and lab use.</p>
-      <div class="notice">
-        <strong>Note:</strong> This section is intentionally scaffolded as a static HTML page and ready for product-specific content.
-      </div>
-      <h2>Overview</h2>
-      <p>Aether is a flexible acoustics platform built for portable measurement workflows, data acquisition, and analysis in demanding environments.</p>
-      <ul>
-        <li>Portable field measurement workflows</li>
-        <li>Signal acquisition and logging</li>
-        <li>Live analysis and reporting</li>
-        <li>Integration with supporting AE systems</li>
-      </ul>
+      <p class="notice"><strong>Draft for review:</strong> This Aether guide is being prepared. Product details and procedures are subject to review.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#main-functions">Main functions</a></li>
+            <li><a href="#connections-and-controls">Connections and controls</a></li>
+            <li><a href="#using-this-guide">Using this guide</a></li>
+          </ul>
+        </nav>
+      </details>
+<p>Aether is a portable microphone interface and recorder for acoustic measurements. It is normally used wirelessly with DIRAC Field, running from its internal battery, and can store recordings on its internal SD card. A 1/2-inch measurement microphone is normally supplied with Aether and connects directly to its BNC input.</p>
+<p>DIRAC Field supports both live sound level measurement (SLM) and recording with Aether. The desktop version of DIRAC also supports Aether for recording; it does not support Aether's SLM function.</p>
+<h2 id="main-functions">Main functions</h2>
+<ul>
+  <li>IEPE power for a compatible measurement microphone.</li>
+  <li>Acoustic calibration using a 1 kHz calibrator.</li>
+  <li>Live sound level measurements and signal recording, controlled from DIRAC Field.</li>
+  <li>Battery operation, with USB-C for charging or external power when required.</li>
+  <li>LED indications for connection, calibration, recording and charging.</li>
+</ul>
+<h2 id="connections-and-controls">Connections and controls</h2>
+<figure class="aether-parts" aria-labelledby="aether-parts-caption">
+  <div class="aether-parts-layout">
+    <svg class="aether-parts-diagram" viewBox="0 0 350 800" role="img" aria-labelledby="aether-parts-title aether-parts-description" xmlns="http://www.w3.org/2000/svg">
+      <title id="aether-parts-title">Aether with an AEM-01 microphone</title>
+      <desc id="aether-parts-description">Front view with numbered callouts: 1 microphone, 2 semi-transparent LED cover, 3 BNC microphone connector visible inside the cover, 4 antenna chamber, 5 main tube, 6 USB-C connector, and 7 bottom plate. The tripod mounting hole is on the underside and is not visible.</desc>
+      <image href="../assets/aether/aether-aem01.png" x="15" y="0" width="307" height="800" />
+      <g class="aether-parts-leaders" fill="none" stroke-width="1.5">
+        <path d="M195 150 H292" />
+        <path d="M133 310 H51" />
+        <path d="M182 347 H292" />
+        <path d="M225 415 H292" />
+        <path d="M230 540 H292" />
+        <path d="M185 660 H292" />
+        <path d="M139 745 H51" />
+      </g>
+      <g class="aether-parts-points">
+        <circle cx="195" cy="150" r="3" /><circle cx="133" cy="310" r="3" />
+        <circle cx="182" cy="347" r="3" /><circle cx="225" cy="415" r="3" />
+        <circle cx="230" cy="540" r="3" /><circle cx="185" cy="660" r="3" />
+        <circle cx="139" cy="745" r="3" />
+      </g>
+      <g class="aether-parts-markers" stroke="white" stroke-width="2">
+        <circle cx="307" cy="150" r="15" /><circle cx="36" cy="310" r="15" />
+        <circle cx="307" cy="347" r="15" /><circle cx="307" cy="415" r="15" />
+        <circle cx="307" cy="540" r="15" /><circle cx="307" cy="660" r="15" />
+        <circle cx="36" cy="745" r="15" />
+      </g>
+      <g class="aether-parts-numbers" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+        <text x="307" y="156">1</text><text x="36" y="316">2</text>
+        <text x="307" y="353">3</text><text x="307" y="421">4</text>
+        <text x="307" y="546">5</text><text x="307" y="666">6</text>
+        <text x="36" y="751">7</text>
+      </g>
+    </svg>
+    <ol class="aether-parts-key">
+      <li><p><strong>AEM-01 microphone</strong><br>The 1/2-inch measurement microphone connects directly to Aether, without a microphone cable.</p></li>
+      <li><p><strong>LED cover</strong><br>The semi-transparent cover surrounds the status LEDs. See <a href="./power-status/index.html#status-indicators">Power and Status Indicators</a>.</p></li>
+      <li><p><strong>BNC microphone connector</strong><br>Visible through the LED cover. It connects the microphone and supplies IEPE power when the microphone is in use.</p></li>
+      <li><p><strong>Antenna chamber</strong><br>The dark section below the LED cover houses the Wi-Fi antenna.</p></li>
+      <li><p><strong>Main tube</strong><br>Houses the battery and electronics.</p></li>
+      <li><p><strong>USB-C connector</strong><br>Provides battery charging and the only external power connection. Aether is normally used wirelessly on battery power.</p></li>
+      <li><p><strong>Bottom plate and tripod mount</strong><br>The bottom plate has a 1/4-inch UNC threaded tripod mounting hole on its underside. The hole is not visible in this front view.</p></li>
+    </ol>
+  </div>
+  <figcaption id="aether-parts-caption">Aether fitted with an AEM-01 microphone. Illustration based on the FreeCAD model.</figcaption>
+</figure>
+<p>The internal orientation sensor supports wake-up and the deliberate movement sequences used for recovery. The Wi-Fi interface connects Aether through an existing network or its own hotspot; see <a href="./network/index.html">Remote Control</a>.</p>
+<h2 id="using-this-guide">Using this guide</h2>
+<p>Start with <a href="./quick-start/index.html">Quick Start</a>. This guide explains Aether's connections, microphone requirements, power behaviour and recovery procedures.</p>
+<p>The <a href="../diracmobile/index.html">DIRAC Field guide</a> covers application workflows such as selecting measurement parameters, managing projects, retrieving recordings and analysing results. Its <a href="../diracmobile/device-controls/aether/index.html">Using Aether</a> chapter describes the app's SLM, recording, calibration and settings controls.</p>
+<p>For recording workflows in the desktop application, see the <a href="../dirac/index.html">DIRAC guide</a>.</p>
     </main>
   </div>
 
   <footer class="page-footer">
-    Copyright &copy; 2026 Acoustics Engineering. Product documentation and support.
+    Copyright &copy; 2026 Acoustics Engineering.
   </footer>
 </body>
 </html>

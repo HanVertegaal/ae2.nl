@@ -1,0 +1,35 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Echo Battery low warning",
+  "description": "Battery low warning with example readings Avl:18.6 Req:36.4 Wh. The unit label matches the firmware display.",
+  "elements": [
+    {
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 128,
+      "height": 64
+    },
+    {
+      "type": "rect",
+      "x": 2,
+      "y": 2,
+      "width": 124,
+      "height": 60,
+      "lit": false
+    },
+    {
+      "type": "text",
+      "text": "Battery low",
+      "font": 16,
+      "y": 20
+    },
+    {
+      "type": "text",
+      "text": "Avl:18.6 Req:36.4 Wh",
+      "font": 8,
+      "y": 45
+    }
+  ]
+}

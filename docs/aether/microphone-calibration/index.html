@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Microphone and Calibration - Aether manual</title>
+  <meta name="description" content="Aether microphone connection, power, warm-up, clipping and acoustic calibration.">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261105-aether">
+  <script src="../../assets/manual.js" defer></script>
+</head>
+<body class="manual aether-manual">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://www.acoustics-engineering.com" aria-label="Acoustics Engineering website">
+        <img class="brand-logo" src="../../assets/common/acoustics-engineering-logo.svg" alt="Acoustics Engineering">
+      </a>
+      <a class="all-products" href="../../index.html"><span aria-hidden="true">&larr;</span> All products</a>
+    </div>
+  </header>
+
+  <div class="manual-layout">
+    <aside class="manual-sidebar" aria-label="Manual navigation">
+      <details class="chapter-menu" open>
+        <summary>Aether manual</summary>
+        <nav aria-label="Aether chapters">
+          <ul>
+            <li><a href="../../aether/index.html">Overview</a></li>
+            <li><a href="../../aether/quick-start/index.html">Quick Start</a></li>
+            <li><a href="../../aether/microphone-calibration/index.html" aria-current="page">Microphone and Calibration</a></li>
+            <li><a href="../../aether/power-status/index.html">Power and Status Indicators</a></li>
+            <li><a href="../../aether/network/index.html">Remote Control</a></li>
+            <li><a href="../../aether/specifications/index.html">Technical Specifications</a></li>
+            <li><a href="../../aether/troubleshooting/index.html">Troubleshooting and Recovery</a></li>
+            <li><a href="../../aether/release-notes/index.html">Release Notes</a></li>
+          </ul>
+        </nav>
+      </details>
+    </aside>
+
+    <main id="main" class="content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs">
+        <a href="../index.html">Aether</a> <span aria-hidden="true">/</span> <span aria-current="page">Microphone and Calibration</span>
+      </nav>
+      <h1 id="microphone-calibration">Microphone and Calibration</h1>
+      <p class="notice"><strong>Draft for review:</strong> This Aether guide is being prepared. Product details and procedures are subject to review.</p>
+      <details class="page-outline">
+        <summary>On this page</summary>
+        <nav aria-label="On this page">
+          <ul>
+            <li><a href="#microphone-connection">Microphone connection</a></li>
+            <li><a href="#microphone-power">Microphone power and warm-up</a></li>
+            <li><a href="#clipping">Clipping</a></li>
+            <li><a href="#calibration">Acoustic calibration</a></li>
+            <li><a href="#checking-calibration">Checking calibration</a></li>
+          </ul>
+        </nav>
+      </details>
+<h2 id="microphone-connection">Microphone connection</h2>
+<p>A 1/2-inch IEPE measurement microphone is normally supplied with Aether. Connect it directly to Aether's BNC input, without a microphone cable, and keep the connection secure during calibration and measurement.</p>
+<p>If you replace the microphone, check its compatibility with Aether and calibrate the new assembly before measuring calibrated sound levels.</p>
+<h2 id="microphone-power">Microphone power and warm-up</h2>
+<p>Aether enables its IEPE supply while an admitted live microphone session, calibration or recording needs it. Opening a management connection alone does not keep the microphone powered.</p>
+<p>The microphone supply must be on for at least five seconds before a recording or calibration can use it. If it is already warmed up, only the remaining delay is needed. Microphone power can switch off after a period without microphone activity to save battery energy.</p>
+<h2 id="clipping">Clipping</h2>
+<p>If the input clips, the distorted waveform cannot be restored by applying a lower level later. Reduce the acoustic level at the microphone and repeat the measurement. Check that the microphone is suitable for the expected sound level.</p>
+<h2 id="calibration">Acoustic calibration</h2>
+<p>Use a 1 kHz acoustic calibrator with a coupler that fits the microphone. Enter the actual calibrator level selected on the calibrator; 94 dB is a common setting, not a value to assume for every calibration.</p>
+<ol>
+  <li>Fit the calibrator securely and switch it on.</li>
+  <li>Initiate Aether calibration from DIRAC Field and enter the calibrator's sound pressure level.</li>
+  <li>Keep the assembly steady. Aether first waits for microphone warm-up and a stable calibration tone, then measures the tone.</li>
+  <li>Wait for successful completion. If calibration fails, check the calibrator level, coupler, microphone connection and background noise before retrying.</li>
+  <li>Remove the calibrator and check the live reading before starting the measurement.</li>
+</ol>
+<p>The purple rotating LED indication identifies calibration. The successful calibration scale is retained by Aether and used to convert microphone samples to sound pressure.</p>
+<h2 id="checking-calibration">Checking calibration</h2>
+<p>Check the measurement chain before and after an important measurement session. Record the calibrator level and the result with the measurement documentation. Factory reset clears the user calibration, so recalibration is required afterwards.</p>
+<p>For the calibration dialog and application controls, see the <a href="../../diracmobile/index.html">DIRAC Field guide</a>.</p>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    Copyright &copy; 2026 Acoustics Engineering.
+  </footer>
+</body>
+</html>

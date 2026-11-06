@@ -1,0 +1,35 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Echo USB pwr ovl warning",
+  "description": "USB pwr ovl warning with example readings Avl:7.5 Req:9.0 W. The unit label matches the firmware display.",
+  "elements": [
+    {
+      "type": "rect",
+      "x": 0,
+      "y": 0,
+      "width": 128,
+      "height": 64
+    },
+    {
+      "type": "rect",
+      "x": 2,
+      "y": 2,
+      "width": 124,
+      "height": 60,
+      "lit": false
+    },
+    {
+      "type": "text",
+      "text": "USB pwr ovl",
+      "font": 12,
+      "y": 20
+    },
+    {
+      "type": "text",
+      "text": "Avl:7.5 Req:9.0 W",
+      "font": 8,
+      "y": 45
+    }
+  ]
+}
