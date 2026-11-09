@@ -6,7 +6,7 @@
   <title>Acoustic Measurement Workflow - DIRAC Field manual</title>
   <meta name="description" content="Combine source playback and receiver capture, verify the result and choose the correct analysis.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Acoustic Measurement Workflow</span></nav>
       <h1 id="measurement-workflow">Acoustic Measurement Workflow</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -78,11 +78,24 @@
 <p>A dedicated STIPA acquisition is a signal-based speech-intelligibility workflow. Use the appropriate STIPA source configuration and review the corresponding STIPA result. A waveform's presence alone does not establish that its recording is suitable for that analysis.</p>
 <p>The signal and its supported timing determine the source-driven run. Recording duration selected on a receiver's recording-only page is a separate setting. Review the actual saved duration instead of assuming it equals the rounded sequence-length label.</p>
 <h2 id="run">Run the acquisition</h2>
-<!-- Illustration DF-11 -->
 <ol><li>Open the source control page and verify the signal and level or gain. Check the <strong>Save to</strong> destination.</li><li>Use the source's measurement/Record control. It becomes available when the app has suitable receivers and, for Echo/Atlas, a supported measurement signal.</li><li>Allow preparation, any signal buildup, capture, retrieval and processing to complete. Keep the app connected and the equipment stationary.</li><li>If you stop or cancel, read the resulting state. Stop acquisition and Cancel are distinct actions where both are shown; an abandoned run must not be treated as complete.</li></ol>
 <p>HBK 2255 participates in a complete source-triggered run only after its BZ-7351 status has been verified as active. This prerequisite does not prevent ordinary recording-only captures from its own control page. See <a href="../device-controls/hbk2255/index.html#prerequisites">HBK 2255 prerequisites</a>.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-11a">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-11a-capture-progress.png" aria-label="Open full-size screenshot: Capture in progress">
+      <img src="../../assets/diracmobile/df-11a-capture-progress.png" alt="Capture in progress: The recording stage of a source-triggered Echo acquisition." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Capture in progress.</strong> The recording stage of a source-triggered Echo acquisition. <a href="../../assets/diracmobile/df-11a-capture-progress.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-11b">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-11b-retrieval-progress.png" aria-label="Open full-size screenshot: Retrieval in progress">
+      <img src="../../assets/diracmobile/df-11b-retrieval-progress.png" alt="Retrieval in progress: After capture, allow the receiver data to finish transferring." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Retrieval in progress.</strong> After capture, allow the receiver data to finish transferring. <a href="../../assets/diracmobile/df-11b-retrieval-progress.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="verify">Verify every receiver result</h2>
-<p>Open the destination group. A completed multi-receiver measurement should have usable data for every intended receiver. A partially completed run means some receiver data succeeded and some did not; preserve the successful data and repeat the missing measurements where necessary. The current detail page opens the first successful receiver recording; export the complete measurement to inspect the other receivers.</p>
+<p>Open the destination group. Each participating receiver has a separate measurement entry, with its own measurement number. Open each expected receiver result to check its data. If a receiver failed, its failed entry does not invalidate the successful entries; preserve those results and repeat the missing measurement where necessary.</p>
 <p>Check waveform duration, clipping, background disturbance and the appropriate measurement type. Examine an impulse response and its decay before relying on reverberation or speech results. A missing result or band is not a zero value.</p>
 <h2 id="finish">Finish and preserve the data</h2>
 <p>Stop source playback explicitly and check the device state, especially after a canceled run or lost connection. Review the <a href="../results-and-analysis/index.html">results</a>, add useful metadata, then <a href="../export-and-desktop-dirac/index.html">export</a> the required data. Confirm the exported file was saved before removing equipment or deleting local copies.</p>

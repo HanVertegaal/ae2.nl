@@ -6,10 +6,10 @@
   <title>Atlas - Acoustics Engineering</title>
   <meta name="description" content="Atlas user manual: operation, signal setup, networking and technical specifications.">
   <link rel="stylesheet" href="../assets/style.css">
-  <link rel="stylesheet" href="../assets/manual.css">
+  <link rel="stylesheet" href="../assets/manual.css?v=20261107-atlas-views">
   <script src="../assets/manual.js" defer></script>
 </head>
-<body class="manual">
+<body class="manual atlas-manual">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
@@ -40,13 +40,16 @@
     </aside>
 
     <main id="main" class="content" tabindex="-1">
-      <p class="notice"><strong>Draft:</strong> This Atlas guide is adapted from the Echo manual. Descriptions, specifications and illustrations still need to be checked for Atlas.</p>
       <nav class="breadcrumbs" aria-label="Breadcrumbs">
         <span aria-current="page">Atlas</span>
       </nav>
 <h1 id="atlas">Atlas</h1>
       <p>Atlas is a portable omnidirectional source for room and building acoustics.</p>
-      <p>The Atlas is designed to be used with the DiracMobile or Dirac acoustics measurement software.</p>
+      <p>Atlas can be used with <a href="../diracmobile/index.html">DIRAC Field</a> or the desktop version of DIRAC acoustics measurement software.</p>
+      <figure class="atlas-product-photo">
+        <img src="../assets/atlas/atlas-photograph.jpg" width="1690" height="1800" alt="Atlas omnidirectional sound source with its loudspeaker grilles, display, three control buttons and carrying handle visible" decoding="async">
+        <figcaption>Atlas omnidirectional sound source.</figcaption>
+      </figure>
 
       <details class="page-outline">
         <summary>On this page</summary>
@@ -54,7 +57,9 @@
           <ul>
 
               <li><a href="#main-functions">Main functions</a></li>
+              <li><a href="#top-view">Top view</a></li>
               <li><a href="#control-panel">Control panel</a></li>
+              <li><a href="#bottom-view">Bottom view and connections</a></li>
           </ul>
         </nav>
       </details>
@@ -63,23 +68,32 @@
         <li>Built-in signals for room and building acoustics</li>
         <li>User signal playback</li>
         <li>BNC line input and output support</li>
-        <li>Wi‑Fi based remote control using DiracMobile</li>
+        <li>Wi-Fi remote control using DIRAC Field</li>
       </ul>
-      <h2 id="control-panel">Control panel</h2>
-      <p><img src="../assets/echo/front_annotated.svg" alt="Annotated front view"></p>
+      <h2 id="top-view">Top view</h2>
+      <figure class="atlas-parts-view">
+        <a href="../assets/atlas/atlas-top-annotated.svg" aria-label="Enlarge the numbered Atlas top view">
+          <img src="../assets/atlas/atlas-top-annotated.svg" width="1200" height="1070" alt="Atlas top CAD view: 1 carrying handle, 2 central Wi-Fi antenna cover, 3 display and three buttons, 4 nameplate" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Atlas top view. Select the illustration to enlarge it.</figcaption>
+      </figure>
+      <ol class="atlas-parts-key">
+        <li><p><strong>Handle</strong><br>The carrying handle is located on the upper part of Atlas.</p></li>
+        <li><p><strong>Wi-Fi antenna cover</strong><br>The central cover houses the Wi-Fi antenna used for remote control.</p></li>
+        <li><p><strong>Display and three buttons</strong><br>The OLED display and the L, M and R buttons provide local operation.</p></li>
+        <li><p><strong>Nameplate</strong><br>The nameplate identifies Atlas.</p></li>
+      </ol>
+      <h3 id="control-panel">Control panel</h3>
+      <p>The three buttons are arranged below the display. Their current functions are indicated by the icons above them.</p>
       <div class="table-wrap">
-        <table>
+        <table class="button-functions">
           <thead>
-            <tr><th scope="col">Number</th><th scope="col">Function</th></tr>
+            <tr><th scope="col">Button</th><th scope="col">Function</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>OLED Display</td></tr>
-            <tr><td>2</td><td><strong>L</strong>eft button - Signal setup on the home page; decrease gain during playback</td></tr>
-            <tr><td>3</td><td><strong>M</strong>iddle button - Menu on the home page; stop playback and return home during playback</td></tr>
-            <tr><td>4</td><td><strong>R</strong>ight button - Start playback on the home page; increase gain during playback</td></tr>
-            <tr><td>5</td><td>BNC line level input</td></tr>
-            <tr><td>6</td><td>BNC line level output</td></tr>
-            <tr><td>7</td><td>USB-C power input</td></tr>
+            <tr><td><strong>L</strong>eft</td><td>Signal setup on the home page; decrease gain during playback.</td></tr>
+            <tr><td><strong>M</strong>iddle</td><td>Menu on the home page; stop playback and return home during playback.</td></tr>
+            <tr><td><strong>R</strong>ight</td><td>Start playback on the home page; increase gain during playback.</td></tr>
           </tbody>
         </table>
       </div>
@@ -88,6 +102,19 @@
       <p>The home page shows the battery state (upper left), Wifi state (upper right), selected signal (center), and icons for the three buttons.<br/>
          In this example, the battery is partially charged with a charger attached. The + sign indicates the charger can deliver at least 45 Watts of power.<br/>
          Also in this example, the selected signal is a continuous (C) PMLS-RA signal with a length of 5.5 seconds at a gain of -30 dB. </p>
+      <h2 id="bottom-view">Bottom view and connections</h2>
+      <figure class="atlas-parts-view">
+        <a href="../assets/atlas/atlas-bottom-annotated.svg" aria-label="Enlarge the numbered Atlas bottom view">
+          <img src="../assets/atlas/atlas-bottom-annotated.svg" width="1200" height="1070" alt="Atlas bottom CAD view: 1 quarter-inch UNC threaded tripod mounting hole, 2 USB-C connector, 3 BNC input and output connectors, 4 three rubber feet" loading="lazy" decoding="async">
+        </a>
+        <figcaption>Atlas bottom view. The three branches from callout 4 identify the three rubber feet. Select the illustration to enlarge it.</figcaption>
+      </figure>
+      <ol class="atlas-parts-key">
+        <li><p><strong>Tripod mounting hole</strong><br>The bottom has a 1/4-inch UNC threaded hole for a compatible tripod mount.</p></li>
+        <li><p><strong>USB-C connector</strong><br>Connects the external power supply. See <a href="./signal-setup/index.html#power-limits">power limits and warnings</a> for USB supply requirements.</p></li>
+        <li><p><strong>BNC connectors</strong><br>Line-level input and output. Callout 3 identifies the pair; use the markings on Atlas to distinguish input from output. For output routing, see <a href="./system-menu/index.html#output">System Menu: Output</a>.</p></li>
+        <li><p><strong>Three rubber feet</strong><br>The feet support Atlas when it is placed on a surface rather than mounted on a tripod.</p></li>
+      </ol>
     </main>
   </div>
 

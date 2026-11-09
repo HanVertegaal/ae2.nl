@@ -6,7 +6,7 @@
   <title>Export and Desktop DIRAC - DIRAC Field manual</title>
   <meta name="description" content="Export DIRAC Field projects, groups or measurements as DIRAC packages or WAV and calculated result files.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Export and Desktop DIRAC</span></nav>
       <h1 id="export-and-desktop-dirac">Export and Desktop DIRAC</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -64,20 +64,53 @@
 <p>Export is available from project and group actions and from a measurement's detail page. In a group, use <strong>Select</strong> to export a chosen set of measurements. Select the appropriate scope before choosing the file format.</p>
 <p>A measurement can include several receiver recordings. Exporting a measurement package preserves the measurement context and available receiver data rather than only the waveform initially opened by the detail page.</p>
 <h2 id="dirac">Export for desktop DIRAC</h2>
-<!-- Illustration DF-34 -->
 <ol><li>Tap <strong>Export</strong> for the required project, group, measurement or selection.</li><li>Choose <strong>Export for Dirac (.dmpx)</strong>.</li><li>Wait while the app prepares the package.</li><li>Complete the operating system's save dialog. Choose a location and filename you can find later.</li><li>Wait for <strong>Export complete</strong>, then transfer the saved package to the computer using your usual file-transfer method.</li><li>Open/import it using the compatible desktop DIRAC version's Field package workflow and verify the expected project, measurements and receiver data.</li></ol>
 <p>The package carries hierarchy, measurement metadata and available recordings. Use this format when you want to continue work in desktop DIRAC. A WAV alone does not carry all the same project and stimulus context.</p>
 <p>If desktop DIRAC does not recognise a package, check the desktop version and its import support. Do not repair a package by renaming its extension. The detailed desktop commands belong in the <a href="../../dirac/index.html">DIRAC desktop guide</a>.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-34">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-34-export-format.png" aria-label="Open full-size screenshot: Export format">
+      <img src="../../assets/diracmobile/df-34-export-format.png" alt="Export format: Choose a desktop DIRAC package or WAV/CSV/TXT data export." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Export format.</strong> Choose a desktop DIRAC package or WAV/CSV/TXT data export. <a href="../../assets/diracmobile/df-34-export-format.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="data">Export audio or calculated results</h2>
-<!-- Illustration DF-35 -->
 <ol><li>Choose <strong>Export data (WAV / CSV / TXT)</strong>.</li><li>Select <strong>WAV only</strong>, <strong>Calculated results only</strong>, or <strong>WAV plus calculated results</strong>.</li><li>If results are included, choose <strong>CSV</strong> or <strong>TXT</strong>.</li><li>Wait for preparation, complete the system save dialog and check the completion message.</li></ol>
 <p>A single eligible output can be saved directly. A set of files is packaged in a ZIP archive; extract it before opening the contained files in other applications.</p>
 <p>WAV preserves audio data for suitable analysis tools. CSV and TXT provide calculated values for review or further processing. They do not replace the recording when reanalysis is needed. A missing or unavailable calculated value should not be interpreted as a measured zero.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-35a">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-35a-export-data-content.png" aria-label="Open full-size screenshot: Data export content">
+      <img src="../../assets/diracmobile/df-35a-export-data-content.png" alt="Data export content: Choose audio, calculated results, or both." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Data export content.</strong> Choose audio, calculated results, or both. <a href="../../assets/diracmobile/df-35a-export-data-content.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-35b">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-35b-export-result-format.png" aria-label="Open full-size screenshot: Calculated result format">
+      <img src="../../assets/diracmobile/df-35b-export-result-format.png" alt="Calculated result format: Choose CSV or TXT when exporting calculated results." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Calculated result format.</strong> Choose CSV or TXT when exporting calculated results. <a href="../../assets/diracmobile/df-35b-export-result-format.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="save">Save and verify the file</h2>
-<!-- Illustration DF-36 -->
 <p>Export preparation and saving are separate steps. Canceling the chooser or save dialog does not produce a completed saved export. If an export fails, retain the measurements in the app, resolve storage or permission problems, and retry.</p>
-<p>Open the saved file or archive and check that its scope and contents are what you intended, particularly for multi-receiver measurements. The system picker may save to local storage or a location offered by another application; check that any later transfer or synchronisation has completed.</p>
+<p>Open the saved file or archive and check that its scope and contents are what you intended, particularly when exporting several receiver entries together. The system picker may save to local storage or a location offered by another application; check that any later transfer or synchronisation has completed.</p>
 <p>Export copies data; it does not delete the measurements from DIRAC Field. Keep the app copy until the required backup or desktop import has been verified.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-36a">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-36a-system-save.png" aria-label="Open full-size screenshot: Android save picker">
+      <img src="../../assets/diracmobile/df-36a-system-save.png" alt="Android save picker: Choose the destination and filename, then select Save. Other platforms use their own picker." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Android save picker.</strong> Choose the destination and filename, then select Save. Other platforms use their own picker. <a href="../../assets/diracmobile/df-36a-system-save.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-36b">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-36b-export-complete.png" aria-label="Open full-size screenshot: Export complete">
+      <img src="../../assets/diracmobile/df-36b-export-complete.png" alt="Export complete: The app confirms the saved filename after the system save step." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Export complete.</strong> The app confirms the saved filename after the system save step. <a href="../../assets/diracmobile/df-36b-export-complete.png">Full size</a>.</figcaption>
+  </figure>
+</div>
     </main>
   </div>
   <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>

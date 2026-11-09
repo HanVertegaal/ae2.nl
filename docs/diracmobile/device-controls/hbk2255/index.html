@@ -6,7 +6,7 @@
   <title>Using HBK 2255 - DIRAC Field manual</title>
   <meta name="description" content="Record and retrieve HBK 2255 data in DIRAC Field and understand source-measurement eligibility.">
   <link rel="stylesheet" href="../../../assets/style.css">
-  <link rel="stylesheet" href="../../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../../index.html">DIRAC Field</a><span aria-hidden="true">/</span><a href="../../device-controls/index.html">Device Controls</a><span aria-hidden="true">/</span><span aria-current="page">Using HBK 2255</span></nav>
       <h1 id="hbk2255">Using HBK 2255</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -63,17 +63,31 @@
       </details>
 <p>DIRAC Field uses HBK 2255 as a recording receiver. The control page shows input-level information and recording controls. It does not provide Aether's selectable SLM workflow; the HBK's functions operated locally are outside this app guide.</p>
 <h2 id="page">Read the control page</h2>
-<!-- Illustration DF-26 -->
 <p>Check the selected device name, connection and battery state. The main area contains an input-level readout, the <strong>Save to</strong> destination, <strong>Measurement duration</strong> and the recording action. Use the level indication to check signal presence before acquisition.</p>
 <p>Use the HBK equipment's own microphone setup and calibration procedures. DIRAC Field's <strong>Calibrate Aether</strong> dialog is not an HBK 2255 calibration control.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-26">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-26-hbk2255-control.png" aria-label="Open full-size screenshot: HBK 2255 control">
+      <img src="../../../assets/diracmobile/df-26-hbk2255-control.png" alt="HBK 2255 control: The receiver page shows the destination, input-level indication, duration and Record control." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>HBK 2255 control.</strong> The receiver page shows the destination, input-level indication, duration and Record control. <a href="../../../assets/diracmobile/df-26-hbk2255-control.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="recording">Make a recording</h2>
 <ol><li>Open the HBK 2255 card on Devices, complete authentication if required, and wait for the recording control page to be ready.</li><li>Check microphone preparation and the input-level indication.</li><li>Check <strong>Save to</strong>, choose <strong>Measurement duration</strong>, and tap Record.</li><li>Wait for preparation, capture and retrieval. If you interrupt the run, check its final status and the retrieved duration.</li><li>Open the destination group and inspect the saved receiver data.</li></ol>
 <p>The duration labels are rounded for display. Use the saved data to check the exact duration when timing matters. A recording-only run can acquire from other available recorders too; inspect the receiver identity associated with each result.</p>
 <p>Retrieval is part of completing the app measurement. A recording that exists on the HBK but was not successfully retrieved is not yet a usable local result in DIRAC Field. Keep the instrument and its original recording available while investigating a retrieval failure.</p>
 <h2 id="prerequisites">Source-triggered measurements and BZ-7351</h2>
-<!-- Illustration DF-27 -->
 <p>For a complete source-triggered measurement, DIRAC Field requires the HBK 2255's <strong>BZ-7351</strong> status to be verified as active. The Devices list can show <strong>BZ-7351 missing or inactive</strong> or <strong>BZ-7351 status not verified</strong>. An unverified state is not a confirmed active licence.</p>
 <p>This gate applies to participation in the source-triggered measurement workflow. It does not disable ordinary recording-only captures from the HBK 2255 control page. Resolve the licence/status issue if the instrument is to participate in a run started from Echo, Atlas or HBK 2755.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-27">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-27-hbk2255-eligibility.png" aria-label="Open full-size screenshot: HBK 2255 eligibility">
+      <img src="../../../assets/diracmobile/df-27-hbk2255-eligibility.png" alt="HBK 2255 eligibility: The card reports BZ-7351 missing or inactive; this affects source-triggered measurement eligibility." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>HBK 2255 eligibility.</strong> The card reports BZ-7351 missing or inactive; this affects source-triggered measurement eligibility. <a href="../../../assets/diracmobile/df-27-hbk2255-eligibility.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="source-runs">Use HBK 2255 with a source</h2>
 <p>Connect and authenticate the receiver, verify its eligibility, then open the desired source's control page. Configure the source, check the destination and use its measurement action. For a multi-receiver run, check that each expected receiver supplied usable data.</p>
 <p>Using a source does not make every capture an impulse response. The selected stimulus and the processing supported for it determine the result. See <a href="../../measurement-workflow/index.html#signals">Match signal and analysis</a>.</p>

@@ -6,7 +6,7 @@
   <title>Projects and Measurement Groups - DIRAC Field manual</title>
   <meta name="description" content="Create projects and groups, choose a capture destination, edit metadata and organise measurements.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Projects and Measurement Groups</span></nav>
       <h1 id="projects-and-groups">Projects and Measurement Groups</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -67,25 +67,66 @@
 <p>A <strong>project</strong> holds related work, such as a building or survey. A <strong>group</strong> collects measurements within that project, for example a room or receiver position. A <strong>measurement</strong> represents one acquisition and can include separate data from several receivers.</p>
 <p>Keep the distinction between measurements stored in the app and recordings still held by the equipment. Exporting an app measurement, deleting it, or changing its group is not the same operation as managing files on the recorder.</p>
 <h2 id="projects">Create or edit a project</h2>
-<!-- Illustrations DF-06, DF-07 -->
 <ol><li>Choose <strong>Projects</strong> from the app menu.</li><li>Tap <strong>+ New project</strong>, enter its name, and enter the default temperature, air pressure and relative humidity for new measurements.</li><li>Tap <strong>Save</strong>, then open the project.</li><li>Use the project's edit action or <strong>Edit project defaults</strong> to change these defaults later.</li></ol>
 <p>Environmental defaults are copied into new measurements. Existing measurements retain their own environmental values. Enter the conditions for the measurement location, rather than assuming that the initial defaults describe the site.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-06">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-06-projects.png" aria-label="Open full-size screenshot: Projects">
+      <img src="../../assets/diracmobile/df-06-projects.png" alt="Projects: Project cards show their groups, measurement counts and available actions." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Projects.</strong> Project cards show their groups, measurement counts and available actions. <a href="../../assets/diracmobile/df-06-projects.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-07">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-07-project-editor.png" aria-label="Open full-size screenshot: New project">
+      <img src="../../assets/diracmobile/df-07-project-editor.png" alt="New project: Set the name and environmental defaults for new measurements." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>New project.</strong> Set the name and environmental defaults for new measurements. <a href="../../assets/diracmobile/df-07-project-editor.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="groups">Create and activate a group</h2>
-<!-- Illustration DF-08 -->
 <ol><li>Open a project and tap <strong>+ New group</strong>.</li><li>Give the group a meaningful name, such as a room, source position or receiver position.</li><li>Use the group's <strong>Use</strong> action, or open it and choose <strong>Use for new measurements</strong>.</li><li>Check the active-destination indication and the <strong>Save to</strong> field when returning to the control page.</li></ol>
 <p>The active group is the destination for subsequent acquisitions. Opening another group to inspect old data does not by itself mean that the next acquisition will be saved there. Use the explicit destination action.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-08">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-08-project-groups.png" aria-label="Open full-size screenshot: Project groups">
+      <img src="../../assets/diracmobile/df-08-project-groups.png" alt="Project groups: The active destination is marked ACTIVE; Use selects another group." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Project groups.</strong> The active destination is marked ACTIVE; Use selects another group. <a href="../../assets/diracmobile/df-08-project-groups.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="save-to">Change the destination from a control page</h2>
 <p>The <strong>Save to</strong> field shows the active project and group. Its change action opens <strong>Save the next measurement to</strong>, where you can choose an existing destination or create a new group or project. Recheck the displayed destination before acquiring a new series.</p>
 <h2 id="measurements">Inspect, move and delete measurements</h2>
-<!-- Illustration DF-09 -->
 <p>Open a group to see its measurements and capture summaries. Tap a successful entry to inspect its data. The list includes identifying metadata and acquisition information; an entry with no successful receiver data cannot be opened as a valid recording.</p>
 <p>Use the measurement edit action to open <strong>Edit Measurement Metadata</strong>. Use <strong>Select</strong> for a batch operation, mark the required measurements, and choose <strong>Move</strong>, <strong>Export</strong> or <strong>Delete</strong>. <strong>Done</strong> leaves selection mode. The move chooser offers other groups in the same project and can create a new group there.</p>
 <p>Read the confirmation before deleting a measurement, group or project. Export data that you need to retain before deleting its app copy. Deleting a parent group or project also affects its contained measurements.</p>
+<p>A capture with several receivers creates a separate measurement entry for each receiver. Each receiver entry has its own measurement number. Open, rename, move, export or delete an entry independently of the other receiver results.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-09a">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-09a-group-measurements.png" aria-label="Open full-size screenshot: Group measurements">
+      <img src="../../assets/diracmobile/df-09a-group-measurements.png" alt="Group measurements: Separate HBK 2255 and Aether entries identify the receiver for each result." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Group measurements.</strong> Separate HBK 2255 and Aether entries identify the receiver for each result. <a href="../../assets/diracmobile/df-09a-group-measurements.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-09b">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-09b-group-selection.png" aria-label="Open full-size screenshot: Measurement selection">
+      <img src="../../assets/diracmobile/df-09b-group-selection.png" alt="Measurement selection: Two selected receiver entries, with Move, Export and Delete actions." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Measurement selection.</strong> Two selected receiver entries, with Move, Export and Delete actions. <a href="../../assets/diracmobile/df-09b-group-selection.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="metadata">Edit measurement metadata</h2>
-<!-- Illustration DF-10 -->
 <p>The metadata editor includes the measurement name, <strong>Measurement Type</strong>, source–receiver distance for successful receiver recordings, and speech/noise level information. Save changes explicitly; Cancel leaves the editor without applying them.</p>
 <p>Set the type to <strong>Signal</strong> for a recording of sound, and to <strong>Impulse response</strong> only when the stored data actually represent an impulse response. Changing the label does not deconvolve or repair the waveform. The type determines which analysis parameters are offered.</p>
 <p>Source–receiver distance is entered in metres. Check the actual distance for each receiver. The default distance can be set in that receiver's <a href="../device-settings/index.html#measurement">Measurement settings</a>; editing an existing measurement is a separate action.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-10">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-10-measurement-metadata.png" aria-label="Open full-size screenshot: Measurement metadata">
+      <img src="../../assets/diracmobile/df-10-measurement-metadata.png" alt="Measurement metadata: Edit one receiver result, including its type, distance and speech/noise band levels." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Measurement metadata.</strong> Edit one receiver result, including its type, distance and speech/noise band levels. <a href="../../assets/diracmobile/df-10-measurement-metadata.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="names">Measurement filenames</h2>
 <p>New names use the app's configured naming format, including a project/group/fixed prefix and optional source and receiver labels. Configure this under <a href="../application-settings/index.html#filenames">Application Settings</a>. Naming preferences apply to new captures; they do not rename earlier measurements automatically.</p>
     </main>

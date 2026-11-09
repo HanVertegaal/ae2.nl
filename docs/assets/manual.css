@@ -204,6 +204,55 @@
   margin-bottom: 0.75rem;
 }
 
+/* Keep native phone screenshots readable and linked to their full-size originals. */
+.dirac-field-manual .app-screenshots
+{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  align-items: start;
+  justify-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.dirac-field-manual .app-screenshot
+{
+  min-width: 0;
+  width: 100%;
+  max-width: 20rem;
+  margin: 0;
+  break-inside: avoid;
+  scroll-margin-top: 1.5rem;
+}
+
+.dirac-field-manual .app-screenshot-link
+{
+  display: block;
+  background: #202020;
+}
+
+.dirac-field-manual .app-screenshot img
+{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.dirac-field-manual .app-screenshot figcaption
+{
+  margin-top: 0.75rem;
+  color: #40515a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.dirac-field-manual .app-screenshot figcaption a
+{
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* Give Aether reference labels room and wrap them at word boundaries. */
 .aether-manual :is(th, td):first-child
 {
@@ -273,6 +322,76 @@
 @media (max-width: 1000px)
 {
   .aether-parts-layout
+  {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Keep product photographs and Atlas views clear, with readable numbered keys. */
+.manual-product-photo,
+.atlas-product-photo,
+.atlas-parts-view
+{
+  margin: 1.5rem auto;
+}
+
+.manual-product-photo,
+.atlas-product-photo
+{
+  max-width: 32rem;
+}
+
+.atlas-parts-view
+{
+  max-width: 44rem;
+}
+
+.manual-product-photo img,
+.atlas-product-photo img,
+.atlas-parts-view img
+{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.atlas-parts-view a
+{
+  display: block;
+}
+
+.manual-product-photo figcaption,
+.atlas-product-photo figcaption,
+.atlas-parts-view figcaption
+{
+  margin-top: 0.75rem;
+  color: #4f5d68;
+  font-size: 0.9rem;
+}
+
+.atlas-parts-key
+{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.atlas-parts-key li::marker
+{
+  color: var(--ae-blue);
+  font-weight: 700;
+}
+
+.atlas-parts-key p
+{
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 760px)
+{
+  .atlas-parts-key
   {
     grid-template-columns: minmax(0, 1fr);
   }

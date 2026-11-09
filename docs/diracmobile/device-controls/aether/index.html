@@ -6,7 +6,7 @@
   <title>Using Aether - DIRAC Field manual</title>
   <meta name="description" content="DIRAC Field Aether control page, SLM, recording, microphone calibration, settings and recovery.">
   <link rel="stylesheet" href="../../../assets/style.css">
-  <link rel="stylesheet" href="../../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../../index.html">DIRAC Field</a><span aria-hidden="true">/</span><a href="../../device-controls/index.html">Device Controls</a><span aria-hidden="true">/</span><span aria-current="page">Using Aether</span></nav>
       <h1 id="aether">Using Aether</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -64,7 +64,6 @@
       </details>
 <p>Aether provides both sound level measurement and recording in DIRAC Field. Its <strong>Mode</strong> selector chooses which controls the page displays. Stop the current operation before changing mode or the SLM parameter.</p>
 <h2 id="page">Read the control page</h2>
-<!-- Illustrations DF-12, DF-13 -->
 <div class="table-wrap"><table><thead><tr><th scope="col">Control or indication</th><th scope="col">Purpose</th></tr></thead><tbody>
 <tr><td>Device name and connection state</td><td>Confirm the selected Aether and wait for connection to finish.</td></tr>
 <tr><td>Battery indication</td><td>Check the reported charge/charging state before a long session.</td></tr>
@@ -76,8 +75,15 @@
 <tr><td>Transport control</td><td>Start/Stop for SLM; Record for signal capture.</td></tr>
 </tbody></table></div>
 <p><strong>Identify</strong> requires a working connection. It is a useful final identity check after connecting, not a way to establish the connection.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-12a">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-12a-aether-slm-live.png" aria-label="Open full-size screenshot: Aether live SLM">
+      <img src="../../../assets/diracmobile/df-12a-aether-slm-live.png" alt="Aether live SLM: An ongoing A-weighted, Fast measurement with Stop available." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Aether live SLM.</strong> An ongoing A-weighted, Fast measurement with Stop available. <a href="../../../assets/diracmobile/df-12a-aether-slm-live.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="slm">Measure a sound level</h2>
-<!-- Illustration DF-14 -->
 <ol><li>Select <strong>SLM</strong> in Mode.</li><li>While stopped, tap the level display to open the SLM configuration page.</li><li>Choose <strong>Measurement type</strong>, <strong>Frequency weighting</strong> and, when applicable, <strong>Time weighting</strong>. Tap <strong>Apply</strong> to return to the control page. Cancel leaves the selection unchanged.</li><li>For Leq, enter <strong>Measurement time (seconds)</strong> on the control page.</li><li>Tap Start. Follow the measurement state as well as the numerical level.</li><li>Use Stop for an ongoing measurement. A timed Leq ends at its configured interval; its final value remains displayed.</li></ol>
 <p>Applying a parameter prepares the next acquisition; it does not start it. Mode and parameter controls are unavailable while an operation is running.</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">Measurement type</th><th scope="col">Meaning and choices</th></tr></thead><tbody>
@@ -88,22 +94,94 @@
 </tbody></table></div>
 <p>Use the full parameter symbol when recording a reading; for example, LAeq and LAFmax describe different measurements. A final timed result is different from a live value that is still updating. If the connection is lost or the app reports an interruption, do not treat the last displayed number as a newly completed measurement.</p>
 <p>The SLM controls display sound level results. They do not make a project waveform recording. To retain a waveform for later analysis and export, select <strong>Recording</strong>.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-14a">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-14a-aether-slm-configuration.png" aria-label="Open full-size screenshot: Live-level configuration">
+      <img src="../../../assets/diracmobile/df-14a-aether-slm-configuration.png" alt="Live-level configuration: L offers both frequency weighting and time weighting." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Live-level configuration.</strong> L offers both frequency weighting and time weighting. <a href="../../../assets/diracmobile/df-14a-aether-slm-configuration.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-14b">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-14b-aether-leq-configuration.png" aria-label="Open full-size screenshot: Leq configuration">
+      <img src="../../../assets/diracmobile/df-14b-aether-leq-configuration.png" alt="Leq configuration: Leq offers frequency weighting; its integration time is set on the control page." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Leq configuration.</strong> Leq offers frequency weighting; its integration time is set on the control page. <a href="../../../assets/diracmobile/df-14b-aether-leq-configuration.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-12b">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-12b-aether-leq-final.png" aria-label="Open full-size screenshot: Aether completed Leq">
+      <img src="../../../assets/diracmobile/df-12b-aether-leq-final.png" alt="Aether completed Leq: The final A-weighted equivalent level remains displayed after the ten-second interval." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Aether completed Leq.</strong> The final A-weighted equivalent level remains displayed after the ten-second interval. <a href="../../../assets/diracmobile/df-12b-aether-leq-final.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="recording">Record a signal</h2>
 <ol><li>Select <strong>Recording</strong>. Check the input indication and microphone calibration.</li><li>Check <strong>Save to</strong> and choose <strong>Measurement duration</strong>.</li><li>Tap Record and allow preparation to finish. Microphone warm-up and an attention delay may precede actual capture.</li><li>Wait through acquisition and retrieval. Use the offered Stop or Cancel action only when you intend to interrupt the run, and check its resulting status.</li><li>Open the destination group and inspect the successful receiver recording or recordings.</li></ol>
 <p>Recording-only capture can involve other available receivers as well as the Aether whose page is open. A source-triggered run starts instead from the source's page; see <a href="../../measurement-workflow/index.html">Acoustic Measurement Workflow</a>.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-13">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-13-aether-recording.png" aria-label="Open full-size screenshot: Aether recording">
+      <img src="../../../assets/diracmobile/df-13-aether-recording.png" alt="Aether recording: Recording mode shows the destination, level indication, duration and Record control." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Aether recording.</strong> Recording mode shows the destination, level indication, duration and Record control. <a href="../../../assets/diracmobile/df-13-aether-recording.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="calibration">Calibrate the microphone</h2>
-<!-- Illustrations DF-15, DF-16 -->
 <ol><li>Stop SLM and recording. Fit and operate the acoustic calibrator according to the microphone and calibrator instructions.</li><li>On the Aether control page, choose <strong>menu → Settings → Measurement → Calibrate</strong>.</li><li>In <strong>Calibrate Aether</strong>, enter the actual calibrator level in dB and tap <strong>Start</strong>.</li><li>Keep the assembly steady while the app reports warm-up, tone search and measurement. Use Cancel if you need to abandon the attempt.</li><li>Wait for a successful result. On failure, check the connection, tone and entered level before retrying.</li><li>Remove the calibrator before measuring and check the resulting sound level indication.</li></ol>
 <p>The app initiates calibration and reports its progress; the Aether retains the resulting calibration. Physical microphone compatibility, direct mounting and calibrator preparation are covered in <a href="../../../aether/microphone-calibration/index.html">Aether: Microphone and Calibration</a>. Recheck calibration after replacing the microphone.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-15">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-15-aether-calibration-start.png" aria-label="Open full-size screenshot: Start calibration">
+      <img src="../../../assets/diracmobile/df-15-aether-calibration-start.png" alt="Start calibration: Enter the actual calibrator level before selecting Start." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Start calibration.</strong> Enter the actual calibrator level before selecting Start. <a href="../../../assets/diracmobile/df-15-aether-calibration-start.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-16a">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-16a-aether-calibration-progress.png" aria-label="Open full-size screenshot: Calibration in progress">
+      <img src="../../../assets/diracmobile/df-16a-aether-calibration-progress.png" alt="Calibration in progress: The calibration tone has been detected; keep the calibrator in place." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Calibration in progress.</strong> The calibration tone has been detected; keep the calibrator in place. <a href="../../../assets/diracmobile/df-16a-aether-calibration-progress.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-16b">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-16b-aether-calibration-result.png" aria-label="Open full-size screenshot: Calibration complete">
+      <img src="../../../assets/diracmobile/df-16b-aether-calibration-result.png" alt="Calibration complete: The result dialog reports the calibration information." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Calibration complete.</strong> The result dialog reports the calibration information. <a href="../../../assets/diracmobile/df-16b-aether-calibration-result.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="settings">Aether settings</h2>
 <p>The common <a href="../../device-settings/index.html">Device settings</a> sections cover identity, network, password, power and software. Aether additionally provides:</p>
 <ul><li><strong>Measurement:</strong> the default source–receiver distance and the calibration action.</li><li><strong>LEDs:</strong> ordinary status brightness and pre-recording attention time. Save changes explicitly.</li><li><strong>Service:</strong> factory reset with a physical confirmation sequence and final erase action.</li></ul>
 <p>Attention time is a delay before recording; it is not part of the waveform duration. Setting ordinary LED brightness to zero does not suppress the full-brightness attention indication. See <a href="../../../aether/power-status/index.html">Aether: Power and Status Indicators</a>.</p>
 <h2 id="recovery">Recovery actions in the app</h2>
-<!-- Illustrations DF-17, DF-18 -->
 <p>If normal access is unavailable, follow the physical procedure in <a href="../../../aether/troubleshooting/index.html#recovery-network">Aether: Temporary recovery network</a>. Join that network in the operating system, return to Devices, and tap the recovery-mode Aether card.</p>
 <p><strong>Restore factory password</strong> asks for the original factory password supplied with the equipment. On success it becomes the active password for remote access and the normal hotspot. This restoration preserves recordings and settings.</p>
 <p><strong>Factory reset</strong> is a different operation: it deletes recordings, saved networks, calibration and user settings and restores the factory password. Follow the app's physical confirmation instructions and read the final <strong>Erase and reset</strong> confirmation. Export required data before starting. Afterward, reconnect and recalibrate.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-17a">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-17a-aether-recovery-options.png" aria-label="Open full-size screenshot: Aether recovery">
+      <img src="../../../assets/diracmobile/df-17a-aether-recovery-options.png" alt="Aether recovery: Password restoration and factory reset are separate actions." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Aether recovery.</strong> Password restoration and factory reset are separate actions. <a href="../../../assets/diracmobile/df-17a-aether-recovery-options.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-17b">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-17b-aether-password-restoration.png" aria-label="Open full-size screenshot: Restore factory password">
+      <img src="../../../assets/diracmobile/df-17b-aether-password-restoration.png" alt="Restore factory password: Enter the original factory password; this example keeps it masked." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Restore factory password.</strong> Enter the original factory password; this example keeps it masked. <a href="../../../assets/diracmobile/df-17b-aether-password-restoration.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-18a">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-18a-aether-reset-confirmation.png" aria-label="Open full-size screenshot: Factory-reset preparation">
+      <img src="../../../assets/diracmobile/df-18a-aether-reset-confirmation.png" alt="Factory-reset preparation: Review the data-loss warning before starting the physical confirmation sequence." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Factory-reset preparation.</strong> Review the data-loss warning before starting the physical confirmation sequence. <a href="../../../assets/diracmobile/df-18a-aether-reset-confirmation.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-18b">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-18b-aether-reset-physical-confirmation.png" aria-label="Open full-size screenshot: Final reset confirmation">
+      <img src="../../../assets/diracmobile/df-18b-aether-reset-physical-confirmation.png" alt="Final reset confirmation: Physical confirmation is complete; Erase and reset is the separate final action." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Final reset confirmation.</strong> Physical confirmation is complete; Erase and reset is the separate final action. <a href="../../../assets/diracmobile/df-18b-aether-reset-physical-confirmation.png">Full size</a>.</figcaption>
+  </figure>
+</div>
     </main>
   </div>
   <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>

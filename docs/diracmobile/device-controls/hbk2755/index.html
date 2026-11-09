@@ -6,7 +6,7 @@
   <title>Using HBK 2755 - DIRAC Field manual</title>
   <meta name="description" content="DIRAC Field HBK 2755 signal buttons, gain, user-signal management and receiver capture.">
   <link rel="stylesheet" href="../../../assets/style.css">
-  <link rel="stylesheet" href="../../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../../index.html">DIRAC Field</a><span aria-hidden="true">/</span><a href="../../device-controls/index.html">Device Controls</a><span aria-hidden="true">/</span><span aria-current="page">Using HBK 2755</span></nav>
       <h1 id="hbk2755">Using HBK 2755</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -63,16 +63,30 @@
       </details>
 <p>HBK 2755 is a playback source in DIRAC Field. Its control page uses <strong>White</strong>, <strong>Pink</strong> and <strong>User</strong> buttons instead of the Echo/Atlas signal configuration form. It does not provide a microphone recording or SLM mode.</p>
 <h2 id="signals">Select and play a signal</h2>
-<!-- Illustration DF-24 -->
 <ol><li>Open the HBK 2755 card on Devices and wait until the source is connected and authenticated.</li><li>Tap <strong>White</strong>, <strong>Pink</strong> or <strong>User</strong> to play that signal. User uses the file currently assigned to the source's User selection.</li><li>Check the highlighted signal and output state. Tap the active signal button again to stop it; selecting another signal changes the requested playback selection.</li></ol>
 <p>The controls follow the device's returned state. If a command fails or the connection is lost, confirm the actual source state before assuming that sound has stopped.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-24">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-24-hbk2755-control.png" aria-label="Open full-size screenshot: HBK 2755 control">
+      <img src="../../../assets/diracmobile/df-24-hbk2755-control.png" alt="HBK 2755 control: Pink is selected; the gain readout, knob and measurement control are visible." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>HBK 2755 control.</strong> Pink is selected; the gain readout, knob and measurement control are visible. <a href="../../../assets/diracmobile/df-24-hbk2755-control.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="gain">Adjust gain</h2>
 <p>The large gain readout and knob set output gain in dB. Drag the knob to the required setting and release it to finish the adjustment. The step size follows the source configuration. Allow the returned state to confirm the value.</p>
 <p>Gain is an output adjustment, not a calibrated sound level at a receiver. Check the sound level and operating limits for the actual source and measurement arrangement. Leave gain fixed while a measurement is being acquired; the control is unavailable during an app-managed capture.</p>
 <h2 id="user-signals">Choose or upload User audio</h2>
-<!-- Illustration DF-25 -->
 <ol><li>Press and hold <strong>User</strong> to open <strong>User Signals</strong>. A short tap instead operates playback.</li><li>Select a stored file and tap <strong>Set as User</strong> to assign it to the User button.</li><li>To add audio, tap <strong>Upload</strong>, choose the supported source file and wait for transfer to complete. Then select and assign the intended uploaded file.</li><li>Return to the control page and use a short User tap to play the assigned signal.</li></ol>
 <p>Use <strong>Delete</strong> to remove a selected user file from the source after confirmation. Retain an original copy if it will be needed again. Source file selection and project measurement selection are separate operations.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-25">
+    <a class="app-screenshot-link" href="../../../assets/diracmobile/df-25-hbk2755-user-signals.png" aria-label="Open full-size screenshot: HBK 2755 User Signals">
+      <img src="../../../assets/diracmobile/df-25-hbk2755-user-signals.png" alt="HBK 2755 User Signals: Select stored audio and use Set as User to assign it to the User control." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>HBK 2755 User Signals.</strong> Select stored audio and use Set as User to assign it to the User control. <a href="../../../assets/diracmobile/df-25-hbk2755-user-signals.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="measurement">Acquire with receivers</h2>
 <p>When suitable receivers are available, the control page provides the <strong>Save to</strong> field and measurement action. Check the project/group, choose the signal and gain, then use the measurement action to run source playback and receiver acquisition together.</p>
 <p>Allow signal buildup, capture and retrieval to finish. Check each receiver result in the destination group. Verify playback afterward and stop the source explicitly when finished. HBK 2755 noise or user playback must not be assumed to produce the processed impulse response offered for supported Echo/Atlas sequences.</p>

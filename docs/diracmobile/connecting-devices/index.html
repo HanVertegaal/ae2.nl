@@ -6,7 +6,7 @@
   <title>Connecting Devices - DIRAC Field manual</title>
   <meta name="description" content="Prepare the local network, discover devices, authenticate and reconnect from DIRAC Field.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Connecting Devices</span></nav>
       <h1 id="connecting-devices">Connecting Devices</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -67,18 +67,39 @@
 <p>DIRAC Field must be able to reach each device on the local network. Join a common Wi-Fi network, or connect the phone or tablet directly to a device hotspot. A hotspot provides local device access; it need not provide internet access. If the operating system reports no internet, keep the intended local connection.</p>
 <p>For several sources and receivers, use a network on which all participants can communicate. Guest networks and access-point client isolation can prevent this even when the devices show a Wi-Fi connection. Configure the phone's network in the operating system; the app's device network editor changes the <em>equipment's</em> network.</p>
 <h2 id="discovery">Find and open a device</h2>
-<!-- Illustration DF-03 -->
 <ol><li>Open <strong>Devices</strong> from the app menu. Discovery starts automatically.</li><li>Find the device by its name and type. A card can also show its connection state and battery indication.</li><li>Pull down on the list to refresh discovery and reachability.</li><li>Tap the intended card to open its control page. Wait for connection and authentication to finish before using the controls.</li></ol>
 <p>A listed device is not necessarily authenticated or ready for measurement. Read the state shown by the app and the control page; do not rely on the device name alone.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-03">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-03-devices.png" aria-label="Open full-size screenshot: Devices">
+      <img src="../../assets/diracmobile/df-03-devices.png" alt="Devices: The discovered Atlas, HBK 2755, Aether, HBK 2255 and Echo." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Devices.</strong> The discovered Atlas, HBK 2755, Aether, HBK 2255 and Echo. <a href="../../assets/diracmobile/df-03-devices.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="manual-address">Add by IP address</h2>
-<!-- Illustration DF-04 -->
 <p>If automatic discovery does not find equipment whose address you know, tap the add button in the Devices app bar. In <strong>Add Device</strong>, enter the device's IP address and confirm. The app probes that address and reports whether it found supported equipment.</p>
 <p>Manual addition does not repair an unreachable network or supply missing credentials. Confirm the current address on the device or network, particularly after changing between a hotspot and an existing network.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-04">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-04-add-device.png" aria-label="Open full-size screenshot: Add Device">
+      <img src="../../assets/diracmobile/df-04-add-device.png" alt="Add Device: Enter a device IP address when discovery is unavailable." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Add Device.</strong> Enter a device IP address when discovery is unavailable. <a href="../../assets/diracmobile/df-04-add-device.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="authentication">Authenticate</h2>
-<!-- Illustration DF-05 -->
 <p>When the app asks to authenticate, enter the password for that device. DIRAC Field can retain device passwords and use them on later connections. If a saved password is rejected, enter the current device password when prompted.</p>
 <p>For Aether, Echo and Atlas, the active device password is used both for remote control and the normal device hotspot. It is different from the password of an unrelated Wi-Fi access point. For HBK equipment, use the credentials configured for that equipment; do not assume the AE password arrangement applies.</p>
 <p>Use <a href="../application-settings/index.html#passwords">App settings → Device Management</a> to clear a stored password. Clearing it in DIRAC Field does not change the device password.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-05">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-05-device-authentication.png" aria-label="Open full-size screenshot: Device Authentication">
+      <img src="../../assets/diracmobile/df-05-device-authentication.png" alt="Device Authentication: Enter the selected device password; the entry is masked." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Device Authentication.</strong> Enter the selected device password; the entry is masked. <a href="../../assets/diracmobile/df-05-device-authentication.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="identify">Identify after connecting</h2>
 <p>On an Aether control page, use <strong>Identify</strong> to briefly show its identification LED pattern when several Aethers are present. This requires an established device connection. It cannot identify an Aether while you are still preparing its initial connection.</p>
 <h2 id="reconnect">After changing networks</h2>

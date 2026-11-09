@@ -1,0 +1,6 @@
+{
+  "asset": "echo-photograph.jpg",
+  "source": "codex-clipboard-6463f0e5-57b1-42b1-b846-1f4f144c236e.png",
+  "description": "User-supplied photograph of the Echo speech source for the manual overview.",
+  "preparation": "Downsampled proportionally to 1800 pixels wide and JPEG-encoded at quality 90 for web delivery. No cropping or retouching; supplied branding, connectors and display content retained."
+}

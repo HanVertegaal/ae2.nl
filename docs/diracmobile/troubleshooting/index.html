@@ -6,7 +6,7 @@
   <title>Troubleshooting - DIRAC Field manual</title>
   <meta name="description" content="Resolve DIRAC Field discovery, authentication, capture, analysis and export problems.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Troubleshooting</span></nav>
       <h1 id="troubleshooting">Troubleshooting</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -81,7 +81,7 @@
 <p>A run can be partially completed when some receivers succeed and others fail. Preserve the successful data, keep any instrument recording available during investigation, and repeat the missing acquisition as needed. Do not erase equipment storage or factory-reset the receiver as the first response to a failed transfer.</p>
 <p>During a source-triggered run, confirm that the selected stimulus is supported. Ordinary user audio, noise or external input is not automatically a processed impulse response. Stop the source explicitly after an interrupted workflow and check its actual state.</p>
 <h2 id="results">A measurement or parameter cannot be opened</h2>
-<p>Confirm that the measurement has a successful local recording. The detail page opens the first successful receiver recording; use a full export to examine other receivers. If an expected parameter is absent, check Signal versus Impulse response classification and whether that analysis is supported for the data.</p>
+<p>Confirm that the selected receiver entry has a successful local recording. For a capture with several receivers, open each receiver entry separately in the group. If an expected parameter is absent, check Signal versus Impulse response classification and whether that analysis is supported for the data.</p>
 <p>Missing bands can reflect insufficient usable data, decay or signal-to-noise conditions. Check the waveform and acquisition conditions; a blank result is not zero. Correcting metadata does not repair clipped or missing samples.</p>
 <h2 id="export">Export or desktop import fails</h2>
 <p>Retain the app data, check local storage space and file-save permissions, and repeat the export for the intended scope. Complete the system save dialog and wait for Export complete. Verify that a transferred file has finished copying or synchronising.</p>

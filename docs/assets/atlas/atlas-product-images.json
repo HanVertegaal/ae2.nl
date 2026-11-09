@@ -1,0 +1,21 @@
+{
+  "description": "Atlas product photograph and editable numbered CAD-view callouts supplied for the Atlas manual.",
+  "top": {
+    "source": "codex-clipboard-abe09ff2-4988-4694-bbf8-cc241d0ae658.png",
+    "asset": "atlas-top-cad.png",
+    "annotated": "atlas-top-annotated.svg",
+    "labels": ["Handle", "Wi-Fi antenna cover", "Display and three buttons", "Nameplate"]
+  },
+  "bottom": {
+    "source": "codex-clipboard-c6e1aed8-ed4e-4219-8124-a53e344723e8.png",
+    "asset": "atlas-bottom-cad.png",
+    "annotated": "atlas-bottom-annotated.svg",
+    "labels": ["1/4-inch UNC tripod mounting hole", "USB-C connector", "BNC input and output connectors (pair)", "Three rubber feet"],
+    "note": "The two BNC connectors are identified as a pair. The image does not establish which individual socket is input or output."
+  },
+  "photograph": {
+    "source": "codex-clipboard-9bdaf795-1a8a-4270-b287-7d124bada181.png",
+    "asset": "atlas-photograph.jpg",
+    "preparation": "Downsampled proportionally to 1800 pixels high and JPEG-encoded at quality 90 for web delivery. No cropping or retouching; supplied geometry, components and display content retained."
+  }
+}

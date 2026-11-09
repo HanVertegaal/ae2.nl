@@ -6,7 +6,7 @@
   <title>Application Settings - DIRAC Field manual</title>
   <meta name="description" content="Configure DIRAC Field filename formats, clear stored device passwords and restore forgotten devices.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Application Settings</span></nav>
       <h1 id="application-settings">Application Settings</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -62,26 +62,54 @@
         </nav>
       </details>
 <h2 id="open">Open App settings</h2>
-<!-- Illustration DF-43 -->
 <p>Return to <strong>Devices</strong> and choose <strong>menu → Settings</strong>. The page is titled <strong>App settings</strong>. It contains <strong>Measurements</strong>, <strong>Device Management</strong> and <strong>Forgotten Devices</strong> sections. Tap a heading to expand it.</p>
 <p>If Settings was opened from a connected device's control page, it refers to that device instead. Return to a general page when you want to change the app-wide preferences below.</p>
 <h2 id="filenames">Measurement filenames</h2>
 <p>Under <strong>Measurements</strong>, choose the elements for newly captured measurement filenames:</p>
 <ul><li><strong>Prefix:</strong> Project name, Group name or Fixed string.</li><li><strong>Fixed prefix:</strong> the text to use when Fixed string is selected.</li><li><strong>Include source label</strong> and <strong>Include receiver label:</strong> optional identity elements.</li></ul>
 <p>Check the example filename and choose <strong>Save filename format</strong>. The saved format is used for new captures. Existing measurements retain their names; edit an existing name through its metadata editor when necessary.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-43">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-43-app-filename-settings.png" aria-label="Open full-size screenshot: Measurement filename settings">
+      <img src="../../assets/diracmobile/df-43-app-filename-settings.png" alt="Measurement filename settings: Choose a prefix and optional source/receiver labels; check the example and Save filename format." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Measurement filename settings.</strong> Choose a prefix and optional source/receiver labels; check the example and Save filename format. <a href="../../assets/diracmobile/df-43-app-filename-settings.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="passwords">Stored device passwords</h2>
-<!-- Illustration DF-44 -->
 <p><strong>Device Management</strong> lists discovered devices for which the app has a stored password. Use the device's <strong>Clear</strong> action to remove its stored credential, then reconnect and enter the current password if required.</p>
 <p><strong>Clear All Stored Passwords</strong> also removes credentials for devices that are currently offline. Read the confirmation and ensure that the required device passwords are available before clearing them.</p>
 <p>These actions clear the app's saved credentials. They do not change a device's active password, erase a project's recordings or remove an access-point password stored in the equipment.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-44">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-44-stored-password-management.png" aria-label="Open full-size screenshot: Stored device passwords">
+      <img src="../../assets/diracmobile/df-44-stored-password-management.png" alt="Stored device passwords: Clear one stored credential or use Clear All Stored Passwords." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Stored device passwords.</strong> Clear one stored credential or use Clear All Stored Passwords. <a href="../../assets/diracmobile/df-44-stored-password-management.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="forgotten">Forgotten devices</h2>
-<!-- Illustration DF-45 -->
 <p>A device hidden with <strong>Forget</strong> on its discovery card appears under <strong>Forgotten Devices</strong>. Choose <strong>Unblock</strong> to allow it to appear again. Return to Devices and refresh if necessary.</p>
 <p>Unblocking does not power up unreachable equipment, change its network or bypass authentication. If it still cannot be reached, use the <a href="../connecting-devices/index.html">connection checks</a>.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-45">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-45-forgotten-devices.png" aria-label="Open full-size screenshot: Forgotten Devices">
+      <img src="../../assets/diracmobile/df-45-forgotten-devices.png" alt="Forgotten Devices: Unblock allows a hidden device to appear in discovery again." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Forgotten Devices.</strong> Unblock allows a hidden device to appear in discovery again. <a href="../../assets/diracmobile/df-45-forgotten-devices.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="about">About and help</h2>
-<!-- Illustration DF-46 -->
 <p><strong>menu → About</strong> identifies DIRAC Field and shows its application version. This is separate from a connected instrument's Software version. Include both when reporting a device-control problem.</p>
 <p><strong>Help</strong> from a general page opens this manual. On a device page it opens the equipment's help or manufacturer's documentation. Use this manual's Device Controls chapter for the app's device-specific procedures.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-46">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-46-about.png" aria-label="Open full-size screenshot: About DIRAC Field">
+      <img src="../../assets/diracmobile/df-46-about.png" alt="About DIRAC Field: The app identity, version and AE Field branding. The illustrated version is an example, not a latest-version claim." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>About DIRAC Field.</strong> The app identity, version and AE Field branding. The illustrated version is an example, not a latest-version claim. <a href="../../assets/diracmobile/df-46-about.png">Full size</a>.</figcaption>
+  </figure>
+</div>
     </main>
   </div>
   <footer class="page-footer">Copyright &copy; 2026 Acoustics Engineering.</footer>

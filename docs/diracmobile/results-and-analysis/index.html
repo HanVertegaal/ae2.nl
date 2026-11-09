@@ -6,7 +6,7 @@
   <title>Results and Analysis - DIRAC Field manual</title>
   <meta name="description" content="Inspect DIRAC Field recordings and impulse responses, choose acoustic parameters and configure graphs or tables.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261106-dirac-field">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261109-field-screenshots">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual dirac-field-manual">
@@ -48,7 +48,7 @@
     <main id="main" class="content" tabindex="-1">
       <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="../index.html">DIRAC Field</a><span aria-hidden="true">/</span><span aria-current="page">Results and Analysis</span></nav>
       <h1 id="results-and-analysis">Results and Analysis</h1>
-      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions are being reviewed. Screenshots will be added to illustrate the app pages.</p>
+      <p class="notice"><strong>Draft for review:</strong> These DIRAC Field instructions and illustrations are being reviewed.</p>
       <details class="page-outline">
         <summary>On this page</summary>
         <nav aria-label="On this page">
@@ -63,12 +63,18 @@
         </nav>
       </details>
 <h2 id="open">Open a stored measurement</h2>
-<!-- Illustration DF-28 -->
 <ol><li>Choose <strong>Projects</strong> from the menu, open the project and group, and tap the measurement.</li><li>Check the title, data type and available views before interpreting a result.</li><li>Select a <strong>Category</strong>, then select a <strong>View</strong> or <strong>Parameter</strong> within that category.</li></ol>
-<p>The current detail page opens the first successfully stored receiver recording in a measurement. It does not provide a receiver chooser. For a multi-receiver run, use the measurement metadata and an export containing all receiver recordings to check the remaining receivers, for example in desktop DIRAC.</p>
+<p>Each receiver recording has its own measurement entry in the group. Open the entry for the receiver you want to inspect. Each receiver entry has its own measurement number and identifies its receiver. You can inspect and export each result independently, or select several entries for a combined export.</p>
 <p>A measurement with no successful recording cannot be inspected as a waveform. Keep failed or partially completed status distinct from a valid measurement whose numerical result happens to be small.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-28">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-28-measurement-pressure.png" aria-label="Open full-size screenshot: Pressure view">
+      <img src="../../assets/diracmobile/df-28-measurement-pressure.png" alt="Pressure view: A stored Aether receiver result with waveform, selectors and audition control." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Pressure view.</strong> A stored Aether receiver result with waveform, selectors and audition control. <a href="../../assets/diracmobile/df-28-measurement-pressure.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="views">Inspect the signal</h2>
-<!-- Illustrations DF-29, DF-30 -->
 <div class="table-wrap"><table><thead><tr><th scope="col">View</th><th scope="col">Use</th></tr></thead><tbody>
 <tr><td>Pressure</td><td>Inspect the waveform over time. Check capture length, unexpected disturbances, flat sections and overload.</td></tr>
 <tr><td>ETC</td><td>Inspect the energy-time curve of an impulse response. This view is offered for impulse-response data.</td></tr>
@@ -76,8 +82,27 @@
 <tr><td>Spectrogram</td><td>Inspect how frequency content changes over the duration of the recording.</td></tr>
 </tbody></table></div>
 <p>The offered views and parameter categories depend on <strong>Measurement Type</strong>. Ordinary recordings are Signals. Supported sequence processing can produce Impulse responses. If the classification is wrong, correct it through <a href="../projects-and-groups/index.html#metadata">Edit Measurement Metadata</a>; changing that classification alone does not calculate an impulse response from a raw recording.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-29">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-29-impulse-response-etc.png" aria-label="Open full-size screenshot: ETC view">
+      <img src="../../assets/diracmobile/df-29-impulse-response-etc.png" alt="ETC view: The energy-time curve of the illustrated impulse response." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>ETC view.</strong> The energy-time curve of the illustrated impulse response. <a href="../../assets/diracmobile/df-29-impulse-response-etc.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-30a">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-30a-spectrum.png" aria-label="Open full-size screenshot: Spectrum view">
+      <img src="../../assets/diracmobile/df-30a-spectrum.png" alt="Spectrum view: Frequency content of the stored receiver data." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Spectrum view.</strong> Frequency content of the stored receiver data. <a href="../../assets/diracmobile/df-30a-spectrum.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-30b">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-30b-spectrogram.png" aria-label="Open full-size screenshot: Spectrogram view">
+      <img src="../../assets/diracmobile/df-30b-spectrogram.png" alt="Spectrogram view: Frequency content over the recording duration, with time and frequency axes." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Spectrogram view.</strong> Frequency content over the recording duration, with time and frequency axes. <a href="../../assets/diracmobile/df-30b-spectrogram.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="parameters">Select an acoustic parameter</h2>
-<!-- Illustrations DF-31, DF-32 -->
 <p>Parameter categories include <strong>Reverberation</strong>, <strong>Level</strong>, <strong>Speech</strong> and <strong>Ratio</strong>. Only parameters appropriate to the measurement are offered.</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">Parameters</th><th scope="col">What they describe</th></tr></thead><tbody>
 <tr><td>EDT, T10, T20, T30</td><td>Decay-based reverberation measures obtained from different parts of an impulse-response decay.</td></tr>
@@ -88,11 +113,38 @@
 </tbody></table></div>
 <p>A result may be a single value or a set of frequency-band values. An unavailable band or result indicates that a usable value was not calculated; it is not equivalent to zero. Check the data, decay, noise and acquisition conditions before changing the measurement solely to obtain a number.</p>
 <p>Speech calculations can also use speech/noise level metadata. Check any manual band-level entries, calibration and measurement conditions when comparing results. Source output gain and a measured sound level at the receiver are different quantities.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-31a">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-31a-t20-graph.png" aria-label="Open full-size screenshot: T20 graph">
+      <img src="../../assets/diracmobile/df-31a-t20-graph.png" alt="T20 graph: Reverberation time plotted by frequency band." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>T20 graph.</strong> Reverberation time plotted by frequency band. <a href="../../assets/diracmobile/df-31a-t20-graph.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-31b">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-31b-t20-table.png" aria-label="Open full-size screenshot: T20 table">
+      <img src="../../assets/diracmobile/df-31b-t20-table.png" alt="T20 table: The same parameter in tabular form; an unavailable band is shown as n/a." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>T20 table.</strong> The same parameter in tabular form; an unavailable band is shown as n/a. <a href="../../assets/diracmobile/df-31b-t20-table.png">Full size</a>.</figcaption>
+  </figure>
+  <figure class="app-screenshot" id="df-32">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-32-stipa-result.png" aria-label="Open full-size screenshot: STIPA result">
+      <img src="../../assets/diracmobile/df-32-stipa-result.png" alt="STIPA result: An example scalar speech-intelligibility result. Check the measurement type and input data when interpreting it." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>STIPA result.</strong> An example scalar speech-intelligibility result. Check the measurement type and input data when interpreting it. <a href="../../assets/diracmobile/df-32-stipa-result.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="display">Set graph and table display options</h2>
-<!-- Illustration DF-33 -->
 <p>For band-based parameter results, tap the settings/gear control to open <strong>Parameter display</strong>. Set the applicable options and tap <strong>Apply</strong>; Close dismisses the dialog without applying the proposed changes.</p>
 <ul><li><strong>Band resolution:</strong> Full octave or Third-octave.</li><li><strong>Representation:</strong> Graph or Table.</li><li><strong>Graph style:</strong> Line or Bar, with optional grid and trace width.</li><li><strong>X-axis range:</strong> the first and last displayed frequency bands.</li><li><strong>Y-axis minimum/maximum:</strong> automatic limits, or explicit numerical values. A manual minimum must be below the maximum.</li></ul>
 <p>Display settings affect presentation and, where applicable, the requested band resolution. They do not correct clipped samples or turn an interrupted capture into a complete recording.</p>
+<div class="app-screenshots">
+  <figure class="app-screenshot" id="df-33">
+    <a class="app-screenshot-link" href="../../assets/diracmobile/df-33-parameter-display.png" aria-label="Open full-size screenshot: Parameter display">
+      <img src="../../assets/diracmobile/df-33-parameter-display.png" alt="Parameter display: Set band resolution, representation, graph appearance and axis limits." width="1080" height="2199" loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Parameter display.</strong> Set band resolution, representation, graph appearance and axis limits. <a href="../../assets/diracmobile/df-33-parameter-display.png">Full size</a>.</figcaption>
+  </figure>
+</div>
 <h2 id="listen">Listen to the stored recording</h2>
 <p>Tap the playback triangle on the detail page to audition the stored recording through the phone or tablet's audio output. Tap Stop to end auditioning. This is not a command to Echo, Atlas or HBK 2755. An unavailable-playback message concerns auditioning that stored data; the waveform and export may still be usable.</p>
 <h2 id="quality">Check quality before reporting</h2>
