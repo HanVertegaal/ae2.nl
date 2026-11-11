@@ -69,7 +69,7 @@
 <tr><td>LSWP-BA</td><td>Linear sweep for building acoustics.</td></tr>
 <tr><td>EqMLS-BA</td><td>Equalized maximum-length sequence for building acoustics.</td></tr>
 <tr><td>User</td><td>A signal uploaded by the user to internal storage.</td></tr>
-<tr><td>BNC input</td><td>External signal input.</td></tr>
+<tr><td>BNC input</td><td>External analogue line input. Set the external source level to avoid input clipping.</td></tr>
 </tbody></table></div>
 <h2 id="playback-modes">Playback modes</h2>
 <p>Room-acoustics signals offer Continuous and Intermittent playback. Building-acoustics signals play continuously.</p>
@@ -85,10 +85,12 @@
 <tr><td>MLS-RA, PMLS-RA, ESWP-RA</td><td>Continuous</td><td>5.5, 11 or 22 s</td><td>5.5, 11 or 22 s, respectively</td></tr>
 <tr><td>MLS-RA, PMLS-RA, ESWP-RA</td><td>Intermittent</td><td>5.5, 11 or 22 s</td><td>11, 22 or 44 s, respectively</td></tr>
 </tbody></table></div>
-<p><strong>Soundfield buildup:</strong> For impulse response measurements, DiracMobile can play the stimulus before recording to allow the soundfield to build up. This time is additional to the sequence period.</p>
+<p><strong>Soundfield buildup:</strong> For impulse response measurements, DIRAC Field will play the stimulus before recording to allow the soundfield to build up. This time is additional to the sequence period.</p>
 <p>User and BNC input do not use the sequence-length setting.</p>
+<p>The front-panel <strong>Signal Length</strong> choices refer to one complete sequence period. For an intermittent sequence this includes the silent half; use the stimulus and measurement columns above to distinguish them.</p>
 <h2 id="signal-level">Signal level</h2>
-<p>Atlas uses a gain setting from −60 to 0 dB for all signal sources, rather than a calibrated sound pressure level. The resulting acoustic level depends on the signal and measurement conditions.</p>
+<p>Atlas uses a gain setting from −60 to 0 dB for all signal sources, including User and BNC input, rather than a calibrated sound pressure level. The resulting acoustic level depends on the signal and measurement conditions.</p>
+<p>On the front panel, set gain at the end of signal selection, or use L and R during playback. In DIRAC Field, gain is on the main Atlas control page; the app's signal setup page contains type, mode and length. See <a href="../../diracmobile/device-controls/echo-atlas/index.html#atlas">Using Atlas in DIRAC Field</a>.</p>
 <hr>
 <h2 id="power-limits">Power limits and warnings</h2>
 <p>The usable signal gain depends on the signal peaks, the remaining battery energy and the power available from the USB supply. Lowering the gain reduces the load, but input clipping must be corrected at the external source.</p>

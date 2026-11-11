@@ -1,0 +1,23 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Self-test in progress",
+  "description": "Self Test screen showing Test 2/3.",
+  "provenance": {
+    "source_photo": "C:\\Users\\han\\AppData\\Local\\Temp\\codex-clipboard-71cac8f4-5647-444a-9817-4106776b9539.jpg",
+    "source_device": "Echo",
+    "reuse_in_atlas": "User authorised the Echo example because a complete twelve-speaker Atlas was unavailable."
+  },
+  "elements": [
+    {
+      "type": "title",
+      "text": "Self Test"
+    },
+    {
+      "type": "text",
+      "text": "Test 2/3",
+      "font": 12,
+      "y": 32
+    }
+  ]
+}

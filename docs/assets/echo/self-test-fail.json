@@ -1,0 +1,29 @@
+{
+  "width": 128,
+  "height": 64,
+  "title": "Self-test Fail example",
+  "description": "Self Test Fail, Fr: 122.0 Hz (-18.0), from the supplied Echo photograph.",
+  "provenance": {
+    "source_photo": "C:\\Users\\han\\AppData\\Local\\Temp\\codex-clipboard-64c76944-1640-4a92-8b90-c4f039c81994.jpg",
+    "source_device": "Echo",
+    "reuse_in_atlas": "User authorised the Echo example because a complete twelve-speaker Atlas was unavailable."
+  },
+  "elements": [
+    {
+      "type": "title",
+      "text": "Self Test"
+    },
+    {
+      "type": "text",
+      "text": "Fail",
+      "font": 12,
+      "y": 24
+    },
+    {
+      "type": "text",
+      "text": "Fr: 122.0 Hz (-18.0)",
+      "font": 8,
+      "y": 45
+    }
+  ]
+}

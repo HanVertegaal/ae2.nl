@@ -6,7 +6,7 @@
   <title>System Menu - Echo manual</title>
   <meta name="description" content="Press M from the Home screen to open the system menu.">
   <link rel="stylesheet" href="../../assets/style.css">
-  <link rel="stylesheet" href="../../assets/manual.css?v=20261031-1">
+  <link rel="stylesheet" href="../../assets/manual.css?v=20261111-self-test">
   <script src="../../assets/manual.js" defer></script>
 </head>
 <body class="manual system-menu">
@@ -56,18 +56,24 @@
               <li><a href="#timer">Timer</a></li>
               <li><a href="#network">Network</a></li>
               <li><a href="#service">Service</a></li>
+              <li><a href="#software-update">Software update</a></li>
+              <li><a href="#self-test">Self-test</a></li>
           </ul>
         </nav>
       </details>
 <h2 id="navigation">Navigation</h2>
 <p>Press <strong>M</strong> on the Home screen to open the system menu. Use the <strong>L</strong> and <strong>R</strong> buttons, indicated by the arrows on the display, to move through the options. Press <strong>M</strong> to select an item.</p>
-<p>In a submenu, select <strong>Back</strong> to return to the main menu. Select <strong>Exit</strong> to return to the Home screen, or press and hold <strong>M</strong> from anywhere in the menu.</p>
+<p>In a submenu, select <strong>Back</strong> to return to the main menu. Select <strong>Exit</strong> to return to the Home screen, or press and hold <strong>M</strong> while a menu list is displayed. In a time or text editor, holding <strong>M</strong> cancels the entry and returns to its menu.</p>
 <h2 id="entering-time">Entering a time</h2>
-<p>Time is entered as hours, minutes and seconds (<strong>hh:mm:ss</strong>). Use the down and up arrows to change the highlighted digit, then press <strong>M</strong> to accept it and move to the next digit. When you accept the final digit, the time is stored and Echo returns to the menu.</p>
+<p>Time is entered as hours, minutes and seconds (<strong>hh:mm:ss</strong>). Use the down and up arrows to change the highlighted digit, then press <strong>M</strong> to accept it and move to the next digit. When you accept the final digit, the time is stored and Echo returns to the menu. For <a href="#power">Auto-off</a>, a shorter enabled timeout is first raised to the 5-minute minimum for confirmation. Hold <strong>M</strong> to cancel without storing the proposed time.</p>
 <p><img src="../../assets/echo/time-entry.svg" alt="Time entry screen showing 01:00:00 with the final digit highlighted and down and up arrows below."></p>
 <h2 id="entering-text">Entering text</h2>
 <p>When entering a device or network password, use the arrow buttons to select a character and press <strong>M</strong> to accept it. To delete the previous character (backspace), select the left-pointing character and press <strong>M</strong>. When the text is complete, select the checkmark and press <strong>M</strong> to store it and return to the menu or connect to the network. To abort text entry, press and hold <strong>M</strong>.</p>
 <p><img src="../../assets/echo/password-entry.svg" alt="Password entry screen with the checkmark selected to accept the entered text."></p>
+<figure class="manual-display">
+  <img src="../../assets/echo/password-backspace.svg" alt="Password entry with the left-pointing backspace symbol selected and down/up arrows at the lower corners.">
+  <figcaption>Select the left-pointing symbol and press <strong>M</strong> to delete the previous character.</figcaption>
+</figure>
 <p>The main menu contains Power, Output, Timer, Network, Service and Exit.</p>
 <hr>
 <h2 id="power">Power</h2>
@@ -82,7 +88,7 @@
 <tbody>
 <tr>
 <td>Off</td>
-<td>Switch device to standby or power off</td>
+<td>Power off on battery; enter standby with the display off when USB power is attached.</td>
 </tr>
 <tr>
 <td>Auto-off</td>
@@ -108,6 +114,8 @@
 </table>
 </div>
 <hr>
+<p><strong>Auto-off</strong> sets the automatic power-off timeout; <strong>00:00:00</strong> disables it. The minimum enabled timeout is <strong>00:05:00</strong> (5 minutes). If you enter a shorter nonzero time, the editor shows 00:05:00; press <strong>M</strong> again to confirm. Automatic power-off is suspended while USB power is attached. Disconnecting USB starts a fresh timeout. To stop playback after a chosen duration, use the separate <a href="#timer">playback timer</a>.</p>
+<p>With USB power connected, <strong>Off</strong> leaves Echo in standby so battery charging can continue. Disconnecting USB while in standby switches the device fully off.</p>
 <h2 id="output">Output</h2>
 <div class="table-wrap">
 <table>
@@ -164,6 +172,7 @@
 </table>
 </div>
 <hr>
+<p>The playback timer stops the signal after <strong>Duration</strong>; it does not select the sequence length or switch the device off. Check that Duration is set before enabling the timer.</p>
 <h2 id="network">Network</h2>
 <div class="table-wrap">
 <table>
@@ -226,15 +235,15 @@
 </tr>
 <tr>
 <td>Update</td>
-<td>Update firmware</td>
+<td>Check for and install device software; see <a href="#software-update">Software update</a>.</td>
 </tr>
 <tr>
 <td>Self-test</td>
-<td>Perform self-test</td>
+<td>Run the loudspeaker resonance check; see <a href="#self-test">Self-test</a>.</td>
 </tr>
 <tr>
 <td>Reset</td>
-<td>Restart the device</td>
+<td>Restart the device. This is not a factory reset and does not erase saved settings or user signals.</td>
 </tr>
 <tr>
 <td>Back</td>
@@ -246,6 +255,54 @@
 </tr>
 </tbody>
 </table>
+</div>
+<h3 id="software-update">Software update</h3>
+<ol>
+<li>Stop playback and any app-managed measurement. Connect a suitable USB power supply.</li>
+<li>Connect Echo to a Wi-Fi network with internet access. A direct connection to its hotspot alone does not provide access to the update service.</li>
+<li>Open <strong>Menu → Service → Update</strong> and wait for the availability check.</li>
+<li>If <strong>Update to v…</strong> is offered, check the proposed version, select <strong>Yes</strong> with L or R and press M. Select No to return without installing.</li>
+<li>Allow downloading, writing and restart to finish. After reconnecting, check the installed version under <strong>Service → About</strong>.</li>
+</ol>
+<p><strong>No update</strong> means the check completed without an offered update. <strong>Update failure</strong> or <strong>Update failed</strong> means the operation did not complete; check power and internet connectivity before retrying. Device software updates are separate from updating DIRAC Field itself.</p>
+<h3 id="self-test">Self-test</h3>
+<p>The self-test checks the loudspeaker resonance using an internal test signal and compares the measured frequency with the stored reference. It is a functional check of the source; it does not calibrate the acoustic output or measure the room response.</p>
+<ol>
+<li>Stop ordinary playback and any measurement started from DIRAC Field. On Echo, press <strong>R</strong> to stop playback.</li>
+<li>Perform the self-test in a quiet environment. Place Echo in its normal operating position with the loudspeaker grille unobstructed. Check that the battery is charged or a suitable USB supply is connected.</li>
+<li>Under <strong>Menu → Output</strong>, select <strong>Speaker</strong>. The speaker must be enabled for the resonance check; BNC-only output is unsuitable.</li>
+<li>Open <strong>Menu → Service</strong>, select <strong>Self-test</strong> and press <strong>M</strong>. The test starts immediately and plays a test signal. No external microphone or DIRAC Field recording is required.</li>
+<li>Wait for the three measurements. The display is titled <strong>Self Test</strong> and shows <strong>Test 1/3</strong>, <strong>Test 2/3</strong> and <strong>Test 3/3</strong> while measuring.</li>
+<li>Read the result, then press <strong>M</strong> to return to Service. Restore your required output selection before resuming normal operation.</li>
+</ol>
+<figure class="manual-display" id="self-test-progress">
+  <a href="../../assets/echo/self-test-progress.svg" aria-label="Enlarge the self-test progress display">
+    <img src="../../assets/echo/self-test-progress.svg" width="1216" height="704" alt="Self Test display showing Test 2/3." loading="lazy" decoding="async">
+  </a>
+  <figcaption>The second of three self-test measurements.</figcaption>
+</figure>
+
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">Result</th><th scope="col">Meaning and action</th></tr></thead><tbody>
+<tr><td>Pass</td><td>The measured resonance is within the stored tolerance of the reference frequency.</td></tr>
+<tr><td>Fail with Fr</td><td>A resonance was measured, but it lies outside the stored tolerance. Record the frequency and difference, check the preparation and repeat the test. Contact Acoustics Engineering if the result persists.</td></tr>
+<tr><td>Fail without Fr</td><td>The test could not produce a usable measurement. Check that ordinary playback is stopped and Speaker output is selected, then retry. This message alone does not identify a defective loudspeaker.</td></tr>
+</tbody></table></div>
+<p>After a completed measurement, <strong>Fr: … Hz (…)</strong> gives the measured resonance frequency, followed in parentheses by the difference from the stored reference, also in hertz. A negative difference means the resonance is below the reference. The reference frequency and tolerance are factory settings and cannot be changed by the user. The displayed numbers are not sound levels.</p>
+<p>The following examples reproduce the supplied Echo displays. Their readings illustrate the result format; they are not fixed pass/fail limits.</p>
+<div class="manual-display-gallery" id="self-test-examples">
+  <figure class="manual-display">
+    <a href="../../assets/echo/self-test-pass.svg" aria-label="Enlarge the self-test Pass example">
+      <img src="../../assets/echo/self-test-pass.svg" width="1216" height="704" alt="Self Test Pass. Fr: 134.0 Hz (-6.0)." loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Pass example:</strong> 134.0 Hz, 6.0 Hz below the stored reference.</figcaption>
+  </figure>
+  <figure class="manual-display">
+    <a href="../../assets/echo/self-test-fail.svg" aria-label="Enlarge the self-test Fail example">
+      <img src="../../assets/echo/self-test-fail.svg" width="1216" height="704" alt="Self Test Fail. Fr: 122.0 Hz (-18.0)." loading="lazy" decoding="async">
+    </a>
+    <figcaption><strong>Fail example:</strong> 122.0 Hz, 18.0 Hz below the stored reference.</figcaption>
+  </figure>
 </div>
     </main>
   </div>

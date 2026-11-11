@@ -55,7 +55,7 @@ This is an authoring checklist, not a chapter in the customer manual. The 60 sup
 | DF-24 | Core | df-24-hbk2755-control.png | HBK 2755 with one of White/Pink/User active, gain and knob visible, plus measurement controls with an eligible receiver available. | [HBK 2755 — signal controls](device-controls/hbk2755/index.html#signals). | Integrated |
 | DF-25 | Core | df-25-hbk2755-user-signals.png | User Signals page opened by holding User, with file selection, Set as User, Upload and Delete visible. | [HBK 2755 — user signals](device-controls/hbk2755/index.html#user-signals). | Integrated |
 | DF-26 | Core | df-26-hbk2255-control.png | HBK 2255 recording page with input-level indication, destination, duration selector and Record. | [HBK 2255 — control page](device-controls/hbk2255/index.html#page). | Integrated |
-| DF-27 | Supporting | df-27-hbk2255-eligibility.png | Device card showing an existing “BZ-7351 missing or inactive” or “status not verified” message. Do not alter a working licence just to capture this. | [HBK 2255 — prerequisites](device-controls/hbk2255/index.html#prerequisites). Clarify the difference from recording-only capture. | Integrated |
+| DF-27 | Supporting | df-27-hbk2255-eligibility.png | Device card showing an existing “BZ-7351 missing or inactive” or “status not verified” message. Do not alter a working licence just to capture this. | [HBK 2255 — prerequisites](device-controls/hbk2255/index.html#prerequisites). Explain that both recording-only capture and source-triggered measurements require an active BZ-7351 option. | Integrated |
 
 ## Results, analysis and export
 

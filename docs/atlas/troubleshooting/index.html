@@ -40,7 +40,6 @@
     </aside>
 
     <main id="main" class="content" tabindex="-1">
-      <p class="notice"><strong>Draft:</strong> This Atlas guide is adapted from the Echo manual. Descriptions, specifications and illustrations still need to be checked for Atlas.</p>
       <nav class="breadcrumbs" aria-label="Breadcrumbs">
         <a href="../../atlas/index.html">Atlas</a> <span aria-hidden="true">/</span> <span aria-current="page">Troubleshooting</span>
       </nav>
@@ -54,38 +53,47 @@
               <li><a href="#cannot-connect-to-network">Cannot connect to network</a></li>
               <li><a href="#playback-stops-unexpectedly">Playback stops unexpectedly</a></li>
               <li><a href="#no-signal-on-bnc-output">No signal on BNC output</a></li>
+              <li><a href="#self-test-fails">Self-test reports Fail</a></li>
+              <li><a href="#support">Information for support</a></li>
           </ul>
         </nav>
       </details>
 <h2 id="no-playback">No playback</h2>
 <ul>
-<li>Verify output selection</li>
-<li>Verify signal configuration</li>
-<li>Verify playback level</li>
-<li>Verify playback has been started using <strong>R</strong></li>
+<li>Check <strong>Menu → Output</strong>: use Speaker or Speaker+BNC for acoustic output.</li>
+<li>Check the selected signal and its level or gain. For User, verify that an uploaded signal is selected; for BNC input, verify that the external source is supplying audio.</li>
+<li>Press <strong>R</strong> from the home screen to start playback. During playback R adjusts gain; press M to stop.</li>
+<li>If a power warning appears, record its message and Avl/Req values. Follow <a href="../signal-setup/index.html#power-limits">Power limits and warnings</a> before restarting.</li>
 </ul>
 <hr>
 <h2 id="cannot-connect-to-network">Cannot connect to network</h2>
 <ul>
-<li>Verify network mode</li>
-<li>Verify Wi‑Fi password</li>
-<li>Restart networking</li>
-<li>Restart the device</li>
+<li>Check <strong>Network → Mode</strong> and <strong>Network → Info</strong>. Off disables remote access; Station and Hotspot require the controller to join the corresponding network.</li>
+<li>Use the access-point password when joining an existing Wi-Fi network. Use the device password for the device hotspot and DIRAC Field authentication.</li>
+<li>For a failed Station connection, select Retry and re-enter its password. Check the saved network's Auto-reconnect choice if it does not reconnect automatically.</li>
+<li>After a mode or password change, reconnect the phone or tablet and reopen the device in DIRAC Field. See <a href="../network/index.html">Remote Control</a> and the <a href="../../diracmobile/connecting-devices/index.html">app connection checks</a>.</li>
 </ul>
 <hr>
 <h2 id="playback-stops-unexpectedly">Playback stops unexpectedly</h2>
 <ul>
-<li>Verify playback timer settings</li>
-<li>Verify auto-off settings</li>
-<li>Check battery charge level</li>
+<li>Check <strong>Timer → Timer</strong> and <strong>Duration</strong>. The playback timer stops the signal independently of its sequence length.</li>
+<li>Check <strong>Power → Auto-off</strong> for battery-powered operation and check the battery charge.</li>
+<li>Inspect any power or clipping indication and reduce the source level or output gain as described in <a href="../signal-setup/index.html#power-limits">Power limits and warnings</a>.</li>
+<li>If USB power was disconnected or briefly interrupted, Atlas stops playback. Reconnect a suitable supply and check the gain before starting again.</li>
 </ul>
 <hr>
 <h2 id="no-signal-on-bnc-output">No signal on BNC output</h2>
 <ul>
-<li>Verify output mode</li>
-<li>Verify playback is active</li>
-<li>Verify external equipment connections</li>
+<li>Select BNC or Speaker+BNC under <strong>Menu → Output</strong>.</li>
+<li>Check playback, the selected source and its level, then check the external equipment and cable.</li>
+<li>Confirm that the cable is connected to the BNC output, rather than the input.</li>
 </ul>
+<hr>
+<h2 id="self-test-fails">Self-test reports Fail</h2>
+<p>Repeat the <a href="../system-menu/index.html#self-test">self-test preparation</a>: stop playback and acquisition, select Speaker output, ensure adequate power and leave the loudspeaker grilles unobstructed. Let all three measurements finish.</p>
+<p>If <strong>Fr: … Hz (…)</strong> is shown, record both values. A Fail with this line means the measured resonance is outside the stored tolerance; Fail without it means no usable result was obtained. If it persists, contact Acoustics Engineering with the device identity and a photograph of the display. The reference and tolerance are factory settings and cannot be changed by the user. Repeat the test in a quiet environment before requesting service.</p>
+<h2 id="support">Information for support</h2>
+<p>Include the serial number and software version from <strong>Service → About</strong>, the selected signal and gain, output mode, battery/USB power condition, exact message and the steps that reproduce it. For a remote-control problem, also include the DIRAC Field version and the current network mode and address.</p>
     </main>
   </div>
 

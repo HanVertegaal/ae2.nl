@@ -84,11 +84,11 @@
 <h2 id="configure">Configure a signal</h2>
 <ol><li>Stop playback or acquisition before setting up a new measurement.</li><li>Tap the signal display and select <strong>Signal Type</strong>.</li><li>Choose the offered <strong>Mode</strong> and <strong>Length</strong> where they apply. A signal with only one mode does not offer an alternative.</li><li>For Echo, set the signal's level or input gain where offered. Sine also provides a frequency setting; User provides a stored-signal selector. Atlas gain is adjusted on its main control page.</li><li>Tap <strong>Apply</strong>. Wait for acceptance and verify the signal description on the control page. Use Cancel to discard the proposed configuration.</li></ol>
 <p>Only controls relevant to the selected device and signal are shown. The offered list also depends on the device's reported capabilities. Changing the type can change the available modes and lengths and, for Echo, the level choices. Check the offered settings before applying.</p>
-<p><strong>Continuous</strong> and <strong>Intermittent</strong> describe the source sequence, not whether DIRAC Field will save a recording. Their timing and available lengths are explained in the source hardware guide. An external USB or analogue input also requires a physical signal connection.</p>
+<p><strong>Continuous</strong> and <strong>Intermittent</strong> describe the source sequence, not whether DIRAC Field will save a recording. Their timing and available lengths are explained in the source hardware guide. An external analogue input also requires a physical signal connection.</p>
 <h2 id="echo">Echo signals and levels</h2>
-<p>Echo provides Pink MLS, e-Sweep, STIPA, Speech, Sine, User, USB and BNC selections where supported. Use <a href="../../../echo/signal-setup/index.html">Echo: Signal Setup</a> for the signal meanings, available timing and hardware power limits.</p>
+<p>Echo provides Pink MLS, e-Sweep, STIPA, Speech, Sine, User and BNC selections where supported. Use <a href="../../../echo/signal-setup/index.html">Echo: Signal Setup</a> for the signal meanings, available timing and hardware power limits.</p>
 <p>Built-in calibrated signals present an acoustic <strong>Level</strong>; other sources present an electrical <strong>Gain</strong>. The displayed units and offered choices identify which applies. STIPA offers its supported preset levels. Do not interpret an external-input gain value as a calibrated sound level at the microphone.</p>
-<p>For a tone, set the Sine frequency as well as gain. For User, select the required stored file. For USB or BNC, check the upstream source and its level before starting the output.</p>
+<p>For a tone, set the Sine frequency as well as gain. For User, select the required stored file. For BNC, check the upstream source and its level before starting the output.</p>
 <div class="app-screenshots">
   <figure class="app-screenshot" id="df-21a">
     <a class="app-screenshot-link" href="../../../assets/diracmobile/df-21a-echo-signal-setup.png" aria-label="Open full-size screenshot: Echo Pink MLS setup">
@@ -104,7 +104,7 @@
   </figure>
 </div>
 <h2 id="atlas">Atlas signals and gain</h2>
-<p>Atlas provides the MLS-BA/RA, PMLS-BA/RA, ESWP-BA/RA, LSWP-BA and EqMLS-BA measurement sequences, together with User, USB and AUX where supported. Building-acoustics and room-acoustics variants can have different mode and length choices. See <a href="../../../atlas/signal-setup/index.html">Atlas: Signal Setup</a>.</p>
+<p>Atlas provides the MLS-BA/RA, PMLS-BA/RA, ESWP-BA/RA, LSWP-BA and EqMLS-BA measurement sequences, together with User and AUX where supported. Building-acoustics and room-acoustics variants can have different mode and length choices. See <a href="../../../atlas/signal-setup/index.html">Atlas: Signal Setup</a>.</p>
 <p>Atlas uses custom gain, from −60 to 0 dB, on its main control page. The signal setup page selects the signal and timing; applying those settings preserves the current gain. Set the required gain on the control page before starting playback. Gain can also be adjusted during ordinary playback.</p>
 <p>Drag the gain knob to the desired value and release it; wait for the device state to confirm the requested value before relying on it. Gain adjustment is unavailable during an app-managed measurement.</p>
 <p>A gain adjustment changes the source output, not the receiver calibration. Once a measurement has started, leave the measurement conditions stable. If a power or clipping warning is reported, check the source and level before repeating the measurement.</p>

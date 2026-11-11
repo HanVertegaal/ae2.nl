@@ -84,13 +84,14 @@
 <td>Speech</td>
 <td>A male voice used to set the output level of a PA system.</td>
 </tr>
+<tr><td>Sine</td><td>A generated sine wave. Set its frequency in hertz and its gain; this is not a calibrated acoustic level.</td></tr>
 <tr>
 <td>User</td>
 <td>A signal uploaded by the user to internal storage.</td>
 </tr>
 <tr>
 <td>BNC input</td>
-<td>External signal input</td>
+<td>External analogue line input. Set the external source level to avoid input clipping.</td>
 </tr>
 </tbody>
 </table>
@@ -146,9 +147,10 @@
 </tbody>
 </table>
 </div>
-<p><strong>Soundfield buildup:</strong> For impulse response (IR) measurements, DiracMobile allows the stimulus to play before recording so the soundfield can build up. DiracMobile manages this additional time; it is not part of the Echo sequence period or the measurement lengths shown above.</p>
-<p>Continuous STIPA repeats after exactly 100 s. This repeat period does not prescribe the duration of a STIPA measurement; set the measurement duration in the measurement software. Speech, User and BNC input do not use this sequence-length setting.</p>
+<p><strong>Soundfield buildup:</strong> For impulse response (IR) measurements, DIRAC Field will play the stimulus before recording to allow the soundfield to build up. DIRAC Field manages this additional time; it is not part of the Echo sequence period or the measurement lengths shown above.</p>
+<p>Continuous STIPA repeats after exactly 100 s. This repeat period does not prescribe the duration of a STIPA measurement; set the measurement duration in the measurement software. Speech, Sine, User and BNC input do not use this sequence-length setting.</p>
 <hr>
+<p>The front-panel <strong>Signal Length</strong> choices refer to one complete sequence period. For an intermittent sequence this includes the silent half; use the stimulus and measurement columns above to distinguish them.</p>
 <h2 id="signal-level">Signal level</h2>
 <p>The level setting depends on the signal type. For Pink MLS, ESweep, STIPA and Speech, it specifies an A-weighted sound level in dBA. For other signals, it specifies a gain in dB.</p>
 <div class="table-wrap" role="region" aria-labelledby="signal-level" tabindex="0">
@@ -165,11 +167,19 @@
 <tr><td>ESweep</td><td>60 or 70 dBA; custom 40–80 dBA</td><td>Calibrated at 60 and 70 dBA. Other levels are derived from these calibrated settings.</td></tr>
 <tr><td>STIPA</td><td>60 or 70 dBA; custom 40–80 dBA</td><td>Calibrated at 60 and 70 dBA. Other levels are derived from these calibrated settings.</td></tr>
 <tr><td>Speech</td><td>60 dBA; custom 40–70 dBA</td><td>Calibrated at 60 dBA. Other levels are derived from this calibrated setting.</td></tr>
+<tr><td>Sine</td><td>−60 to 0 dB</td><td>Gain applied to the generated tone.</td></tr>
 <tr><td>User</td><td>−60 to 0 dB</td><td>Gain applied to the uploaded signal.</td></tr>
 <tr><td>BNC input</td><td>−60 to +20 dB</td><td>Gain applied to the external input signal.</td></tr>
 </tbody>
 </table>
 </div>
+<p>The ranges above describe the local front-panel controls. In the front-panel STIPA <strong>Signal Level</strong> menu, <strong>User</strong> opens custom level adjustment; it does not select an uploaded User signal. DIRAC Field offers STIPA preset levels of 60 and 70 dBA.</p>
+<figure class="manual-display" id="stipa-front-panel-level">
+  <a href="../../assets/echo/signal-level.svg" aria-label="Enlarge the STIPA Signal Level menu">
+    <img src="../../assets/echo/signal-level.svg" width="1216" height="704" alt="STIPA Signal Level menu with 70 dB selected, 60 dB above it and User below it. Navigation arrows appear at the bottom corners." loading="lazy" decoding="async">
+  </a>
+  <figcaption>Front-panel STIPA level choices: 60 dB, 70 dB and User (custom level).</figcaption>
+</figure>
 <p>A gain setting does not specify an absolute sound level. The resulting output level depends on the level of the source signal.</p>
 <hr>
 <h2 id="power-limits">Power limits and warnings</h2>

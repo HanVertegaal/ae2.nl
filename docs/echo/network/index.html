@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Remote Control - Echo manual</title>
-  <meta name="description" content="Connect Echo to Wi-Fi and control it with DiracMobile.">
+  <meta name="description" content="Connect Echo to Wi-Fi and control it with DIRAC Field.">
   <link rel="stylesheet" href="../../assets/style.css">
   <link rel="stylesheet" href="../../assets/manual.css">
   <script src="../../assets/manual.js" defer></script>
@@ -52,7 +52,7 @@
               <li><a href="#network-modes">Network modes</a></li>
               <li><a href="#connecting-to-a-network">Connecting to a network</a></li>
               <li><a href="#hotspot-mode">Hotspot mode</a></li>
-              <li><a href="#remote-control">Remote control with DiracMobile</a></li>
+              <li><a href="#remote-control">Remote control with DIRAC Field</a></li>
           </ul>
         </nav>
       </details>
@@ -90,22 +90,25 @@
 <li>Choose <strong>Mode</strong>, then select <strong>Station</strong>.</li>
 <li>Select <strong>Connect</strong> and choose the network from the list.</li>
 <li>If prompted, enter the network password. Use <strong>L</strong> and <strong>R</strong> to choose characters and <strong>M</strong> to accept each character. Select the checkmark and press <strong>M</strong> when finished.</li>
-<li>Choose whether Echo should connect automatically to this network.</li>
+<li>Choose whether Echo should connect automatically to this network. This choice is stored for that network; choosing No still permits this manual connection.</li>
 </ol>
-<p>If the connection fails, Echo offers the option to enter the password again.</p>
+<p>If the connection fails, Echo offers <strong>Retry</strong> to enter the password again, or <strong>Forget</strong> to remove the saved network. <strong>Network → Forget</strong> also removes a selected saved network. This does not change the device password used for remote access.</p>
+<p>If a saved Station network is unavailable, the device can open its own hotspot as a fallback and retry networks marked for automatic connection. Select <strong>Hotspot</strong> explicitly when you want a direct connection to remain in hotspot mode. Use <strong>Network → Info</strong> to check the current address and connection.</p>
 <hr>
 <h2 id="hotspot-mode">Creating a hotspot</h2>
 <p>In Hotspot mode, Echo creates its own Wi-Fi network for a direct connection.</p>
+<p>When connecting multiple devices, use a mobile Wi-Fi router (MiFi) or a mobile phone as the hotspot. Connect Echo, Atlas and any Aethers in Station mode to that shared network, together with the controller. Use the device hotspot for a direct connection to one device.</p>
 <ol>
 <li>From the Home screen, press <strong>M</strong> and select <strong>Network</strong>.</li>
 <li>Choose <strong>Mode</strong>, then select <strong>Hotspot</strong>.</li>
 <li>On your phone or tablet, connect to Echo's Wi-Fi network using the device password.</li>
 </ol>
-<p id="remote-access-password">The device password can be changed on the front panel under <strong>Menu → Network → Device pwd</strong>. This password is used for the hotspot and for remote access to the device. For help entering a password, see <a href="../system-menu/index.html#entering-text">Entering text</a>.</p>
+<p id="remote-access-password">The device password can be changed on the front panel under <strong>Menu → Network → Device pwd</strong>. This 8–63 character password is used for the hotspot and for remote access to the device. It is separate from the password of an existing Wi-Fi access point. Changing it can disconnect a controller using the hotspot; reconnect using the new password. For help entering a password, see <a href="../system-menu/index.html#entering-text">Entering text</a>.</p>
 <hr>
-<h2 id="remote-control">Remote control with DiracMobile</h2>
-<p>Use the DiracMobile app, available for Android and iOS, to control Echo remotely. Connect your mobile device to the same Wi-Fi network as Echo, or connect it directly to Echo's hotspot.</p>
+<h2 id="remote-control">Remote control with DIRAC Field</h2>
+<p>Use DIRAC Field on your phone or tablet to configure signals, start and stop playback, and acquire measurements with compatible receivers. Connect your mobile device to the same Wi-Fi network as Echo, or connect it directly to Echo's hotspot.</p>
 <p>The <a href="../../diracmobile/connecting-devices/index.html">DIRAC Field connection guide</a> explains discovery, authentication and reconnection. See <a href="../../diracmobile/device-controls/echo-atlas/index.html">Using Echo and Atlas</a> for the app's signal and playback controls.</p>
+<p>Stop playback and acquisition before changing networks, passwords or device software. For the app's maintenance controls, including software update and supported rollback, see <a href="../../diracmobile/device-settings/index.html">Device Settings and Maintenance</a>.</p>
     </main>
   </div>
 
